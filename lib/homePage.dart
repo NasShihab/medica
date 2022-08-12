@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:medica/02.%20Sign%20Up%20&%20Sign%20In%20(a)/10_Light_sign%20up%20blank%20form.dart';
 import 'package:medica/02.%20Sign%20Up%20&%20Sign%20In%20(a)/9_light_lets%20you%20in.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/03.%20Sign%20Up%20&%20Sign%20In%20(b)/16_Light_fill%20your%20profile%20blank%20form.dart';
+
+import '02. Sign Up & Sign In (a)/13_Light_sign in blank form.dart';
 
 class homePage extends StatelessWidget {
   const homePage({Key? key}) : super(key: key);
@@ -40,18 +43,18 @@ class homePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const lets_you_in()));
+                          const sign_in_blank()));
                     },
-                    child: Text('9_Light_lets you in',style: TextStyle(
+                    child: Text('13_Light_sign in blank form',style: TextStyle(
                       fontSize: 30.sp,
                     ),)),
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const lets_you_in()));
+                          const fill_your_profile()));
                     },
-                    child: Text('9_Light_lets you in',style: TextStyle(
+                    child: Text('16_Light_fill your profile blank form',style: TextStyle(
                       fontSize: 30.sp,
                     ),)),
                 TextButton(

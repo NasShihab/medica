@@ -59,19 +59,14 @@ class sign_up_blank extends StatelessWidget {
                 ico: const Icon(Icons.lock),
                 htext: "Password",
                 sfico: const Icon(Icons.visibility_off)),
-            Wrap(
-              alignment: WrapAlignment.center,
-              children: [
-                CheckboxListTile(
-                  contentPadding: EdgeInsets.symmetric(horizontal: 90.w),
-                  controlAffinity: ListTileControlAffinity.leading,
-                  activeColor: Colors.green,
-                  checkColor: Colors.white,
-                  value: false,
-                  onChanged: (bool? value) {},
-                  title: const Text('Remember Me'),
-                ),
-              ],
+            CheckboxListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 90.w),
+              controlAffinity: ListTileControlAffinity.leading,
+              activeColor: Colors.green,
+              checkColor: Colors.white,
+              value: false,
+              onChanged: (bool? value) {},
+              title: const Text('Remember Me'),
             ),
             SizedBox(height: 10.h),
             SizedBox(
@@ -98,7 +93,7 @@ class sign_up_blank extends StatelessWidget {
             Text(
               'Or Continue with',
               style: TextStyle(
-                  fontSize: 14.sp,
+                  fontSize: 18.sp,
                 color: Colors.grey
               ),
             ),
@@ -133,7 +128,7 @@ class sign_up_blank extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 30.h),
+            SizedBox(height: 20.h),
             SizedBox(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
