@@ -92,7 +92,9 @@ class login extends StatelessWidget {
                       )),
                 ),
                 TextButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/forget_password');
+                    },
                     child: Text('Forget the password?',
                       style: TextStyle(
                           fontSize: 18.sp,

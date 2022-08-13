@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/pages/forget_password/forget_password.dart';
 import 'package:medica/pages/login/login.dart';
 import 'package:medica/pages/login/welcome.dart';
 import 'package:medica/pages/signUp/create_pin.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
           '/fill_profile' : (context) => const fill_profile(),
           '/fingerprint' : (context) => const fingerprint(),
           '/create_pin' : (context) => const create_pin(),
+          '/forget_password' : (context) => const forget_password(),
         },
         theme: ThemeData(fontFamily: 'Roboto'),
         debugShowCheckedModeBanner: false,
