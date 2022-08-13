@@ -76,7 +76,9 @@ class welcome extends StatelessWidget {
               height: 60.h,
               width: double.infinity,
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.blueAccent[700]),
                     foregroundColor: MaterialStateProperty.all(Colors.white),
@@ -104,7 +106,9 @@ class welcome extends StatelessWidget {
                   ),
                   Flexible(
                       child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/sign_up');
+                          },
                           child: Text(
                             'Sign Up',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.sp),
                           ))),

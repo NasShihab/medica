@@ -89,7 +89,9 @@ class fill_profile extends StatelessWidget {
                   height: 60.h,
                   width: double.infinity,
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/create_pin');
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                         MaterialStateProperty.all(Colors.blueAccent[700]),

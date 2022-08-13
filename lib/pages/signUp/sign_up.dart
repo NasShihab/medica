@@ -142,7 +142,9 @@ class sign_up extends StatelessWidget {
                   ),
                   Flexible(
                       child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/login');
+                          },
                           child: Text(
                             'Login',
                             style: TextStyle(

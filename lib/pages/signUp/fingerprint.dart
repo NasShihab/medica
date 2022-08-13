@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../firstPage.dart';
@@ -58,7 +60,9 @@ class fingerprint extends StatelessWidget {
                 children: [
                   Expanded(
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/');
+                        },
                         style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all(Colors.lightBlue[100]),
@@ -99,7 +103,7 @@ class fingerprint extends StatelessWidget {
                                         child: CircleAvatar(
                                           radius: 120.r,
                                           backgroundColor: Colors.transparent,
-                                          backgroundImage: AssetImage('assets/images/profile2.png'),
+                                          backgroundImage: const AssetImage('assets/images/profile2.png'),
                                         ),
                                       ),
                                       Flexible(
@@ -117,7 +121,7 @@ class fingerprint extends StatelessWidget {
                                         child: CircleAvatar(
                                           radius: 40.r,
                                             backgroundColor: Colors.transparent,
-                                            backgroundImage: AssetImage('assets/images/loading.png')),
+                                            backgroundImage: const AssetImage('assets/images/loading.png')),
                                       ),
                                     ],
                                   ),

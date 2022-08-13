@@ -7,6 +7,11 @@ class firstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+
+        centerTitle: true,
+        title: const Text('Home Page'),
+      ),
       body: SafeArea(
         child: SizedBox(
           height: double.infinity,

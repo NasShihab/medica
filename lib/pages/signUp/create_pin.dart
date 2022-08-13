@@ -56,7 +56,9 @@ class create_pin extends StatelessWidget {
               height: 60.h,
               width: double.infinity,
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/fingerprint');
+                  },
                   style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all(Colors.blueAccent[700]),

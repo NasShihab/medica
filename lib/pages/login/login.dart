@@ -146,7 +146,10 @@ class login extends StatelessWidget {
                         style: TextStyle(color: Colors.grey, fontSize: 15.sp),
                       ),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+
+                            Navigator.pushNamed(context, '/sign_up');
+                          },
                           child: Text(
                             'Sign Up',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.sp),
                           )),
