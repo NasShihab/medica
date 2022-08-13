@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../firstPage.dart';
+import '../../pages/firstPage.dart';
 
 class create_pin extends StatelessWidget {
   const create_pin({Key? key}) : super(key: key);

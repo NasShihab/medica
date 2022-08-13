@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/signUp/sign_up.dart';
-import 'package:medica/pages/login/login.dart';
-import 'package:medica/pages/login/welcome.dart';
-import 'signUp/fill_profile.dart';
-import 'signUp/create_pin.dart';
-import 'signUp/fingerprint.dart';
+import '../pagess/login/login.dart';
+import '../pagess/login/welcome.dart';
+import '../pagess/signUp/create_pin.dart';
+import '../pagess/signUp/fill_profile.dart';
+import '../pagess/signUp/fingerprint.dart';
+import '../pagess/signUp/sign_up.dart';
 
 // ignore: camel_case_types
 class firstPage extends StatelessWidget {
