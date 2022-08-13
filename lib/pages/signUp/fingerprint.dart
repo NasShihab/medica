@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../pages/firstPage.dart';
+import '../firstPage.dart';
 
 
 class fingerprint extends StatelessWidget {
