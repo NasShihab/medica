@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../homePage.dart';
+import '../firstPage.dart';
 
-class create_new_pin extends StatelessWidget {
-  const create_new_pin({Key? key}) : super(key: key);
+class create_pin extends StatelessWidget {
+  const create_pin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class create_new_pin extends StatelessWidget {
         leading: IconButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const homePage()));
+                  builder: (BuildContext context) => const firstPage()));
             },
             icon: const Icon(
               Icons.arrow_back,

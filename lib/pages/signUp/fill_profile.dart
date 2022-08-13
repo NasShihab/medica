@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../homePage.dart';
+import '../firstPage.dart';
 
-class fill_your_profile extends StatelessWidget {
-  const fill_your_profile({Key? key}) : super(key: key);
+class fill_profile extends StatelessWidget {
+  const fill_profile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class fill_your_profile extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) =>
-                  const homePage()));
+                  const firstPage()));
             },
             icon: const Icon(
               Icons.arrow_back,

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../homePage.dart';
+import '../firstPage.dart';
 
-class set_yout_fingerprint extends StatelessWidget {
-  const set_yout_fingerprint({Key? key}) : super(key: key);
+class fingerprint extends StatelessWidget {
+  const fingerprint({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class set_yout_fingerprint extends StatelessWidget {
         leading: IconButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const homePage()));
+                  builder: (BuildContext context) => const firstPage()));
             },
             icon: const Icon(
               Icons.arrow_back,

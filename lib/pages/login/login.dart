@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../homePage.dart';
+import '../firstPage.dart';
 
-class sign_in_blank extends StatelessWidget {
-  const sign_in_blank({Key? key}) : super(key: key);
+
+class login extends StatelessWidget {
+  const login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class sign_in_blank extends StatelessWidget {
 
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) =>
-                  const homePage()));
+                  const firstPage()));
             },
             icon: const Icon(
               Icons.arrow_back,

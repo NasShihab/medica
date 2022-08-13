@@ -1,11 +1,11 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/homePage.dart';
+import 'package:medica/pages/firstPage.dart';
 
 // ignore: camel_case_types
-class lets_you_in extends StatelessWidget {
-  const lets_you_in({Key? key}) : super(key: key);
+class welcome extends StatelessWidget {
+  const welcome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class lets_you_in extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) =>
-                  const homePage()));
+                  const firstPage()));
             },
             icon: const Icon(
               Icons.arrow_back,

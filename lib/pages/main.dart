@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/homePage.dart';
+import 'package:medica/pages/firstPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         theme: ThemeData(fontFamily: 'Roboto'),
         debugShowCheckedModeBanner: false,
-        home: const homePage(),
+        home: const firstPage(),
       ),
       designSize: const Size(428, 926),
     );

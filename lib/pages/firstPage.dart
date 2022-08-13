@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:medica/02.%20Sign%20Up%20&%20Sign%20In%20(a)/10_Light_sign%20up%20blank%20form.dart';
-import 'package:medica/02.%20Sign%20Up%20&%20Sign%20In%20(a)/9_light_lets%20you%20in.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/03.%20Sign%20Up%20&%20Sign%20In%20(b)/16_Light_fill%20your%20profile%20blank%20form.dart';
-import 'package:medica/03.%20Sign%20Up%20&%20Sign%20In%20(b)/18_Light_create%20new%20PIN.dart';
-import 'package:medica/03.%20Sign%20Up%20&%20Sign%20In%20(b)/19_Light_set%20your%20fingerprint.dart';
-
-import '02. Sign Up & Sign In (a)/13_Light_sign in blank form.dart';
+import 'package:medica/pages/signUp/sign_up.dart';
+import 'package:medica/pages/login/login.dart';
+import 'package:medica/pages/login/welcome.dart';
+import 'signUp/fill_profile.dart';
+import 'signUp/create_pin.dart';
+import 'signUp/fingerprint.dart';
 
 // ignore: camel_case_types
-class homePage extends StatelessWidget {
-  const homePage({Key? key}) : super(key: key);
+class firstPage extends StatelessWidget {
+  const firstPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class homePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              const lets_you_in()));
+                              const welcome()));
                     },
                     child: Text('9_Light_lets you in',style: TextStyle(
                       fontSize: 30.sp,
@@ -37,7 +36,7 @@ class homePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const sign_up_blank()));
+                          const sign_up()));
                     },
                     child: Text('10_Light_sign up blank form',style: TextStyle(
                       fontSize: 30.sp,
@@ -46,7 +45,7 @@ class homePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const sign_in_blank()));
+                          const login()));
                     },
                     child: Text('13_Light_sign in blank form',style: TextStyle(
                       fontSize: 30.sp,
@@ -55,7 +54,7 @@ class homePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const fill_your_profile()));
+                          const fill_profile()));
                     },
                     child: Text('16_Light_fill your profile blank form',style: TextStyle(
                       fontSize: 30.sp,
@@ -64,7 +63,7 @@ class homePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const create_new_pin()));
+                          const create_pin()));
                     },
                     child: Text('18_Light_create new PIN',style: TextStyle(
                       fontSize: 30.sp,
@@ -73,7 +72,7 @@ class homePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const set_yout_fingerprint()));
+                          const fingerprint()));
                     },
                     child: Text('19_Light_set your fingerprint',style: TextStyle(
                       fontSize: 30.sp,
