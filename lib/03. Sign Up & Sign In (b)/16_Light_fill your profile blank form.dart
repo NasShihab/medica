@@ -17,7 +17,6 @@ class fill_your_profile extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) =>
                   const homePage()));

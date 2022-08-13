@@ -31,16 +31,15 @@ class create_new_pin extends StatelessWidget {
       ),
       body: SafeArea(
           child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(height: 110.h),
             Text(
               'Add a PIN number to make your account more secure',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 18.sp),
             ),
-            SizedBox(height: 80.h),
             PinCodeTextField(
               pinTheme: PinTheme(
                 inactiveColor: Colors.grey,
@@ -53,7 +52,6 @@ class create_new_pin extends StatelessWidget {
               onChanged: (value) {},
               keyboardType: TextInputType.number,
             ),
-            SizedBox(height: 80.h),
             SizedBox(
               height: 60.h,
               width: double.infinity,
@@ -74,7 +72,6 @@ class create_new_pin extends StatelessWidget {
                     style: TextStyle(fontSize: 18.sp),
                   )),
             ),
-            SizedBox(height: 10.h),
           ],
         ),
       )),
