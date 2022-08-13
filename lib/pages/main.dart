@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pagess/firstPage.dart';
+
+import 'firstPage.dart';
 
 void main() {
   runApp(const MyApp());
