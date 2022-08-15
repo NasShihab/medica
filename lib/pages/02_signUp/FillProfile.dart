@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../firstPage.dart';
 
-class fill_profile extends StatelessWidget {
-  const fill_profile({Key? key}) : super(key: key);
+class FillProfile extends StatelessWidget {
+  const FillProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -3,8 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../firstPage.dart';
 
-class forget_password extends StatelessWidget {
-  const forget_password({Key? key}) : super(key: key);
+
+class CreatePassword extends StatelessWidget {
+  const CreatePassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +13,15 @@ class forget_password extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text(
-          'Forget Your Password',
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text('Create New Password',style: TextStyle(color: Colors.black),),
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
+
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const firstPage()));
+                  builder: (BuildContext context) =>
+                  const firstPage()));
             },
             icon: const Icon(
               Icons.arrow_back,
@@ -30,74 +30,48 @@ class forget_password extends StatelessWidget {
       ),
       body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                  radius: 120.r,
-                  backgroundColor: Colors.transparent,
-                  child: Image.asset('assets/images/phone_security.png'),
-                ),
-                Flexible(
-                  child: Text(
-                    'Select which contact details should we use to reset your password',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 18.sp),
+                SizedBox(
+                  height: 250.h,
+                  child: CircleAvatar(
+                    radius: 150.r,
+                    backgroundImage:
+                    const AssetImage('assets/images/phone.jpg'),
                   ),
                 ),
-                GestureDetector(
-                  onTap: (){},
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 40.r,
-                        backgroundColor: Colors.transparent,
-                        child: Icon(Icons.message_rounded,size: 40.sp ,color: Colors.blueAccent,),
-                      ),
-                      SizedBox(width: 10.w),
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical: 14.h),
-                        child: Flexible(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('via SMS', style: TextStyle(fontSize: 18.sp, color: Colors.grey),),
-                              SizedBox(width: 10.w),
-                              Text("017xxxxx256", style: TextStyle(fontSize: 18.sp, color: Colors.black),),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Row(
+                Column(
                   children: [
-                    CircleAvatar(
-                      radius: 40.r,
-                      backgroundColor: Colors.transparent,
-                      child: Icon(Icons.mail,size: 40.sp ,color: Colors.blueAccent,),
-                    ),
-                    SizedBox(width: 10.w),
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 14.h),
-                      child: Flexible(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('via Email', style: TextStyle(fontSize: 18.sp, color: Colors.grey),),
-                            SizedBox(width: 10.w),
-                            Text("nas.sh***@gmail.com", style: TextStyle(fontSize: 18.sp, color: Colors.black),),
-                          ],
-                        ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'Create your new password',
+                        style: TextStyle(fontSize: 18.sp,),
                       ),
+                    ),
+                    SizedBox(height: 20.h),
+                    myPasswordField(
+                        ico: const Icon(Icons.lock),
+                        htext: "Enter New Password",
+                        sfico: const Icon(Icons.visibility_off)),
+                    SizedBox(height: 10.h),
+                    myPasswordField(
+                        ico: const Icon(Icons.lock),
+                        htext: "Repeat Your Password",
+                        sfico: const Icon(Icons.visibility_off)),
+                    CheckboxListTile(
+                      contentPadding: EdgeInsets.symmetric(horizontal: 90.w),
+                      controlAffinity: ListTileControlAffinity.leading,
+                      activeColor: Colors.green,
+                      checkColor: Colors.white,
+                      value: false,
+                      onChanged: (bool? value) {},
+                      title: const Text('Remember Me'),
                     ),
                   ],
                 ),
-                //TextButton
                 SizedBox(
                   height: 60.h,
                   width: double.infinity,
@@ -146,19 +120,16 @@ class forget_password extends StatelessWidget {
                       style: ButtonStyle(
                         backgroundColor:
                         MaterialStateProperty.all(Colors.blueAccent[700]),
-                        foregroundColor:
-                        MaterialStateProperty.all(Colors.white),
+                        foregroundColor: MaterialStateProperty.all(Colors.white),
                         padding: MaterialStateProperty.all(
                             EdgeInsets.symmetric(vertical: 14.h)),
-                        shape:
-                        MaterialStateProperty.all<RoundedRectangleBorder>(
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
-                                borderRadius:
-                                BorderRadius.circular(50.r))),
+                                borderRadius: BorderRadius.circular(15.r))),
                       ),
                       child: Text(
                         'Continue',
-                        style: TextStyle(fontSize: 18.sp),
+                        style: TextStyle(fontSize: 20.sp),
                       )),
                 ),
               ],
@@ -166,4 +137,33 @@ class forget_password extends StatelessWidget {
           )),
     );
   }
+  // My Shortcut
+  // My Shortcut
+  Widget myPasswordField(
+      {required Icon ico, required Icon sfico, required String htext}) =>
+      SizedBox(
+        height: 50.h,
+        width: double.infinity,
+        child: TextField(
+          obscureText: true,
+          enableSuggestions: false,
+          autocorrect: false,
+          decoration: InputDecoration(
+              prefixIcon: ico,
+              suffixIcon: sfico,
+              hintText: htext,
+              hintStyle: TextStyle(fontSize: 12.sp),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: Colors.grey, width: 1.w),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: Colors.grey, width: 1.w),
+              ),
+              contentPadding:
+              EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+        ),
+      );
 }
+

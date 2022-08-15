@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/forget_password/forget_password.dart';
-import 'package:medica/pages/login/login.dart';
-import 'package:medica/pages/login/welcome.dart';
-import 'package:medica/pages/signUp/create_pin.dart';
-import 'package:medica/pages/signUp/fill_profile.dart';
-import 'package:medica/pages/signUp/fingerprint.dart';
-import 'package:medica/pages/signUp/sign_up.dart';
-
-import 'firstPage.dart';
+import 'package:medica/pages/04_Home/HomePage.dart';
+import '01_login/login.dart';
+import '01_login/welcome.dart';
+import '02_signUp/CreatePin.dart';
+import '02_signUp/FillProfile.dart';
+import '02_signUp/SignUp.dart';
+import '02_signUp/fingerprint.dart';
+import '03_forget_password/CreatePassword.dart';
+import '03_forget_password/ForgetPassword.dart';
+import '03_forget_password/OtpCode.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,14 +23,17 @@ class MyApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         initialRoute: '/',
         routes: {
-          '/' : (context) => const firstPage(),
+          '/' : (context) => const HomePage(),
           '/welcome' : (context) => const welcome(),
           '/login' : (context) => const login(),
-          '/sign_up' : (context) => const sign_up(),
-          '/fill_profile' : (context) => const fill_profile(),
+          '/sign_up' : (context) => const SignUp(),
+          '/fill_profile' : (context) => const FillProfile(),
           '/fingerprint' : (context) => const fingerprint(),
-          '/create_pin' : (context) => const create_pin(),
-          '/forget_password' : (context) => const forget_password(),
+          '/create_pin' : (context) => const CreatePin(),
+          '/forget_password' : (context) => const ForgetPassword(),
+          '/OtpCode' : (context) => const OtpCode(),
+          '/CreatePassword' : (context) => const CreatePassword(),
+          '/HomePage' : (context) => const HomePage(),
         },
         theme: ThemeData(fontFamily: 'Roboto'),
         debugShowCheckedModeBanner: false,

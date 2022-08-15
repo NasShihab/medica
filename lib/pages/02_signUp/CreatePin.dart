@@ -4,8 +4,9 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../firstPage.dart';
 
-class create_pin extends StatelessWidget {
-  const create_pin({Key? key}) : super(key: key);
+// ignore: camel_case_types
+class CreatePin extends StatelessWidget {
+  const CreatePin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
