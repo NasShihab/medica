@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../firstPage.dart';
-
-
 class CreatePassword extends StatelessWidget {
   const CreatePassword({Key? key}) : super(key: key);
 
@@ -18,10 +15,7 @@ class CreatePassword extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                  const firstPage()));
+              Navigator.pushNamed(context, '/HomePage');
             },
             icon: const Icon(
               Icons.arrow_back,

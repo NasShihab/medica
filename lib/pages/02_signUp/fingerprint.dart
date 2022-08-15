@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../firstPage.dart';
 
 
 class fingerprint extends StatelessWidget {
@@ -22,8 +21,7 @@ class fingerprint extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const firstPage()));
+              Navigator.pushNamed(context, '/HomePage');
             },
             icon: const Icon(
               Icons.arrow_back,

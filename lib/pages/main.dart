@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/HomePage.dart';
 import 'package:medica/pages/05_notification/notification.dart';
+import 'package:medica/pages/front_Page.dart';
 import '01_login/login.dart';
 import '01_login/welcome.dart';
 import '02_signUp/CreatePin.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         initialRoute: '/',
         routes: {
-          '/' : (context) => const HomePage(),
+          '/' : (context) => const front_Page(),
           '/welcome' : (context) => const welcome(),
           '/login' : (context) => const login(),
           '/sign_up' : (context) => const SignUp(),

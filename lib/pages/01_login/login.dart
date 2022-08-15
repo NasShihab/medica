@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/pages/04_Home/HomePage.dart';
 
-import '../firstPage.dart';
 
 class login extends StatelessWidget {
   const login({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class login extends StatelessWidget {
         leading: IconButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const firstPage()));
+                  builder: (BuildContext context) => const HomePage()));
             },
             icon: const Icon(
               Icons.arrow_back,

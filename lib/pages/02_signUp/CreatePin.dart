@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../firstPage.dart';
 
 // ignore: camel_case_types
 class CreatePin extends StatelessWidget {
@@ -22,8 +21,7 @@ class CreatePin extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const firstPage()));
+              Navigator.pushNamed(context, '/HomePage');
             },
             icon: const Icon(
               Icons.arrow_back,

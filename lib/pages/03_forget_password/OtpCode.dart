@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../firstPage.dart';
 
 class OtpCode extends StatelessWidget {
   const OtpCode({Key? key}) : super(key: key);
@@ -21,8 +20,7 @@ class OtpCode extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const firstPage()));
+              Navigator.pushNamed(context, '/HomePage');
             },
             icon: const Icon(
               Icons.arrow_back,

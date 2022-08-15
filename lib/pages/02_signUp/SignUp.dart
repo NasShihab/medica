@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../firstPage.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -16,10 +15,7 @@ class SignUp extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                  const firstPage()));
+              Navigator.pushNamed(context, '/HomePage');
             },
             icon: const Icon(
               Icons.arrow_back,
