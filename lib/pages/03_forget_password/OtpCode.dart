@@ -58,7 +58,7 @@ class OtpCode extends StatelessWidget {
                 width: double.infinity,
                 child: TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/fingerprint');
+                      Navigator.pushNamed(context, '/CreatePassword');
                     },
                     style: ButtonStyle(
                       backgroundColor:

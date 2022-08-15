@@ -103,45 +103,7 @@ class ForgetPassword extends StatelessWidget {
                   width: double.infinity,
                   child: TextButton(
                       onPressed: () {
-                        showDialog(
-                            context: context,
-                            builder: (context) => AlertDialog(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(30.r))
-                              ),
-                              content: SizedBox(
-                                height: 500.h,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children:  [
-                                    Flexible(
-                                      child: CircleAvatar(
-                                        radius: 120.r,
-                                        backgroundColor: Colors.transparent,
-                                        backgroundImage: const AssetImage('assets/images/profile2.png'),
-                                      ),
-                                    ),
-                                    Flexible(
-                                      child: Text('Congratulations', style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 24.sp, color: Colors.blueAccent[700]
-                                      ),),
-                                    ),
-                                    Flexible(
-                                      child: Text('Your account is ready to use. You will be redirected to HomePage',
-                                        style: TextStyle(color: Colors.grey,fontSize: 18.sp),
-                                        textAlign: TextAlign.center,),
-                                    ),
-                                    Flexible(
-                                      child: CircleAvatar(
-                                          radius: 40.r,
-                                          backgroundColor: Colors.transparent,
-                                          backgroundImage: const AssetImage('assets/images/loading.png')),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ));
+                        Navigator.pushNamed(context, '/OtpCode');
                       },
                       style: ButtonStyle(
                         backgroundColor:
