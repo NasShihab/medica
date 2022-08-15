@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/HomePage.dart';
+import 'package:medica/pages/05_notification/notification.dart';
 import '01_login/login.dart';
 import '01_login/welcome.dart';
 import '02_signUp/CreatePin.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
           '/OtpCode' : (context) => const OtpCode(),
           '/CreatePassword' : (context) => const CreatePassword(),
           '/HomePage' : (context) => const HomePage(),
+          '/notification' : (context) =>  notification(),
         },
         theme: ThemeData(fontFamily: 'Roboto'),
         debugShowCheckedModeBanner: false,

@@ -52,7 +52,9 @@ class HomePage extends StatelessWidget {
                       IconButton(
                           alignment: Alignment.centerRight,
                           padding: EdgeInsets.zero,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/notification');
+                          },
                           icon: Icon(
                             Icons.notification_add_outlined,
                             size: 30.sp,
@@ -79,6 +81,8 @@ class HomePage extends StatelessWidget {
                 suffixMode: OverlayVisibilityMode.always,
               ),
               height20(),
+
+              //Todo - Add Indicatior for SLide Image
               const SlideShow(),
               height20(),
               const DoctorSpeciality(),

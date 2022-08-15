@@ -25,7 +25,7 @@ class DoctorSpeciality extends StatelessWidget {
                     color: myBlueAccent)),
           ],
         ),
-        height20(),
+        height30(),
         Column(
           children: [
             Row(

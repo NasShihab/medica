@@ -29,7 +29,7 @@ class Top_Doctors extends StatelessWidget {
                     color: myBlueAccent)),
           ],
         ),
-        height10(),
+        height30(),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
