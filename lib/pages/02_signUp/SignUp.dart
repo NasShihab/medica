@@ -70,7 +70,9 @@ class SignUp extends StatelessWidget {
               height: 60.h,
               width: double.infinity,
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/FillProfile');
+                  },
                   style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all(Colors.blueAccent[700]),

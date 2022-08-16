@@ -9,10 +9,10 @@ Widget height30() => SizedBox(height: 30.h);
 Widget height40() => SizedBox(height: 40.h);
 Widget height50() => SizedBox(height: 50.h);
 
-Widget width5() => SizedBox(width: 5.h);
-Widget width10() => SizedBox(width: 10.h);
-Widget width15() => SizedBox(width: 15.h);
-Widget width20() => SizedBox(width: 20.h);
-Widget width30() => SizedBox(width: 30.h);
-Widget width40() => SizedBox(width: 40.h);
-Widget width50() => SizedBox(width: 50.h);
+Widget width5() => SizedBox(width: 5.w);
+Widget width10() => SizedBox(width: 10.w);
+Widget width15() => SizedBox(width: 15.w);
+Widget width20() => SizedBox(width: 20.w);
+Widget width30() => SizedBox(width: 30.w);
+Widget width40() => SizedBox(width: 40.w);
+Widget width50() => SizedBox(width: 50.w);

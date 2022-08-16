@@ -62,7 +62,9 @@ class HomePage extends StatelessWidget {
                       IconButton(
                           alignment: Alignment.center,
                           padding: EdgeInsets.zero,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/favorite_doctors');
+                          },
                           icon: Icon(
                             Icons.favorite_border_outlined,
                             size: 30.sp,
