@@ -54,19 +54,13 @@ List TopDoctorsList = [
 ];
 
 class TopDoctorsClass {
-  final String fvImages;
-  final String fvName;
-  final String fvCategory;
-  final String fvHospital;
-  final double fvRatings;
-  final int fvViews;
+  final String doctorsImage;
+  final String doctorsName;
+  final String doctorsCategory;
+  final String doctorsHospital;
+  final double doctorsRating;
+  final int doctorsReviews;
 
-  TopDoctorsClass(
-    this.fvImages,
-    this.fvName,
-    this.fvCategory,
-    this.fvHospital,
-    this.fvRatings,
-    this.fvViews,
+  TopDoctorsClass(this.doctorsImage, this.doctorsName, this.doctorsCategory, this.doctorsHospital, this.doctorsRating, this.doctorsReviews
   );
 }

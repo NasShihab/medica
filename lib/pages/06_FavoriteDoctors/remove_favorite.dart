@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../Z_other/myColor.dart';
 import '../Z_other/mySizedBox.dart';
-import 'list_Favorite_Doctors.dart';
+import 'ListItem_FavoriteDoctors.dart';
 
 class RemoveFavorite extends StatelessWidget {
   const RemoveFavorite({Key? key}) : super(key: key);
@@ -47,7 +47,7 @@ class RemoveFavorite extends StatelessWidget {
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10.r)),
                                 child: Image.asset(
-                                    '${fvDoctorsList[index].fvImages}'),
+                                    '${fvDoctorsList[index].doctorsImage}'),
                               ),
                             ),
                           ],
@@ -62,7 +62,7 @@ class RemoveFavorite extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  '${fvDoctorsList[index].fvName}',
+                                  '${fvDoctorsList[index].doctorsName}',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20.sp),
@@ -84,7 +84,7 @@ class RemoveFavorite extends StatelessWidget {
                             ),
                             height10(),
                             Text(
-                                '${fvDoctorsList[index].fvCategory}   |   ${fvDoctorsList[index].fvHospital}'),
+                                '${fvDoctorsList[index].doctorsCategory}   |   ${fvDoctorsList[index].doctorsHospital}'),
                             height10(),
                             Row(
                               children: [
@@ -95,7 +95,7 @@ class RemoveFavorite extends StatelessWidget {
                                 ),
                                 width5(),
                                 Text(
-                                    '${fvDoctorsList[index].fvRatings.toString()} (${fvDoctorsList[index].fvViews.toString()} Reviews)')
+                                    '${fvDoctorsList[index].doctorsRating.toString()} (${fvDoctorsList[index].doctorsReviews.toString()} Reviews)')
                               ],
                             ),
                           ],

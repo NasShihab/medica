@@ -14,6 +14,7 @@ import '03_forget_password/CreatePassword.dart';
 import '03_forget_password/ForgetPassword.dart';
 import '03_forget_password/OtpCode.dart';
 import '06_FavoriteDoctors/favorite_doctors.dart';
+import 'DoctorsProfile/DoctorsProfile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         initialRoute: '/',
         routes: {
-          '/' : (context) => const TopDoctors(),
+          '/' : (context) => const HomePage(),
           '/welcome' : (context) => const welcome(),
           '/login' : (context) => const login(),
           '/sign_up' : (context) => const SignUp(),
@@ -42,6 +43,8 @@ class MyApp extends StatelessWidget {
           '/favorite_doctors' : (context) =>  const FavoriteDoctors(),
           '/TopDoctors' : (context) =>  const TopDoctors(),
           '/SearchPage' : (context) =>  const SearchPage(),
+          '/DoctorsProfile' : (context) =>  const DoctorsProfile(),
+
         },
         theme: ThemeData(fontFamily: 'Roboto'),
         debugShowCheckedModeBanner: false,
