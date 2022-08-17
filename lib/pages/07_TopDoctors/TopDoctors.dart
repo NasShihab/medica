@@ -142,7 +142,7 @@ class TopDoctors extends StatelessWidget {
                                                   });
                                             },
                                             icon: Icon(
-                                              Icons.favorite,
+                                              Icons.favorite_border_sharp,
                                               color: myBlueAccent,
                                               size: 30.sp,
                                             ))
