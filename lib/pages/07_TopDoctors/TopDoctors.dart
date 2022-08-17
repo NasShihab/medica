@@ -156,6 +156,7 @@ class TopDoctors extends StatelessWidget {
                                     ),
                                     height10(),
                                     Text(
+                                        overflow: TextOverflow.ellipsis,
                                         '${TopDoctorsList[index].fvCategory}   |   ${TopDoctorsList[index].fvHospital}'),
                                     height10(),
                                     Row(
