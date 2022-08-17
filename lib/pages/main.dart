@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/HomePage.dart';
 import 'package:medica/pages/05_notification/notification.dart';
 import 'package:medica/pages/07_TopDoctors/TopDoctors.dart';
+import 'package:medica/pages/08_SearchDoctors/SearchPage.dart';
 import '01_login/login.dart';
 import '01_login/welcome.dart';
 import '02_signUp/CreatePin.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         initialRoute: '/',
         routes: {
-          '/' : (context) => const HomePage(),
+          '/' : (context) => const TopDoctors(),
           '/welcome' : (context) => const welcome(),
           '/login' : (context) => const login(),
           '/sign_up' : (context) => const SignUp(),
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
           '/notification' : (context) =>  notification(),
           '/favorite_doctors' : (context) =>  const FavoriteDoctors(),
           '/TopDoctors' : (context) =>  const TopDoctors(),
+          '/SearchPage' : (context) =>  const SearchPage(),
         },
         theme: ThemeData(fontFamily: 'Roboto'),
         debugShowCheckedModeBanner: false,
