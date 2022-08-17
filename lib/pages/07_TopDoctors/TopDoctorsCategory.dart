@@ -7,8 +7,8 @@ import 'package:medica/pages/Z_other/mySizedBox.dart';
 import '../Z_other/myColor.dart';
 
 // ignore: camel_case_types
-class Top_Doctors extends StatelessWidget {
-  const Top_Doctors({Key? key}) : super(key: key);
+class TopDoctorsCategory extends StatelessWidget {
+  const TopDoctorsCategory({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

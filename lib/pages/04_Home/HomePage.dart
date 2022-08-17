@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/DoctorSpeciality.dart';
 import 'package:medica/pages/04_Home/SlideShow.dart';
-import 'package:medica/pages/04_Home/Top_Doctors.dart';
+import 'package:medica/pages/07_TopDoctors/TopDoctorsCategory.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 import '../Z_other/mySizedBox.dart';
 import 'bottomNavigationBarPage.dart';
@@ -83,13 +83,12 @@ class HomePage extends StatelessWidget {
                 suffixMode: OverlayVisibilityMode.always,
               ),
               height20(),
-
               //Todo - Add Indicatior for SLide Image
               const SlideShow(),
               height20(),
               const DoctorSpeciality(),
               height30(),
-              const Top_Doctors(),
+               const TopDoctorsCategory(),
             ],
           ),
         ),

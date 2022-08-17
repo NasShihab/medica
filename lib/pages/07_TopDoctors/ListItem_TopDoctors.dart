@@ -1,5 +1,5 @@
-List fvDoctorsList = [
-  fvDoctorsClass(
+List TopDoctorsList = [
+  TopDoctorsClass(
     'assets/images/doctors/doctor3.png',
     'Dr. Becky B Cans',
     'Category',
@@ -7,7 +7,7 @@ List fvDoctorsList = [
     2.5,
     800,
   ),
-  fvDoctorsClass(
+  TopDoctorsClass(
     'assets/images/doctors/doctor3.png',
     'Dr. Becky Cans',
     'Category',
@@ -15,7 +15,7 @@ List fvDoctorsList = [
     2.5,
     800,
   ),
-  fvDoctorsClass(
+  TopDoctorsClass(
     'assets/images/doctors/doctor1.jpg',
     'Dr. Becky Cans',
     'Category',
@@ -23,7 +23,7 @@ List fvDoctorsList = [
     2.5,
     800,
   ),
-  fvDoctorsClass(
+  TopDoctorsClass(
     'assets/images/doctors/doctor3.png',
     'Dr. Becky Cans',
     'Category',
@@ -31,7 +31,7 @@ List fvDoctorsList = [
     2.5,
     800,
   ),
-  fvDoctorsClass(
+  TopDoctorsClass(
     'assets/images/doctors/doctor1.jpg',
     'Dr. Becky Cans',
     'Category',
@@ -39,7 +39,7 @@ List fvDoctorsList = [
     2.5,
     800,
   ),
-  fvDoctorsClass(
+  TopDoctorsClass(
     'assets/images/doctors/doctor2.jpg',
     'Dr. Andrew Miky',
     'Category',
@@ -47,7 +47,7 @@ List fvDoctorsList = [
     4.5,
     600,
   ),
-  fvDoctorsClass(
+  TopDoctorsClass(
     'assets/images/doctors/doctor1.jpg',
     'Dr. Andrew Miky',
     'Category',
@@ -58,7 +58,7 @@ List fvDoctorsList = [
 ];
 
 
-class fvDoctorsClass {
+class TopDoctorsClass {
   final String fvImages;
   final String fvName;
   final String fvCategory;
@@ -66,7 +66,7 @@ class fvDoctorsClass {
   final double fvRatings;
   final int fvViews;
 
-  fvDoctorsClass(
+  TopDoctorsClass(
       this.fvImages,
       this.fvName,
       this.fvCategory,
