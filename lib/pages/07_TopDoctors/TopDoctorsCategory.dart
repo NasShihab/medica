@@ -22,11 +22,16 @@ class TopDoctorsCategory extends StatelessWidget {
               'Top Doctors',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
             ),
-            Text('See All',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16.sp,
-                    color: myBlueAccent)),
+            GestureDetector(
+              onTap: (){
+                Navigator.pushReplacementNamed(context, '/TopDoctors');
+              },
+              child: Text('See All',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16.sp,
+                      color: myBlueAccent)),
+            ),
           ],
         ),
         height30(),
@@ -35,11 +40,16 @@ class TopDoctorsCategory extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              topDoctorsButton(context, tdButtonName: 'All', tdPageName: '/login'),
-              topDoctorsButton(context, tdButtonName: 'Dentist', tdPageName: '/login'),
-              topDoctorsButton(context, tdButtonName: 'Neurologist', tdPageName: '/login'),
-              topDoctorsButton(context, tdButtonName: 'Orthopedics', tdPageName: '/login'),
-              topDoctorsButton(context, tdButtonName: 'General', tdPageName: '/login'),
+              topDoctorsButton(context,
+                  tdButtonName: 'All', tdPageName: '/login'),
+              topDoctorsButton(context,
+                  tdButtonName: 'Dentist', tdPageName: '/login'),
+              topDoctorsButton(context,
+                  tdButtonName: 'Neurologist', tdPageName: '/login'),
+              topDoctorsButton(context,
+                  tdButtonName: 'Orthopedics', tdPageName: '/login'),
+              topDoctorsButton(context,
+                  tdButtonName: 'General', tdPageName: '/login'),
             ],
           ),
         ),
@@ -47,7 +57,9 @@ class TopDoctorsCategory extends StatelessWidget {
     );
   }
 
-  Widget topDoctorsButton(BuildContext context, {required String tdButtonName, required String tdPageName}) => SizedBox(
+  Widget topDoctorsButton(BuildContext context,
+          {required String tdButtonName, required String tdPageName}) =>
+      SizedBox(
         height: 35.h,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 3.w),
@@ -59,7 +71,7 @@ class TopDoctorsCategory extends StatelessWidget {
                   side: const BorderSide(color: Colors.blue),
                 )),
                 backgroundColor: MaterialStateProperty.all(Colors.white)),
-            onPressed: (){
+            onPressed: () {
               Navigator.pushNamed(context, tdPageName);
             },
             child: Text(
