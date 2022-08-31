@@ -14,7 +14,10 @@ import '03_forget_password/CreatePassword.dart';
 import '03_forget_password/ForgetPassword.dart';
 import '03_forget_password/OtpCode.dart';
 import '06_FavoriteDoctors/favorite_doctors.dart';
-import 'DoctorsProfile/DoctorsProfile.dart';
+import '09_DoctorsProfile/Book_Appointment/Book_Appointment.dart';
+import '09_DoctorsProfile/DoctorsProfile.dart';
+import '09_DoctorsProfile/Review/DoctorsReviews.dart';
+import '09_DoctorsProfile/Select_Package/Select_Package.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         initialRoute: '/',
         routes: {
-          '/' : (context) => const welcome(),
+          '/' : (context) => const Book_Appointment(),
           '/welcome' : (context) => const welcome(),
           '/login' : (context) => const login(),
           '/sign_up' : (context) => const SignUp(),
@@ -44,6 +47,9 @@ class MyApp extends StatelessWidget {
           '/TopDoctors' : (context) =>  const TopDoctors(),
           '/SearchPage' : (context) =>  const SearchPage(),
           '/DoctorsProfile' : (context) =>  const DoctorsProfile(),
+          '/DoctorsReviews' : (context) =>  const DoctorsReviews(),
+          '/Book_Appointment' : (context) =>  const Book_Appointment(),
+          '/Select_Package' : (context) =>  const Select_Package(),
 
         },
         theme: ThemeData(fontFamily: 'Roboto'),

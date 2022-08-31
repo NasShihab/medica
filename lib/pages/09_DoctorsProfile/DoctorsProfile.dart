@@ -103,7 +103,7 @@ class DoctorsProfile extends StatelessWidget {
                 ),
                 height20(),
                 //Reviews
-                DoctorsReviewCard(context),
+                DoctorsReviewC(context),
                 SizedBox(
                     height: 60.h,
                     width: double.infinity,

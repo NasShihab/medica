@@ -105,90 +105,90 @@ Widget DoctorProfileIcon(
       ),
     );
 
-Widget DoctorsReviewCard(BuildContext context) => Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+Widget DoctorsReviewC(BuildContext context) => Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          'Reviews',
+          style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
+        ),
+        GestureDetector(
+          onTap: () {
+            Navigator.pushReplacementNamed(context, '/DoctorsReviews');
+          },
+          child: Text('See All',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16.sp,
+                  color: myBlueAccent)),
+        ),
+      ],
+    ),
+    height10(),
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            CircleAvatar(
+              radius: 30.r,
+              child: Image.asset('assets/images/profile2.png'),
+            ),
+            width5(),
             Text(
-              'Reviews',
-              style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/HomePage');
-              },
-              child: Text('See All',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.sp,
-                      color: myBlueAccent)),
-            ),
-          ],
-        ),
-        height10(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 30.r,
-                  child: Image.asset('assets/images/profile2.png'),
-                ),
-                width5(),
-                Text(
-                  'Charlotte Hamlin',
-                  style: TextStyle(fontSize: 15.sp),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.purple,
-                    ),
-                    borderRadius: const BorderRadius.all(Radius.circular(20)),
-                  ),
-                  child: Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 15.w, vertical: 5.h),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          size: 25.sp,
-                        ),
-                        Text(
-                          '5',
-                          style: TextStyle(fontSize: 20.sp),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.data_saver_on_sharp,
-                      size: 30.sp,
-                    ))
-              ],
+              'Charlotte Hamlin',
+              style: TextStyle(fontSize: 15.sp),
             )
           ],
         ),
-        height10(),
-        Text(
-          'Neurology is the branch of medicine concerned with the study and '
+        Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.purple,
+                ),
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
+              ),
+              child: Padding(
+                padding:
+                EdgeInsets.symmetric(horizontal: 15.w, vertical: 5.h),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.star,
+                      size: 25.sp,
+                    ),
+                    Text(
+                      '5',
+                      style: TextStyle(fontSize: 20.sp),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.data_saver_on_sharp,
+                  size: 30.sp,
+                ))
+          ],
+        )
+      ],
+    ),
+    height10(),
+    Text(
+      'Neurology is the branch of medicine concerned with the study and '
           'treatment of disorders of the nervous system. The nervous'
           'system is a complex system that regulates'
           'and coordinates body activities.',
-          textAlign: TextAlign.start,
-          style: TextStyle(fontSize: 16.sp),
-        ),
-        height20(),
-      ],
-    );
+      textAlign: TextAlign.start,
+      style: TextStyle(fontSize: 16.sp),
+    ),
+    height20(),
+  ],
+);
