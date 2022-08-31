@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/DoctorSpeciality.dart';
 import 'package:medica/pages/04_Home/SlideShow.dart';
 import 'package:medica/pages/07_TopDoctors/TopDoctorsCategory.dart';
+import 'package:medica/pages/08_SearchDoctors/SearchFilter.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 import '../Z_other/mySizedBox.dart';
 import 'bottomNavigationBarPage.dart';
@@ -77,6 +78,16 @@ class HomePage extends StatelessWidget {
               height10(),
               CupertinoSearchTextField(
                 padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 10.w),
+                onSuffixTap: (){
+                  showModalBottomSheet(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(top: Radius.circular(30.r))
+                      ),
+                      context: context,
+                      builder: (context) {
+                        return const SearchFilter();
+                      });
+                },
                 suffixIcon: Icon(
                   Icons.filter_list,
                   color: myBlueAccent,
