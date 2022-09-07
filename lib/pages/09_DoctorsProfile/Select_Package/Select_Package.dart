@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/09_DoctorsProfile/Book_Appointment/Book_Appointment_Model.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'Select_Package_Model.dart';
 
 class Select_Package extends StatelessWidget {
   const Select_Package({Key? key})
@@ -10,6 +10,8 @@ class Select_Package extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: spNextButton(context, tdButtonName: 'Flo', tdPageName: '/welcome'),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -93,7 +95,32 @@ class Select_Package extends StatelessWidget {
               'Select Package',
               style: TextStyle(fontSize: 20.sp),
             ),
-            nextButton(context, tdButtonName: 'Next', tdPageName: '/Select_Package')
+            height20(),
+            CustomIcon_Select_Package(
+              spicon: Icons.message_rounded,
+              spText1: 'Messaging',
+              spText2: 'Chat message with doctor',
+              spMinutes: 30,
+              spRate: 20,
+            ),
+            height20(),
+            CustomIcon_Select_Package(
+              spicon: Icons.message_rounded,
+              spText1: 'Video Call',
+              spText2:
+                  'Chat video call with doctor',
+              spRate: 20,
+              spMinutes: 30,
+            ),
+            height20(),
+            CustomIcon_Select_Package(
+              spicon: Icons.message_rounded,
+              spText1: 'Voice Call',
+              spText2:
+                  'Chat voice call with doctor',
+              spMinutes: 20,
+              spRate: 30,
+            ),
           ],
         ),
       ),
