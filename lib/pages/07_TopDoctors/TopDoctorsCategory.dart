@@ -24,7 +24,7 @@ class TopDoctorsCategory extends StatelessWidget {
             ),
             GestureDetector(
               onTap: (){
-                Navigator.pushReplacementNamed(context, '/TopDoctors');
+                Navigator.pushNamed(context, '/TopDoctors');
               },
               child: Text('See All',
                   style: TextStyle(
