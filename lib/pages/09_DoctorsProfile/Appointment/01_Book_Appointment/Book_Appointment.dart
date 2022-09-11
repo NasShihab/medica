@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/pages/Z_other/custom_Button.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
+import '../../../Z_other/myCuston_Appbar.dart';
 import 'Book_Appointment_Widget.dart';
 
 class Book_Appointment extends StatelessWidget {
@@ -10,39 +12,11 @@ class Book_Appointment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.zero,
-              onPressed: () {},
-              icon: Icon(
-                Icons.expand_circle_down_outlined,
-                color: Colors.black,
-                size: 30.sp,
-              )),
-        ],
-        title: FittedBox(
-          fit: BoxFit.fitWidth,
-          child: Text(
-            'Book Appointment',
-            style: TextStyle(
-                fontSize: 24.sp,
-                color: Colors.black),
-          ),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(
-                  context, '/HomePage');
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              size: 24.sp,
-              color: Colors.black,
-            )),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      resizeToAvoidBottomInset: false,
+      appBar: mycustomAppBar(context,
+          appBarTitle: 'Book Appointment',
+          action_Icons: const SizedBox.shrink(),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(
@@ -139,14 +113,11 @@ class Book_Appointment extends StatelessWidget {
                       book_time: '16:30 PM'),
                 ],
               ),
-              height20(),
-              nextButton(context,
-                  tdButtonName: 'Next',
-                  tdPageName: '/Select_Package')
             ],
           ),
         ),
       ),
+      floatingActionButton: mycustom_button_Blue(context, btname: 'Next', pageName: '/Select_Package'),
     );
   }
 }

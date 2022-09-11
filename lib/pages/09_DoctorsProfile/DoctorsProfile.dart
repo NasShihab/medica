@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
+import '../Z_other/myCuston_Appbar.dart';
 import 'DoctorsProfileComponents/DoctorProfileCard.dart';
 
 class DoctorsProfile extends StatelessWidget {
@@ -10,43 +11,28 @@ class DoctorsProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              alignment: Alignment.center,
-              padding: EdgeInsets.zero,
-              onPressed: () {},
-              icon: Icon(
-                Icons.search_rounded,
-                color: Colors.black,
-                size: 30.sp,
-              )),
-          IconButton(
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.zero,
-              onPressed: () {},
-              icon: Icon(
-                Icons.expand_circle_down_outlined,
-                color: Colors.black,
-                size: 30.sp,
-              )),
-        ],
-        title: Text(
-          'Dr Doctors Name',
-          style: TextStyle(fontSize: 24.sp, color: Colors.black),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/HomePage');
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              size: 20.sp,
-              color: Colors.black,
-            )),
-      ),
+      appBar: mycustomAppBar(context,
+          appBarTitle: 'Doctor Profile',
+          action_Icons: Row(
+            children: [
+              IconButton(
+                  visualDensity: VisualDensity.compact,
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.favorite_border_sharp,
+                    color: Colors.black,
+                    size: 30.sp,
+                  )),
+              IconButton(
+                  visualDensity: VisualDensity.compact,
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.more_vert,
+                    color: Colors.black,
+                    size: 30.sp,
+                  )),
+            ],
+          )),
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
