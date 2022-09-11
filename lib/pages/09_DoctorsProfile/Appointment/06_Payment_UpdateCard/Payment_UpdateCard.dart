@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../Z_other/mySizedBox.dart';
-import 'Payments_page_Widget.dart';
 
-class Payments_Page extends StatelessWidget {
-  const Payments_Page({Key? key})
-      : super(key: key);
+import '../../../Z_other/mySizedBox.dart';
+import '../04_Payments/Payments_page_Widget.dart';
+
+class Payment_UpdateCard extends StatelessWidget {
+  const Payment_UpdateCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation:
-          FloatingActionButtonLocation
-              .centerFloat,
+      FloatingActionButtonLocation
+          .centerFloat,
       floatingActionButton: pay_NextButton(
           context,
           tdButtonName: 'Next',
@@ -32,7 +32,7 @@ class Payments_Page extends StatelessWidget {
         title: FittedBox(
           fit: BoxFit.fitWidth,
           child: Text(
-            'Payments',
+            'Update Payments',
             style: TextStyle(
                 fontSize: 24.sp,
                 color: Colors.black),
@@ -56,7 +56,7 @@ class Payments_Page extends StatelessWidget {
             horizontal: 20.w),
         child: Column(
           crossAxisAlignment:
-              CrossAxisAlignment.center,
+          CrossAxisAlignment.center,
           children: [
             height10(),
             Align(
@@ -68,25 +68,25 @@ class Payments_Page extends StatelessWidget {
             ),
             height20(),
             SizedBox(
-              height: 300.h,
+              height: 400.h,
               child: ListView.builder(
-                itemCount: PaymentMethodList.length,
+                itemCount: UpdatePaymentMethodList.length,
                 itemBuilder: (context, index) {
                   return Column(
                     children: [
                       ListTile(
                         contentPadding: EdgeInsets.symmetric(vertical: 0.h),
                         visualDensity:
-                            VisualDensity(horizontal: 4, vertical: -1.h),
+                        VisualDensity(horizontal: 4, vertical: -1.h),
                         leading: Image.asset(
                             height: 40,
                             width: 40,
-                            '${PaymentMethodList[index].paymentLogo}'),
+                            '${UpdatePaymentMethodList[index].uppaymentLogo}'),
                         title: Text(
-                          '${PaymentMethodList[index].paymentName}',
+                          '${UpdatePaymentMethodList[index].uppaymentName}',
                           style: TextStyle(
                               fontWeight:
-                                  FontWeight.bold,
+                              FontWeight.bold,
                               fontSize: 20.sp),
                         ),
                         trailing: Radio(
@@ -102,9 +102,9 @@ class Payments_Page extends StatelessWidget {
               ),
             ),
             pay_AddNewButton(context,
-               pay_pageName: '/Add_New_Card',
-               pay_AddNewButton_Name:
-                   'Add New Card'),
+                pay_pageName: '/Add_New_Card',
+                pay_AddNewButton_Name:
+                'Add New Card'),
           ],
         ),
       ),
@@ -112,27 +112,32 @@ class Payments_Page extends StatelessWidget {
   }
 }
 
-List PaymentMethodList = [
-  PaymentMethodClass(
+List UpdatePaymentMethodList = [
+  UpdatePaymentMethodClass(
     'assets/images/paypal.png',
     'Paypal',
   ),
-  PaymentMethodClass(
+  UpdatePaymentMethodClass(
     'assets/images/google.png',
     'Google Pay',
   ),
-  PaymentMethodClass(
+  UpdatePaymentMethodClass(
     'assets/images/apple.png',
     'Apple Pay',
   ),
+
+  UpdatePaymentMethodClass(
+    'assets/images/master_card.png',
+    '----------------- 4789',
+  ),
 ];
 
-class PaymentMethodClass {
-  final String paymentLogo;
-  final String paymentName;
+class UpdatePaymentMethodClass {
+  final String uppaymentLogo;
+  final String uppaymentName;
 
-  PaymentMethodClass(
-      this.paymentLogo,
-      this.paymentName,
+  UpdatePaymentMethodClass(
+      this.uppaymentLogo,
+      this.uppaymentName,
       );
 }

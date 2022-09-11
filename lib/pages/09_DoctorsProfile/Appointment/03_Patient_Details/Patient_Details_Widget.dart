@@ -37,40 +37,34 @@ Widget pdNextButton(BuildContext context,
             )));
 
 Widget ganderDropDown() =>
-    SizedBox(
-      height: 70.h,
-      child: DropdownButtonFormField<String>(
-          decoration: InputDecoration(
-              prefixIcon: Icon(
-                Icons.access_time_filled,
-                color: Colors.black,
-                size: 24.sp,
-              ),
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(15.r)))),
-          value: 'Male', items: <String>['Male', 'Female'].map((String value) {
-            return DropdownMenuItem<String>(
-                value: value, child: Text(value));}).toList(),
-          onChanged: (_) {}),
-    );
+    DropdownButtonFormField<String>(
+        decoration: InputDecoration(
+            prefixIcon: Icon(
+              Icons.access_time_filled,
+              color: Colors.black,
+              size: 24.sp,
+            ),
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(15.r)))),
+        value: 'Male', items: <String>['Male', 'Female'].map((String value) {
+          return DropdownMenuItem<String>(
+              value: value, child: Text(value));}).toList(),
+        onChanged: (_) {});
 
 Widget age_DropDown() =>
-    SizedBox(
-      height: 70.h,
-      child: DropdownButtonFormField<String>(
-          decoration: InputDecoration(
-              prefixIcon: Icon(
-                Icons.access_time_filled,
-                color: Colors.black,
-                size: 24.sp,
-              ),
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(15.r)))),
-          value: '27 Years', items: <String>['27 Years', '30 Years'].map((String value) {
-        return DropdownMenuItem<String>(
-            value: value, child: Text(value));}).toList(),
-          onChanged: (_) {}),
-    );
+    DropdownButtonFormField<String>(
+        decoration: InputDecoration(
+            prefixIcon: Icon(
+              Icons.access_time_filled,
+              color: Colors.black,
+              size: 24.sp,
+            ),
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(15.r)))),
+        value: '27 Years', items: <String>['27 Years', '30 Years'].map((String value) {
+      return DropdownMenuItem<String>(
+          value: value, child: Text(value));}).toList(),
+        onChanged: (_) {});
 
 Widget pdTextField(
     { required String pdHintText}) =>

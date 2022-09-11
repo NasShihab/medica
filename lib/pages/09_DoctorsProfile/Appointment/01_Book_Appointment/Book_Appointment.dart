@@ -142,7 +142,7 @@ class Book_Appointment extends StatelessWidget {
               height20(),
               nextButton(context,
                   tdButtonName: 'Next',
-                  tdPageName: '/02_Select_Package')
+                  tdPageName: '/Select_Package')
             ],
           ),
         ),

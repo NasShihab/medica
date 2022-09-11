@@ -18,7 +18,7 @@ class Add_New_Card extends StatelessWidget {
               .centerFloat,
       floatingActionButton: pdNextButton(context,
           tdButtonName: 'Next',
-          tdPageName: '/welcome'),
+          tdPageName: '/Payment_UpdateCard'),
       appBar: AppBar(
         actions: [
           IconButton(

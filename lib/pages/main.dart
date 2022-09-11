@@ -19,6 +19,9 @@ import '09_DoctorsProfile/Appointment/02_Select_Package/Select_Package.dart';
 import '09_DoctorsProfile/Appointment/03_Patient_Details/Patient_Details.dart';
 import '09_DoctorsProfile/Appointment/04_Payments/Payments_Page.dart';
 import '09_DoctorsProfile/Appointment/05_Add_New_Card/Add_New_Card.dart';
+import '09_DoctorsProfile/Appointment/06_Payment_UpdateCard/Payment_UpdateCard.dart';
+import '09_DoctorsProfile/Appointment/Review_Summary/Enter_Pin.dart';
+import '09_DoctorsProfile/Appointment/Review_Summary/Review_Summary.dart';
 import '09_DoctorsProfile/DoctorsProfile.dart';
 import '09_DoctorsProfile/Review/DoctorsReviews.dart';
 
@@ -34,7 +37,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         initialRoute: '/',
         routes: {
-          '/' : (context) => const Add_New_Card(),
+          '/' : (context) => const Enter_Pin(),
           '/welcome' : (context) => const welcome(),
           '/login' : (context) => const login(),
           '/sign_up' : (context) => const SignUp(),
@@ -51,11 +54,14 @@ class MyApp extends StatelessWidget {
           '/SearchPage' : (context) =>  const SearchPage(),
           '/DoctorsProfile' : (context) =>  const DoctorsProfile(),
           '/DoctorsReviews' : (context) =>  const DoctorsReviews(),
-          '/01_Book_Appointment' : (context) =>  const Book_Appointment(),
-          '/02_Select_Package' : (context) =>  const Select_Package(),
-          '/03_Patient_Details' : (context) =>  const Patient_Details(),
+          '/Book_Appointment' : (context) =>  const Book_Appointment(),
+          '/Select_Package' : (context) =>  const Select_Package(),
+          '/Patient_Details' : (context) =>  const Patient_Details(),
           '/Payments_Page' : (context) =>  const Payments_Page(),
-          '/05_Add_New_Card' : (context) =>  const Add_New_Card(),
+          '/Add_New_Card' : (context) =>  const Add_New_Card(),
+          '/Payment_UpdateCard' : (context) =>  const Payment_UpdateCard(),
+          '/Review_Summary' : (context) =>  const Review_Summary(),
+          '/Enter_Pin' : (context) =>  const Enter_Pin(),
 
         },
         theme: ThemeData(fontFamily: 'Roboto'),
