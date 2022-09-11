@@ -120,7 +120,9 @@ class DoctorsProfile extends StatelessWidget {
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(50.r))),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/Book_Appointment');
+                        },
                         child: Text(
                           'Book Appointment',
                           style: TextStyle(fontSize: 20.sp),

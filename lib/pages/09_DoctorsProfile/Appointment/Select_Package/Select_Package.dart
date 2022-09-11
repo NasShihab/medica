@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
-import 'Select_Package_Model.dart';
+import 'Select_Package_Widget.dart';
 
 class Select_Package extends StatelessWidget {
   const Select_Package({Key? key})
@@ -11,7 +11,7 @@ class Select_Package extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: spNextButton(context, tdButtonName: 'Flo', tdPageName: '/welcome'),
+      floatingActionButton: spNextButton(context, tdButtonName: 'Flo', tdPageName: '/Patient_Details'),
       appBar: AppBar(
         actions: [
           IconButton(

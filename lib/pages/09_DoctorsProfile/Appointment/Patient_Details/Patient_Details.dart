@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../Z_other/mySizedBox.dart';
-import 'Patient_Details_Model.dart';
+import 'Patient_Details_Widget.dart';
 
 class Patient_Details extends StatelessWidget {
   const Patient_Details({Key? key})
@@ -16,7 +16,7 @@ class Patient_Details extends StatelessWidget {
               .centerFloat,
       floatingActionButton: pdNextButton(context,
           tdButtonName: 'Next',
-          tdPageName: '/welcome'),
+          tdPageName: '/Payments_Page'),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -51,45 +51,42 @@ class Patient_Details extends StatelessWidget {
               color: Colors.black,
             )),
       ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: 20.w),
-          child: Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.start,
-            children: [
-              height10(),
-              Text(
-                'Full Name',
-                style: TextStyle(fontSize: 20.sp),
-              ),
-              height20(),
-              pdTextField(pdHintText: 'Antony Gomez'),
-              height20(),
-              Text(
-                'Gender',
-                style: TextStyle(fontSize: 20.sp),
-              ),
-              height20(),
-              ganderDropDown(),
-              height20(),
-              Text(
-                'Your Age',
-                style: TextStyle(fontSize: 20.sp),
-              ),
-              height20(),
-              age_DropDown(),
-              height30(),
-              Text(
-                'Write your problem',
-                style: TextStyle(fontSize: 20.sp),
-              ),
-              height20(),
-              patient_problem_box(pdHintText: 'Hello Doctor, my problem is.............'),
-            ],
-          ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(
+            horizontal: 20.w),
+        child: Column(
+          crossAxisAlignment:
+              CrossAxisAlignment.start,
+          children: [
+            height10(),
+            Text(
+              'Full Name',
+              style: TextStyle(fontSize: 20.sp),
+            ),
+            height20(),
+            pdTextField(pdHintText: 'Antony Gomez'),
+            height20(),
+            Text(
+              'Gender',
+              style: TextStyle(fontSize: 20.sp),
+            ),
+            height20(),
+            ganderDropDown(),
+            height20(),
+            Text(
+              'Your Age',
+              style: TextStyle(fontSize: 20.sp),
+            ),
+            height20(),
+            age_DropDown(),
+            height30(),
+            Text(
+              'Write your problem',
+              style: TextStyle(fontSize: 20.sp),
+            ),
+            height20(),
+            patient_problem_box(pdHintText: 'Hello Doctor, my problem is.............'),
+          ],
         ),
       ),
     );

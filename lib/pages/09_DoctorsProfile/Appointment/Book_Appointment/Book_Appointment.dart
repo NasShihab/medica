@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
-
-import 'Book_Appointment_Model.dart';
+import 'Book_Appointment_Widget.dart';
 
 class Book_Appointment extends StatelessWidget {
   const Book_Appointment({Key? key})
