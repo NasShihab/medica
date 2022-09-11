@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../Z_other/mySizedBox.dart';
-import '../Patient_Details/Patient_Details_Widget.dart';
+import '../03_Patient_Details/Patient_Details_Widget.dart';
 import 'Add_New_Card_Widget.dart';
 
 class Add_New_Card extends StatelessWidget {

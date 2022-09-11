@@ -121,7 +121,7 @@ class DoctorsProfile extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(50.r))),
                         ),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/Book_Appointment');
+                          Navigator.pushNamed(context, '/01_Book_Appointment');
                         },
                         child: Text(
                           'Book Appointment',

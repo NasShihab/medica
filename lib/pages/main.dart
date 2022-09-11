@@ -14,11 +14,11 @@ import '03_forget_password/CreatePassword.dart';
 import '03_forget_password/ForgetPassword.dart';
 import '03_forget_password/OtpCode.dart';
 import '06_FavoriteDoctors/favorite_doctors.dart';
-import '09_DoctorsProfile/Appointment/Add_New_Card/Add_New_Card.dart';
-import '09_DoctorsProfile/Appointment/Book_Appointment/Book_Appointment.dart';
-import '09_DoctorsProfile/Appointment/Patient_Details/Patient_Details.dart';
-import '09_DoctorsProfile/Appointment/Payments/Payments_Page.dart';
-import '09_DoctorsProfile/Appointment/Select_Package/Select_Package.dart';
+import '09_DoctorsProfile/Appointment/01_Book_Appointment/Book_Appointment.dart';
+import '09_DoctorsProfile/Appointment/02_Select_Package/Select_Package.dart';
+import '09_DoctorsProfile/Appointment/03_Patient_Details/Patient_Details.dart';
+import '09_DoctorsProfile/Appointment/04_Payments/Payments_Page.dart';
+import '09_DoctorsProfile/Appointment/05_Add_New_Card/Add_New_Card.dart';
 import '09_DoctorsProfile/DoctorsProfile.dart';
 import '09_DoctorsProfile/Review/DoctorsReviews.dart';
 
@@ -51,11 +51,11 @@ class MyApp extends StatelessWidget {
           '/SearchPage' : (context) =>  const SearchPage(),
           '/DoctorsProfile' : (context) =>  const DoctorsProfile(),
           '/DoctorsReviews' : (context) =>  const DoctorsReviews(),
-          '/Book_Appointment' : (context) =>  const Book_Appointment(),
-          '/Select_Package' : (context) =>  const Select_Package(),
-          '/Patient_Details' : (context) =>  const Patient_Details(),
+          '/01_Book_Appointment' : (context) =>  const Book_Appointment(),
+          '/02_Select_Package' : (context) =>  const Select_Package(),
+          '/03_Patient_Details' : (context) =>  const Patient_Details(),
           '/Payments_Page' : (context) =>  const Payments_Page(),
-          '/Add_New_Card' : (context) =>  const Add_New_Card(),
+          '/05_Add_New_Card' : (context) =>  const Add_New_Card(),
 
         },
         theme: ThemeData(fontFamily: 'Roboto'),

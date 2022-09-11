@@ -16,7 +16,7 @@ class Payments_Page extends StatelessWidget {
       floatingActionButton: pay_NextButton(
           context,
           tdButtonName: 'Next',
-          tdPageName: '/Add_New_Card'),
+          tdPageName: '/welcome'),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -32,7 +32,7 @@ class Payments_Page extends StatelessWidget {
         title: FittedBox(
           fit: BoxFit.fitWidth,
           child: Text(
-            'Payments',
+            '04_Payments',
             style: TextStyle(
                 fontSize: 24.sp,
                 color: Colors.black),
@@ -82,7 +82,7 @@ class Payments_Page extends StatelessWidget {
                     'assets/images/apple.png',
                 payText: 'Apple Pay'),
             height30(),
-            pay_AddNewButton(context, pay_pageName: '/welcome', pay_AddNewButton_Name: 'Add New Card'),
+            pay_AddNewButton(context, pay_pageName: '/05_Add_New_Card', pay_AddNewButton_Name: 'Add New Card'),
           ],
         ),
       ),
