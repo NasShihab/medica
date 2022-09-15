@@ -20,7 +20,10 @@ import '09_DoctorsProfile/Appointment/03_Patient_Details/Patient_Details.dart';
 import '09_DoctorsProfile/Appointment/04_Payments/Payments_Page.dart';
 import '09_DoctorsProfile/Appointment/05_Add_New_Card/Add_New_Card.dart';
 import '09_DoctorsProfile/Appointment/06_Payment_UpdateCard/Payment_UpdateCard.dart';
-import '09_DoctorsProfile/Appointment/Review_Summary/Enter_Pin.dart';
+import '09_DoctorsProfile/Appointment/07_Enter_Pin/Enter_Pin.dart';
+import '09_DoctorsProfile/Appointment/08_My_Appointment/Canceled_Appointment.dart';
+import '09_DoctorsProfile/Appointment/08_My_Appointment/Completed_Appointment.dart';
+import '09_DoctorsProfile/Appointment/08_My_Appointment/My_Appointment.dart';
 import '09_DoctorsProfile/Appointment/Review_Summary/Review_Summary.dart';
 import '09_DoctorsProfile/DoctorsProfile.dart';
 import '09_DoctorsProfile/Review/DoctorsReviews.dart';
@@ -35,6 +38,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: (_, child) => MaterialApp(
+
         initialRoute: '/',
         routes: {
           '/' : (context) => const welcome(),
@@ -62,9 +66,13 @@ class MyApp extends StatelessWidget {
           '/Payment_UpdateCard' : (context) =>  const Payment_UpdateCard(),
           '/Review_Summary' : (context) =>  const Review_Summary(),
           '/Enter_Pin' : (context) =>  const Enter_Pin(),
+          '/My_Appointment' : (context) =>  const My_Appointment(),
+          '/Completed_Appointment' : (context) =>  const Completed_Appointment(),
+          '/Canceled_Appointment' : (context) =>  const Canceled_Appointment(),
 
         },
-        theme: ThemeData(fontFamily: 'Roboto'),
+        theme: ThemeData(fontFamily: 'Roboto',
+        primarySwatch: Colors.indigo),
         debugShowCheckedModeBanner: false,
       ),
       designSize: const Size(428, 926),

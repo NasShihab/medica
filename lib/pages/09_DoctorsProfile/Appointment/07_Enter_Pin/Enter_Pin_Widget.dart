@@ -113,10 +113,10 @@ Widget errorAlert_Widget(
               child: Column(
                 children: [
                   Flexible(
-                    child: mycustom_button_Blue(
+                    child: mycustom_ShowDialogbutton_Blue(
                         context,
-                        pageName: '',
-                        btname: 'Try Again'),
+                        bttttname: 'Try Again',
+                        myCCustomDialog: success_AlertDialog(context)),
                   ),
                   height10(),
                   Flexible(

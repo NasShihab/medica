@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar mycustomAppBar(BuildContext context,
-        {required String appBarTitle, required Widget action_Icons}) =>
+        {required String appBarTitle,
+        required Widget action_Icons}) =>
     AppBar(
       title: FittedBox(
         fit: BoxFit.fitWidth,
@@ -13,9 +14,7 @@ AppBar mycustomAppBar(BuildContext context,
               color: Colors.black),
         ),
       ),
-      actions: [
-        action_Icons
-      ],
+      actions: [action_Icons],
       elevation: 0,
       backgroundColor: Colors.transparent,
       leading: IconButton(
@@ -28,3 +27,4 @@ AppBar mycustomAppBar(BuildContext context,
             color: Colors.black,
           )),
     );
+

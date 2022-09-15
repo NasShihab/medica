@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/Review_Summary/Enter_Pin_Widget.dart';
+import 'package:medica/pages/09_DoctorsProfile/Appointment/07_Enter_Pin/Enter_Pin_Widget.dart';
 import 'package:medica/pages/Z_other/custom_Button.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
