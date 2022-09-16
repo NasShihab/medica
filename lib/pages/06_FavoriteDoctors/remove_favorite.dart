@@ -8,7 +8,6 @@ import 'ListItem_FavoriteDoctors.dart';
 class RemoveFavorite extends StatelessWidget {
   const RemoveFavorite({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(

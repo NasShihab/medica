@@ -4,19 +4,14 @@ import '../../../Z_other/mySizedBox.dart';
 import 'Patient_Details_Widget.dart';
 
 class Patient_Details extends StatelessWidget {
-  const Patient_Details({Key? key})
-      : super(key: key);
+  const Patient_Details({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation
-              .centerFloat,
-      floatingActionButton: pdNextButton(context,
-          tdButtonName: 'Next',
-          tdPageName: '/Payments_Page'),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: pdNextButton(context, tdButtonName: 'Next', tdPageName: '/Payments_Page'),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -33,17 +28,14 @@ class Patient_Details extends StatelessWidget {
           fit: BoxFit.fitWidth,
           child: Text(
             'Patient Details',
-            style: TextStyle(
-                fontSize: 24.sp,
-                color: Colors.black),
+            style: TextStyle(fontSize: 24.sp, color: Colors.black),
           ),
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-              Navigator.pushNamed(
-                  context, '/HomePage');
+              Navigator.pushNamed(context, '/HomePage');
             },
             icon: Icon(
               Icons.arrow_back,
@@ -52,11 +44,9 @@ class Patient_Details extends StatelessWidget {
             )),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: 20.w),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
-          crossAxisAlignment:
-              CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             height10(),
             Text(
@@ -85,7 +75,7 @@ class Patient_Details extends StatelessWidget {
               style: TextStyle(fontSize: 20.sp),
             ),
             height20(),
-            patient_problem_box(pdHintText: 'Hello Doctor, my problem is.............'),
+            long_Text_Box(pdHintText: 'Hello Doctor, my problem is.............'),
           ],
         ),
       ),

@@ -1,12 +1,12 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../Z_other/myColor.dart';
 import '../../../Z_other/mySizedBox.dart';
-import 'My_Appointment_Widget.dart';
 
-class Upcoming_Appointment extends StatelessWidget {
-  const Upcoming_Appointment({Key? key}) : super(key: key);
+class Canceled_Appointment extends StatelessWidget {
+  const Canceled_Appointment({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,13 +57,13 @@ class Upcoming_Appointment extends StatelessWidget {
                               Container(
                                 padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 5.w),
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                                    border: Border.all(
-                                        color: Colors.blue
-                                    )
+                                  borderRadius: const BorderRadius.all(Radius.circular(8)),
+                                  border: Border.all(
+                                    color: Colors.red
+                                  )
                                 ),
-                                child: const Text('Upcoming',
-                                  style: TextStyle(color: Colors.blue),),
+                                child: const Text('Canceled',
+                                  style: TextStyle(color: Colors.red),),
                               ),
                               Row(
                                 children: [
@@ -92,18 +92,6 @@ class Upcoming_Appointment extends StatelessWidget {
                       ),
                     ),
                   ),
-                ],
-              ),
-              const Divider(
-                thickness: 2,
-                height: 2,
-              ),
-              height20(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(child: Book_again_button(context, btname: 'Cancel Appointment', pageName: '/')),
-                  Expanded(child: Leave_a_review_Button(context, btname: 'Reschedule', pageName: '/')),
                 ],
               ),
             ],

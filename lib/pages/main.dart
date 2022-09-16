@@ -21,9 +21,11 @@ import '09_DoctorsProfile/Appointment/04_Payments/Payments_Page.dart';
 import '09_DoctorsProfile/Appointment/05_Add_New_Card/Add_New_Card.dart';
 import '09_DoctorsProfile/Appointment/06_Payment_UpdateCard/Payment_UpdateCard.dart';
 import '09_DoctorsProfile/Appointment/07_Enter_Pin/Enter_Pin.dart';
-import '09_DoctorsProfile/Appointment/08_My_Appointment/Canceled_Appointment.dart';
-import '09_DoctorsProfile/Appointment/08_My_Appointment/Completed_Appointment.dart';
-import '09_DoctorsProfile/Appointment/08_My_Appointment/My_Appointment.dart';
+import '09_DoctorsProfile/Appointment/08_My_Appointment/c_Canceled_Appointment.dart';
+import '09_DoctorsProfile/Appointment/08_My_Appointment/b_Completed_Appointment.dart';
+import '09_DoctorsProfile/Appointment/08_My_Appointment/0_My_Appointment.dart';
+import '09_DoctorsProfile/Appointment/08_My_Appointment/d_Reschedule_Appoinment.dart';
+import '09_DoctorsProfile/Appointment/08_My_Appointment/e_Canceled_Reason.dart';
 import '09_DoctorsProfile/Appointment/Review_Summary/Review_Summary.dart';
 import '09_DoctorsProfile/DoctorsProfile.dart';
 import '09_DoctorsProfile/Review/DoctorsReviews.dart';
@@ -69,6 +71,9 @@ class MyApp extends StatelessWidget {
           '/My_Appointment' : (context) =>  const My_Appointment(),
           '/Completed_Appointment' : (context) =>  const Completed_Appointment(),
           '/Canceled_Appointment' : (context) =>  const Canceled_Appointment(),
+          '/Reschedule_Appointment' : (context) =>  const Reschedule_Appointment(),
+          '/Reschedule_Appointment2' : (context) =>  const Reschedule_Appointment2(),
+          '/Canceled_Reason' : (context) =>  const Canceled_Reason(),
 
         },
         theme: ThemeData(fontFamily: 'Roboto',

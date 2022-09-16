@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/07_Enter_Pin/Enter_Pin_Widget.dart';
 import 'package:medica/pages/Z_other/custom_Button.dart';
+import 'package:medica/pages/Z_other/myColor.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -13,23 +14,24 @@ class Enter_Pin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: mycustom_ShowDialogbutton_Blue(context,
-              bttttname: 'Continue',
-              myCCustomDialog: errorAlert_Widget(context)),
+      floatingActionButton: mycustom_ShowDialogbutton_Blue(
+        context,
+        bttttname: 'Continue',
+        myCCustomDialog: errorAlert_Widget(context), btFontSize: 20, btHight: 35, myColor: myBlueAccent,
+      ),
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: mycustomAppBar(context, appBarTitle: 'Enter Pin',
+      appBar: mycustomAppBar(context,
+          appBarTitle: 'Enter Pin',
           action_Icons: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
             child: const SizedBox.shrink(),
           )),
       body: SafeArea(
           child: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: 24.w, vertical: 25.h),
+        padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
         child: Column(
-          mainAxisAlignment:
-              MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Enter your pin to confirm your appointment',

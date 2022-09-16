@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/08_My_Appointment/Upcoming_Appointment.dart';
-import 'Canceled_Appointment.dart';
-import 'Completed_Appointment.dart';
+import 'package:medica/pages/09_DoctorsProfile/Appointment/08_My_Appointment/a_Upcoming_Appointment.dart';
+import 'c_Canceled_Appointment.dart';
+import 'b_Completed_Appointment.dart';
 import 'Tab_Bar.dart';
 
 class My_Appointment extends StatelessWidget {

@@ -94,7 +94,7 @@ class Completed_Appointment extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(child: Book_again_button(context, btname: 'Book Again', pageName: '/')),
-                  Expanded(child: Leave_a_review_Button(context, btname: 'Leave a review', pageName: '/')),
+                  Expanded(child: myCustom_Mini_button(context, btname: 'Leave a review', pageName: '/')),
                 ],
               ),
             ],

@@ -88,7 +88,7 @@ Widget pdTextField(
       ),
     );
 
-Widget patient_problem_box(
+Widget long_Text_Box(
     { required String pdHintText}) =>
     SizedBox(
       height: 200.h,

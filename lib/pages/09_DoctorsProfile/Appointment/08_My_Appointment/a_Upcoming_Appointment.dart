@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/pages/09_DoctorsProfile/Appointment/08_My_Appointment/z_Widgets.dart';
+import 'package:medica/pages/Z_other/custom_Button.dart';
 import '../../../Z_other/myColor.dart';
 import '../../../Z_other/mySizedBox.dart';
+import 'My_Appointment_Widget.dart';
 
-class Canceled_Appointment extends StatelessWidget {
-  const Canceled_Appointment({Key? key}) : super(key: key);
+class Upcoming_Appointment extends StatelessWidget {
+  const Upcoming_Appointment({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,14 +57,11 @@ class Canceled_Appointment extends StatelessWidget {
                               const Text('Video Call  -'),
                               Container(
                                 padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 5.w),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                                  border: Border.all(
-                                    color: Colors.red
-                                  )
+                                decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(8)), border: Border.all(color: Colors.blue)),
+                                child: const Text(
+                                  'Upcoming',
+                                  style: TextStyle(color: Colors.blue),
                                 ),
-                                child: const Text('Canceled',
-                                  style: TextStyle(color: Colors.red),),
                               ),
                               Row(
                                 children: [
@@ -89,6 +89,45 @@ class Canceled_Appointment extends StatelessWidget {
                         ],
                       ),
                     ),
+                  ),
+                ],
+              ),
+              const Divider(
+                thickness: 2,
+                height: 2,
+              ),
+              height20(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: myFullCustomButton(
+                      context,
+                      btname: 'Cancel Appointment',
+                      mybtHeight: 35,
+                      mybtnWidth: double.infinity,
+                      mybtnFontSize: 16,
+                      mybtnFontWeight: FontWeight.normal,
+                      mybtnforgroundColor: myBlueAccent,
+                      mybtnbackgroundColor: Colors.white,
+                      mybtnBorderColor: myBlueAccent,
+                      mybtnBorderRadius: 50,
+                      myOnPressed: () {
+                        showModalBottomSheet(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(30.r),
+                              ),
+                            ),
+                            context: context,
+                            builder: (context) {
+                              return Cancel_Appointment_Dialog(context);
+                            });
+                      },
+                    ),
+                  ),
+                  Expanded(
+                    child: myCustom_Mini_button(context, btname: 'Reschedule', pageName: '/Reschedule_Appointment'),
                   ),
                 ],
               ),

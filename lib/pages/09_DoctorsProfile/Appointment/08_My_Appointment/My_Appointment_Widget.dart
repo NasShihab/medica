@@ -3,12 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Widget Leave_a_review_Button(BuildContext context, {required String btname, required String pageName}) => Container(
+Widget myCustom_Mini_button(BuildContext context, {required String btname, required String pageName}) => Container(
     padding: EdgeInsets.symmetric(horizontal: 10.w),
     height: 35.h,
     child: ElevatedButton(
         style: ButtonStyle(
-          side: MaterialStateProperty.resolveWith<BorderSide>((states) => const BorderSide(width: 2, color: Colors.blue)),
+          side: MaterialStateProperty.resolveWith<BorderSide>(
+            (states) => const BorderSide(width: 2, color: Colors.blue),
+          ),
           backgroundColor: MaterialStateProperty.all(Colors.blue),
           foregroundColor: MaterialStateProperty.all(Colors.white),
           padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 0.h, horizontal: 0.w)),
