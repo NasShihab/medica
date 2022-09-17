@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/03_Patient_Details/Patient_Details_Widget.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/07_Enter_Pin/Enter_Pin_Widget.dart';
-import 'package:medica/pages/Z_other/custom_Button.dart';
-import 'package:medica/pages/Z_other/myColor.dart';
+import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 
@@ -15,8 +14,6 @@ class Reschedule_Appointment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: mycustom_button_Blue(context, btname: 'Next', pageName: '/Reschedule_Appointment2'),
       resizeToAvoidBottomInset: false,
       appBar: mycustomAppBar(
         context,
@@ -65,6 +62,14 @@ class Reschedule_Appointment extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: myFullCustomButton(
+        myButtonTitle: 'Next',
+        myOnPressed: () {
+          Navigator.pushNamed(context, '/Reschedule_Appointment2');
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      //floatingActionButton: mycustom_button_Blue(context, btname: 'Next', pageName: '/Reschedule_Appointment2'),
     );
   }
 }
@@ -75,14 +80,6 @@ class Reschedule_Appointment2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: mycustom_ShowDialogbutton_Blue(
-        context,
-        bttttname: 'Submit',
-        myCCustomDialog: success_AlertDialog(context, message: 'Reschedule Success'),
-        btFontSize: 20,
-        btHight: 60, myColor: myBlueAccent,
-      ),
       appBar: mycustomAppBar(
         context,
         appBarTitle: 'Reschedule Appoinment',
@@ -158,6 +155,13 @@ class Reschedule_Appointment2 extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: myFullCustomButton(
+        myButtonTitle: 'Submit',
+        myOnPressed: () {
+          showDialog(context: context, builder: (context) => success_AlertDialog(context, message: 'Congrats'));
+        },
       ),
     );
   }

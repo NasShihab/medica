@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/07_Enter_Pin/Enter_Pin_Widget.dart';
-import 'package:medica/pages/Z_other/custom_Button.dart';
-import 'package:medica/pages/Z_other/myColor.dart';
+import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -13,12 +12,6 @@ class Enter_Pin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: mycustom_ShowDialogbutton_Blue(
-        context,
-        bttttname: 'Continue',
-        myCCustomDialog: errorAlert_Widget(context), btFontSize: 20, btHight: 35, myColor: myBlueAccent,
-      ),
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
       appBar: mycustomAppBar(context,
@@ -28,32 +21,40 @@ class Enter_Pin extends StatelessWidget {
             child: const SizedBox.shrink(),
           )),
       body: SafeArea(
-          child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Enter your pin to confirm your appointment',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18.sp),
-            ),
-            height50(),
-            PinCodeTextField(
-              pinTheme: PinTheme(
-                inactiveColor: Colors.grey,
-                activeColor: Colors.grey,
-                shape: PinCodeFieldShape.box,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Enter your pin to confirm your appointment',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18.sp),
               ),
-              obscuringCharacter: "o",
-              appContext: context,
-              length: 4,
-              onChanged: (value) {},
-              keyboardType: TextInputType.number,
-            ),
-          ],
+              height50(),
+              PinCodeTextField(
+                pinTheme: PinTheme(
+                  inactiveColor: Colors.grey,
+                  activeColor: Colors.grey,
+                  shape: PinCodeFieldShape.box,
+                ),
+                obscuringCharacter: "o",
+                appContext: context,
+                length: 4,
+                onChanged: (value) {},
+                keyboardType: TextInputType.number,
+              ),
+            ],
+          ),
         ),
-      )),
+      ),
+      floatingActionButton: myFullCustomButton(
+        myButtonTitle: 'Continue',
+        myOnPressed: () {
+          showDialog(context: context, builder: (context) => errorAlert_Widget(context));
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

@@ -1,4 +1,4 @@
 import 'package:flutter/material.dart';
 
-final myBlueAccent = Colors.blueAccent[700];
-const myblack = Colors.black;
+var myBlueAccent =  const Color(0xFF2962FF);
+var myblack = Colors.black;

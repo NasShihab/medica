@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-AppBar myTabBar(BuildContext context,
-    {required String appBarTitle2,
-      required Widget action_Icons2,
-      required Icon leadingIcon2}) =>
+AppBar myTabBar(
+  BuildContext context, {
+  required String appBarTitle2,
+  Widget action_IconBar = const SizedBox.shrink(),
+  Widget leadingIcon2 = const SizedBox.shrink(),
+}) =>
     AppBar(
       backgroundColor: Colors.transparent,
       bottom: TabBar(
           labelColor: Colors.black,
-          labelStyle: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+          labelStyle: TextStyle(
+            fontSize: 18.sp,
+            fontWeight: FontWeight.bold,
+          ),
           tabs: const [
             Tab(text: 'Upcoming'),
             Tab(text: 'Completed'),
@@ -19,12 +24,10 @@ AppBar myTabBar(BuildContext context,
         fit: BoxFit.fitWidth,
         child: Text(
           appBarTitle2,
-          style: TextStyle(
-              fontSize: 24.sp,
-              color: Colors.black),
+          style: TextStyle(fontSize: 24.sp, color: Colors.black),
         ),
       ),
-      actions: [action_Icons2],
+      actions: [action_IconBar],
       elevation: 0,
       leading: IconButton(
         onPressed: () {

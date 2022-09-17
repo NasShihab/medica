@@ -1,7 +1,8 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../Z_other/custom_Button.dart';
+import '../../../Z_other/myFullCustomButton.dart';
 import '../../../Z_other/myColor.dart';
 
 Widget Cancel_Appointment_Dialog(BuildContext context) => SizedBox(
@@ -34,32 +35,33 @@ Widget Cancel_Appointment_Dialog(BuildContext context) => SizedBox(
             Row(
               children: [
                 Expanded(
-                  child: myFullCustomButton(context,
-                      btname: 'Back',
-                      mybtHeight: 60,
-                      mybtnWidth: double.infinity,
-                      mybtnFontSize: 18,
-                      mybtnFontWeight: FontWeight.normal,
-                      mybtnforgroundColor: myBlueAccent,
-                      mybtnbackgroundColor: Colors.grey,
-                      mybtnBorderColor: Colors.white,
-                      mybtnBorderRadius: 50, myOnPressed: () {
-                    Navigator.pop(context);
-                  }),
+                  child: myFullCustomButton(
+                      myButtonTitle: 'Back',
+                      myButtonHeight: 60,
+                      myButtonWidth: double.infinity,
+                      myButtonFontSize: 18,
+                      myButtonFontWeight: FontWeight.normal,
+                      myButtonForgroundColor: myBlueAccent,
+                      myButtonBackgroundColor: Colors.grey,
+                      myButtonBorderColor: Colors.white,
+                      myButton_BorderRadius: 50,
+                      myOnPressed: () {
+                        Navigator.pop(context);
+                      }),
                 ),
                 Expanded(
-                  child: myFullCustomButton(context,
-                      btname: 'Yes, Continue',
-                      mybtHeight: 60,
-                      mybtnWidth: double.infinity,
-                      mybtnFontSize: 18,
-                      mybtnFontWeight: FontWeight.normal,
-                      mybtnforgroundColor: Colors.white,
-                      mybtnbackgroundColor: myBlueAccent,
-                      mybtnBorderColor: myBlueAccent,
-                      mybtnBorderRadius: 50,
+                  child: myFullCustomButton(
+                      myButtonTitle: 'Yes, Continue',
+                      myButtonHeight: 60,
+                      myButtonWidth: double.infinity,
+                      myButtonFontSize: 18,
+                      myButtonFontWeight: FontWeight.normal,
+                      myButtonForgroundColor: Colors.white,
+                      myButtonBackgroundColor: myBlueAccent,
+                      myButtonBorderColor: myBlueAccent,
+                      myButton_BorderRadius: 50,
                       myOnPressed: () {
-                    Navigator.pushNamed(context, '/Canceled_Reason');
+                        Navigator.pushNamed(context, '/Canceled_Reason');
                       }),
                 ),
               ],
@@ -99,21 +101,23 @@ Widget cancel_dialog(BuildContext context, {required String message}) => AlertDi
           ),
           Flexible(
             child: Flexible(
-              child: myFullCustomButton(context,
-                  btname: 'OK',
-                  mybtHeight: 60,
-                  mybtnWidth: double.infinity,
-                  mybtnFontSize: 20,
-                  mybtnFontWeight: FontWeight.normal,
-                  mybtnforgroundColor: Colors.white,
-                  mybtnbackgroundColor: myBlueAccent,
-                  mybtnBorderColor: myBlueAccent,
-                  mybtnBorderRadius: 50,
-                  myOnPressed: (){
-                Navigator.pushNamed(context, '/My_Appointment');
+              child: myFullCustomButton(
+                  myButtonTitle: 'OK',
+                  myButtonHeight: 60,
+                  myButtonWidth: double.infinity,
+                  myButtonFontSize: 20,
+                  myButtonFontWeight: FontWeight.normal,
+                  myButtonForgroundColor: Colors.white,
+                  myButtonBackgroundColor: myBlueAccent,
+                  myButtonBorderColor: myBlueAccent,
+                  myButton_BorderRadius: 50,
+                  myOnPressed: () {
+                    Navigator.pushNamed(context, '/My_Appointment');
                   }),
             ),
           ),
         ],
       ),
     ));
+
+
