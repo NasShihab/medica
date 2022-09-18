@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../Z_other/myFullCustomButton.dart';
 import '../../../Z_other/myColor.dart';
 import '../../../Z_other/myCustom_ListTile.dart';
+import '../../../Z_other/mySizedBox.dart';
 
 class Completed_Appointment extends StatelessWidget {
   const Completed_Appointment({Key? key}) : super(key: key);
@@ -14,18 +15,33 @@ class Completed_Appointment extends StatelessWidget {
       itemCount: 5,
       itemBuilder: (context, index) {
         return myCustom_ListTile(
-          myChart_DoctorAlertText: Container(
-            padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 5.w),
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(8)),
-              border: Border.all(color: Colors.green),
+          myChart_Title: Row(
+        children: [
+        Flex(
+        direction: Axis.vertical,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            height10(),
+            Text('Alexa D Mex', style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold)),
+            height10(),
+            Row(
+              children: [
+                Text('Messaging  -', style: TextStyle(fontSize: 16.sp)),
+                width10(),
+                myBorderText(
+                  myBorderText_borderColor: Colors.green,
+                    my_text_color: Colors.green,
+                    my_text: 'Completed'),
+              ],
             ),
-            child: Text(
-              'Completed',
-              style: TextStyle(color: Colors.green, fontSize: 14.sp),
-            ),
-          ),
-          myChart_AlertIcon: Icons.video_camera_back,
+            height10(),
+            Text('20 Feb 2022  |  10:00 PM', style: TextStyle(fontSize: 16.sp)),
+          ],
+        ),
+        width10(),
+        Flexible(child: myCircleAvatarIcon(myIcon: Icons.message)),
+        ],
+        ),
           myChart_Bottom: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,

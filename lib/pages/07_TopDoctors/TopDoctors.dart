@@ -90,8 +90,8 @@ class TopDoctors extends StatelessWidget {
                           Container(
                             margin: EdgeInsets.symmetric(
                                 horizontal: 10.w, vertical: 10.h),
-                            height: 100,
-                            width: 100,
+                            height: 120.h,
+                            width: 120.w,
                             child: ClipRRect(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10.r)),

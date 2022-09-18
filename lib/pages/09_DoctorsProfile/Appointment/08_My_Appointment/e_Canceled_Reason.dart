@@ -16,7 +16,7 @@ class Canceled_Reason extends StatelessWidget {
       appBar: mycustomAppBar(
         context,
         appBarTitle: 'Cancel Appoinment',
-        action_Icons: SizedBox.shrink(),
+        action_Icons: const SizedBox.shrink(),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),

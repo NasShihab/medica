@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
 
         initialRoute: '/',
         routes: {
-          '/' : (context) => const Canceled_Reason(),
+          '/' : (context) => const My_Appointment(),
           '/welcome' : (context) => const welcome(),
           '/login' : (context) => const login(),
           '/sign_up' : (context) => const SignUp(),
