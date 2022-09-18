@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 
 class FillProfile extends StatelessWidget {
   const FillProfile({Key? key}) : super(key: key);
@@ -9,19 +10,7 @@ class FillProfile extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        title: const Text('Fill Your Profile',style: TextStyle(color: Colors.black),),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/HomePage');
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-            )),
-      ),
+      appBar: mycustomAppBar(context, appBarTitle: 'Fill Your Profile'),
       body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.w),

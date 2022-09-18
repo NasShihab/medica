@@ -13,7 +13,7 @@ class DoctorsProfile extends StatelessWidget {
     return Scaffold(
       appBar: mycustomAppBar(context,
           appBarTitle: 'Doctor Profile',
-          action_Icons: Row(
+          actionBarIcons: Row(
             children: [
               IconButton(
                   visualDensity: VisualDensity.compact,

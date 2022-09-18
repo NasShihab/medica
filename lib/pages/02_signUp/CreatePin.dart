@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-
 
 // ignore: camel_case_types
 class CreatePin extends StatelessWidget {
@@ -12,22 +12,7 @@ class CreatePin extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        title: const Text(
-          'Create New PIN',
-          style: TextStyle(color: Colors.black),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/HomePage');
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-            )),
-      ),
+      appBar: mycustomAppBar(context, appBarTitle: 'Create New Pin'),
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
@@ -59,14 +44,10 @@ class CreatePin extends StatelessWidget {
                     Navigator.pushNamed(context, '/fingerprint');
                   },
                   style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.blueAccent[700]),
+                    backgroundColor: MaterialStateProperty.all(Colors.blueAccent[700]),
                     foregroundColor: MaterialStateProperty.all(Colors.white),
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(vertical: 14.h)),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50.r))),
+                    padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.r))),
                   ),
                   child: Text(
                     'Continue',

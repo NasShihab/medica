@@ -18,7 +18,7 @@ class Reschedule_Appointment extends StatelessWidget {
       appBar: mycustomAppBar(
         context,
         appBarTitle: 'Reschedule Appoinment',
-        action_Icons: SizedBox.shrink(),
+        actionBarIcons: const SizedBox.shrink(),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
@@ -83,7 +83,7 @@ class Reschedule_Appointment2 extends StatelessWidget {
       appBar: mycustomAppBar(
         context,
         appBarTitle: 'Reschedule Appoinment',
-        action_Icons: SizedBox.shrink(),
+        actionBarIcons: SizedBox.shrink(),
       ),
       resizeToAvoidBottomInset: false,
       body: SafeArea(

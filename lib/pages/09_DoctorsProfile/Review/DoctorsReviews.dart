@@ -11,7 +11,7 @@ class DoctorsReviews extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: mycustomAppBar(context, appBarTitle: '4.8(4,200 reviews)',
-          action_Icons: IconButton(onPressed: (){}, icon: Icon(Icons.expand_circle_down_outlined, color: Colors.black,)),
+          actionBarIcons: IconButton(onPressed: (){}, icon: Icon(Icons.expand_circle_down_outlined, color: Colors.black,)),
       ),
       body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),

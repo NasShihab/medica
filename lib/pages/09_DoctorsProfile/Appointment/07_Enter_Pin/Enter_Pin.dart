@@ -14,12 +14,7 @@ class Enter_Pin extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: mycustomAppBar(context,
-          appBarTitle: 'Enter Pin',
-          action_Icons: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.w),
-            child: const SizedBox.shrink(),
-          )),
+      appBar: mycustomAppBar(context, appBarTitle: 'Enter Pin'),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),

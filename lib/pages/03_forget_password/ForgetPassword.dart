@@ -10,7 +10,7 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: mycustomAppBar(context, appBarTitle: 'Forget Your Password', action_Icons: const SizedBox.shrink()),
+      appBar: mycustomAppBar(context, appBarTitle: 'Forget Your Password'),
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
@@ -25,11 +25,8 @@ class ForgetPassword extends StatelessWidget {
               ),
             ),
             Flexible(
-              child: Text(
-                'Select which contact details should we use to reset your password',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 18.sp),
-              ),
+              child: Text('Select which contact details should we use to reset your password',
+                  textAlign: TextAlign.center, style: TextStyle(fontSize: 18.sp)),
             ),
             GestureDetector(
               onTap: () {},

@@ -15,7 +15,7 @@ class FavoriteDoctors extends StatelessWidget {
     return Scaffold(
       appBar: mycustomAppBar(context,
           appBarTitle: 'My Favorite Doctors',
-          action_Icons: Row(
+          actionBarIcons: Row(
             children: [
               IconButton(
                   visualDensity: VisualDensity.compact,

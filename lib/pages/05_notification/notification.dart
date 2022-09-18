@@ -15,15 +15,14 @@ class notification extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: mycustomAppBar(context,
-          appBarTitle: 'Notification',
-          action_Icons: IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.more_vert,
-                color: Colors.black,
-                size: 24.sp,
-              ))),
+      appBar: mycustomAppBar(
+        context,
+        appBarTitle: 'Notification',
+        actionBarIcons: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.more_vert, color: Colors.black, size: 24.sp),
+        ),
+      ),
       body: SafeArea(
           child: ListView.builder(
               itemCount: tdata.length,
@@ -31,71 +30,42 @@ class notification extends StatelessWidget {
                 final tdat = tdata[index];
 
                 return Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: 10.w,
-                      vertical: 10.h),
+                  padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
                   child: Column(
-                    crossAxisAlignment:
-                        CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       ListTile(
                         isThreeLine: true,
                         leading: CircleAvatar(
-                          backgroundColor:
-                              Colors.transparent,
+                          backgroundColor: Colors.transparent,
                           radius: 30.r,
-                          backgroundImage: AssetImage(
-                              '${tdat.nLeading}'),
+                          backgroundImage: AssetImage('${tdat.nLeading}'),
                         ),
                         title: Text(
                           '${tdat.nTitle}',
-                          style: TextStyle(
-                              fontSize: 22.sp),
-                          overflow: TextOverflow
-                              .ellipsis,
+                          style: TextStyle(fontSize: 22.sp),
+                          overflow: TextOverflow.ellipsis,
                         ),
                         subtitle: Text(
                           '${tdat.nSubtitle}',
-                          style: TextStyle(
-                              fontSize: 16.sp),
+                          style: TextStyle(fontSize: 16.sp),
                         ),
 
                         //Todo - Make New notification for newest only
                         trailing: Container(
-                            padding: EdgeInsets
-                                .symmetric(
-                                    horizontal:
-                                        10.w,
-                                    vertical:
-                                        8.h),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius
-                                    .all(Radius
-                                        .circular(
-                                            8.r)),
-                                color:
-                                    myBlueAccent),
+                            padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 8.h),
+                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(8.r)), color: myBlueAccent),
                             child: Text(
                               '${tdat.nTrailing}',
-                              style: TextStyle(
-                                  fontSize: 16.sp,
-                                  color: Colors
-                                      .white),
+                              style: TextStyle(fontSize: 16.sp, color: Colors.white),
                             )),
                       ),
                       Padding(
-                          padding: EdgeInsets
-                              .symmetric(
-                                  horizontal:
-                                      15.w),
+                          padding: EdgeInsets.symmetric(horizontal: 15.w),
                           child: Text(
                             'TextingStory iPhone and Android app : write a text conversation, create a video from your story, watch your creation and share it !',
-                            textAlign:
-                                TextAlign.start,
-                            style: TextStyle(
-                                fontSize: 16.sp,
-                                color: Colors
-                                    .black54),
+                            textAlign: TextAlign.start,
+                            style: TextStyle(fontSize: 16.sp, color: Colors.black54),
                           )),
                     ],
                   ),

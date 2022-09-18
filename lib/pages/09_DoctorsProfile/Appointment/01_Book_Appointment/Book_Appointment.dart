@@ -15,7 +15,6 @@ class Book_Appointment extends StatelessWidget {
       appBar: mycustomAppBar(
         context,
         appBarTitle: 'Book Appointment',
-        action_Icons: const SizedBox.shrink(),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
