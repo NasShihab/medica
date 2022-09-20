@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar mycustomAppBar(BuildContext context,
         {required String appBarTitle,
+          bool appBarCenter = false,
          Widget actionBarIcons = const SizedBox.shrink(),
           dynamic leadIcon = Icons.arrow_back,
         }) =>
@@ -16,6 +17,7 @@ AppBar mycustomAppBar(BuildContext context,
               color: Colors.black),
         ),
       ),
+      centerTitle: appBarCenter,
       actions: [actionBarIcons],
       elevation: 0,
       backgroundColor: Colors.transparent,

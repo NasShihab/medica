@@ -1,6 +1,8 @@
 // ignore_for_file: camel_case_types
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../Z_other/myBorderText.dart';
+import '../../../Z_other/myCircleAvatarIcon.dart';
 import '../../../Z_other/myFullCustomButton.dart';
 import '../../../Z_other/myColor.dart';
 import '../../../Z_other/myCustom_ListTile.dart';

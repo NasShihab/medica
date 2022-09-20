@@ -16,9 +16,10 @@ Widget myFullCustomButton(
         double myButton_BorderRadius = 30,
         double paddingVerticle = 0,
         double paddingHorizontal = 0,
+        double outsidePaddingHorizontal = 10,
         required VoidCallback myOnPressed}) =>
     Container(
-      padding: EdgeInsets.symmetric(horizontal: 10.w),
+      padding: EdgeInsets.symmetric(horizontal: outsidePaddingHorizontal.w),
       height: myButtonHeight.h,
       width: myButtonWidth.w,
       child: ElevatedButton(

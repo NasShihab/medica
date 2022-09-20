@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/HomePage.dart';
 
+import '../Z_other/myFullCustomButton.dart';
 
 class login extends StatelessWidget {
   const login({Key? key}) : super(key: key);
@@ -16,8 +17,7 @@ class login extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const HomePage()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => const HomePage()));
             },
             icon: const Icon(
               Icons.arrow_back,
@@ -26,7 +26,7 @@ class login extends StatelessWidget {
       ),
       body: SafeArea(
           child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
           children: [
             SizedBox(height: 10.h),
@@ -37,8 +37,7 @@ class login extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 100.r,
-                  backgroundImage:
-                      const AssetImage('assets/images/welcome.jpg'),
+                  backgroundImage: const AssetImage('assets/images/welcome.jpg'),
                 ),
               ],
             ),
@@ -49,15 +48,9 @@ class login extends StatelessWidget {
             ),
             SizedBox(height: 30.h),
 
-            myTextField(
-                ico: const Icon(Icons.email),
-                htext: "Email",
-                sfico: const Icon(null)),
+            myTextField(ico: const Icon(Icons.email), htext: "Email", sfico: const Icon(null)),
             SizedBox(height: 10.h),
-            myPasswordField(
-                ico: const Icon(Icons.lock),
-                htext: "Password",
-                sfico: const Icon(Icons.visibility_off)),
+            myPasswordField(ico: const Icon(Icons.lock), htext: "Password", sfico: const Icon(Icons.visibility_off)),
             CheckboxListTile(
               contentPadding: EdgeInsets.symmetric(horizontal: 90.w),
               controlAffinity: ListTileControlAffinity.leading,
@@ -68,28 +61,12 @@ class login extends StatelessWidget {
               title: const Text('Remember Me'),
             ),
             SizedBox(height: 10.h),
-            SizedBox(
-              height: 60.h,
-              width: double.infinity,
-              child: TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/HomePage');
-                  },
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.blueAccent[700]),
-                    foregroundColor: MaterialStateProperty.all(Colors.white),
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(vertical: 14.h)),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.r))),
-                  ),
-                  child: Text(
-                    'Sign In',
-                    style: TextStyle(fontSize: 18.sp),
-                  )),
-            ),
+            myFullCustomButton(
+                myButtonTitle: 'Sign in',
+                outsidePaddingHorizontal: 0,
+                myOnPressed: () {
+                  Navigator.pushNamed(context, '/HomePage');
+                }),
             TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/forget_password');
@@ -151,8 +128,7 @@ class login extends StatelessWidget {
                       },
                       child: Text(
                         'Sign Up',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 15.sp),
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.sp),
                       )),
                 ],
               ),
@@ -169,9 +145,7 @@ class login extends StatelessWidget {
 
   // My Shortcut
   // My Shortcut
-  Widget myTextField(
-          {required Icon ico, required Icon sfico, required String htext}) =>
-      SizedBox(
+  Widget myTextField({required Icon ico, required Icon sfico, required String htext}) => SizedBox(
         height: 50.h,
         width: double.infinity,
         child: TextField(
@@ -188,13 +162,10 @@ class login extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.r),
                 borderSide: BorderSide(color: Colors.grey, width: 1.w),
               ),
-              contentPadding:
-                  EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+              contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
         ),
       );
-  Widget myPasswordField(
-          {required Icon ico, required Icon sfico, required String htext}) =>
-      SizedBox(
+  Widget myPasswordField({required Icon ico, required Icon sfico, required String htext}) => SizedBox(
         height: 50.h,
         width: double.infinity,
         child: TextField(
@@ -214,8 +185,7 @@ class login extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.r),
                 borderSide: BorderSide(color: Colors.grey, width: 1.w),
               ),
-              contentPadding:
-                  EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+              contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
         ),
       );
 }

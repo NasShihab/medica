@@ -1,8 +1,8 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/04_Home/HomePage.dart';
-
+import 'package:medica/pages/Z_other/myFullCustomButton.dart';
+import 'package:medica/pages/Z_other/mySizedBox.dart';
 
 // ignore: camel_case_types
 class welcome extends StatelessWidget {
@@ -17,12 +17,11 @@ class welcome extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                  const HomePage()));
+              Navigator.pushNamed(context, '/HomePage');
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
+              size: 30.sp,
               color: Colors.black,
             )),
       ),
@@ -39,8 +38,7 @@ class welcome extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 130.r,
-                  backgroundImage:
-                      const AssetImage('assets/images/welcome.jpg'),
+                  backgroundImage: const AssetImage('assets/images/welcome.jpg'),
                 ),
               ],
             ),
@@ -49,51 +47,36 @@ class welcome extends StatelessWidget {
               'Let\'s you in ',
               style: TextStyle(fontSize: 40.sp, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 30.h),
+            height30(),
             myTextButton(
               icoo: 'assets/images/facebook.png',
               labell: 'Continue with Facebook',
             ),
-            SizedBox(height: 15.h),
+            height15(),
             myTextButton(
               icoo: 'assets/images/google.png',
               labell: 'Continue with Google',
             ),
-            SizedBox(height: 15.h),
+            height15(),
             myTextButton(
               icoo: 'assets/images/apple.png',
               labell: 'Continue with Apple',
             ),
-            SizedBox(height: 20.h),
+            height20(),
             Center(
               child: Text(
                 'or',
                 style: TextStyle(fontSize: 14.sp),
               ),
             ),
-            SizedBox(height: 20.h),
-            SizedBox(
-              height: 60.h,
-              width: double.infinity,
-              child: TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/login');
-                  },
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.blueAccent[700]),
-                    foregroundColor: MaterialStateProperty.all(Colors.white),
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(vertical: 14.h)),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.r))),
-                  ),
-                  child: Text(
-                    'Sign in with password',
-                    style: TextStyle(fontSize: 18.sp),
-                  )),
-            ),
-            SizedBox(height: 5.h),
+            height20(),
+            myFullCustomButton(
+                myButtonTitle: 'Sign in with password',
+                outsidePaddingHorizontal: 0,
+                myOnPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                }),
+            height5(),
             SizedBox(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -110,11 +93,12 @@ class welcome extends StatelessWidget {
                             Navigator.pushNamed(context, '/sign_up');
                           },
                           child: Text(
-                            'Sign Up',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.sp),
+                            'Sign Up',
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.sp),
                           ))),
                 ],
               ),
-            ), 
+            ),
             SizedBox(height: 15.h),
           ],
         ),
@@ -124,8 +108,7 @@ class welcome extends StatelessWidget {
 
   // My Shortcut
   // My Shortcut
-  Widget myTextButton({required String icoo, required String labell}) =>
-      SizedBox(
+  Widget myTextButton({required String icoo, required String labell}) => SizedBox(
         height: 60.h,
         width: double.infinity,
         child: TextButton.icon(
@@ -133,8 +116,7 @@ class welcome extends StatelessWidget {
           style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.white),
               foregroundColor: MaterialStateProperty.all(Colors.black),
-              padding: MaterialStateProperty.all(
-                  EdgeInsets.symmetric(vertical: 18.h)),
+              padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 18.h)),
               elevation: MaterialStateProperty.all(.5)),
           icon: CircleAvatar(
             radius: 11.r,
