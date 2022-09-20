@@ -20,11 +20,7 @@ class DoctorSpeciality extends StatelessWidget {
               'Doctor Speciality',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
             ),
-            Text('See All',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16.sp,
-                    color: myBlueAccent)),
+            Text('See All', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp, color: myBlueAccent)),
           ],
         ),
         height30(),
@@ -32,27 +28,27 @@ class DoctorSpeciality extends StatelessWidget {
           children: [
             Row(
               children: [
-                DocSpeciality(
-                    dcCategory: 'General', dcicon: Icons.generating_tokens),
-                DocSpeciality(
-                    dcCategory: 'Dentist', dcicon: Icons.table_bar_outlined),
-                DocSpeciality(
-                    dcCategory: 'Ophthalmologist', dcicon: Icons.accessible),
-                DocSpeciality(
-                    dcCategory: 'Nutrition', dcicon: Icons.food_bank_outlined),
+                DocSpeciality(dcCategory: 'General', dcicon: Icons.generating_tokens),
+                DocSpeciality(dcCategory: 'Dentist', dcicon: Icons.table_bar_outlined),
+                DocSpeciality(dcCategory: 'Ophthalmologist', dcicon: Icons.accessible),
+                DocSpeciality(dcCategory: 'Nutrition', dcicon: Icons.food_bank_outlined),
               ],
             ),
             height20(),
             Row(
               children: [
-                DocSpeciality(
-                    dcCategory: 'Neurologist', dcicon: Icons.back_hand_outlined),
-                DocSpeciality(
-                    dcCategory: 'Pediatric', dcicon: Icons.adb_rounded),
-                DocSpeciality(
-                    dcCategory: 'Radiologist', dcicon: Icons.perm_camera_mic),
-                DocSpeciality(
-                    dcCategory: 'More', dcicon: Icons.more),
+                // myCircleAvatarIcon(
+                //     myIconUnderTitile: Text(
+                //       'Neurologist',
+                //       overflow: TextOverflow.ellipsis,
+                //       textAlign: TextAlign.center,
+                //       style: TextStyle(fontSize: 16.sp),
+                //     ),
+                //     myIcon: Icons.back_hand_outlined),
+                DocSpeciality(dcCategory: 'Neurologist', dcicon: Icons.back_hand_outlined),
+                DocSpeciality(dcCategory: 'Pediatric', dcicon: Icons.adb_rounded),
+                DocSpeciality(dcCategory: 'Radiologist', dcicon: Icons.perm_camera_mic),
+                DocSpeciality(dcCategory: 'More', dcicon: Icons.more),
               ],
             ),
           ],
@@ -62,8 +58,7 @@ class DoctorSpeciality extends StatelessWidget {
   }
 
   //My Shortcut
-  Widget DocSpeciality({required var dcicon, required String dcCategory}) =>
-      Expanded(
+  Widget DocSpeciality({required var dcicon, required String dcCategory}) => Expanded(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),
           child: Column(
