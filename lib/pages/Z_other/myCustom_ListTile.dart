@@ -1,9 +1,10 @@
 // ignore_for_file: non_constant_identifier_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/pages/Z_other/mySizedBox.dart';
 
 Widget myCustom_ListTile({
-  String myChart_Leading = 'assets/images/doctors/doctor2.jpg',
+  Widget myChart_Leading = const Image(image: AssetImage('assets/images/doctors/doctor3.png')),
   Widget myChart_Title = const SizedBox.shrink(),
   Widget myChart_Subtitle = const SizedBox.shrink(),
   Widget myChart_MinTitle = const SizedBox.shrink(),
@@ -18,8 +19,6 @@ Widget myCustom_ListTile({
         borderRadius: BorderRadius.all(Radius.circular(10.r)),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,30 +26,19 @@ Widget myCustom_ListTile({
             children: [
               Expanded(
                 flex: 1,
-                child: Column(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.all(Radius.circular(10.r)),
-                        // Leading
-                        child: Image.asset(myChart_Leading),
-                      ),
-                    ),
-                  ],
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                    // Leading
+                    child: myChart_Leading,
+                  ),
                 ),
               ),
+              width10(),
               Expanded(
                 flex: 2,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    myChart_Title,
-                    myChart_Subtitle,
-                    myChart_MinTitle,
-                  ],
-                ),
+                child: myChart_Title,
               ),
             ],
           ),

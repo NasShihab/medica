@@ -75,12 +75,13 @@ class FavoriteDoctors extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: 10.h),
+                        padding: EdgeInsets.only(bottom: 5.h),
                         child: Divider(
                           thickness: 2,
                           height: 2.h,
                         ),
                       ),
+                      height10(),
                       Text('${fvDoctorsList[index].doctorsCategory}   |   ${fvDoctorsList[index].doctorsHospital}',
                           style: TextStyle(fontSize: 16.sp)),
                       height10(),

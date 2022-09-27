@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 import 'Select_Package_Widget.dart';
 
 class Select_Package extends StatelessWidget {
-  const Select_Package({Key? key})
-      : super(key: key);
+  const Select_Package({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: spNextButton(context, tdButtonName: 'Flo', tdPageName: '/Patient_Details'),
+      floatingActionButton: myFullCustomButton(
+          myButtonTitle: 'Next',
+          myOnPressed: () {
+            Navigator.pushNamed(context, '/Patient_Details');
+          }),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -28,17 +32,14 @@ class Select_Package extends StatelessWidget {
           fit: BoxFit.fitWidth,
           child: Text(
             'Select Package',
-            style: TextStyle(
-                fontSize: 24.sp,
-                color: Colors.black),
+            style: TextStyle(fontSize: 24.sp, color: Colors.black),
           ),
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-              Navigator.pushNamed(
-                  context, '/HomePage');
+              Navigator.pushNamed(context, '/HomePage');
             },
             icon: Icon(
               Icons.arrow_back,
@@ -47,11 +48,9 @@ class Select_Package extends StatelessWidget {
             )),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: 20.w),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
-          crossAxisAlignment:
-              CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             height10(),
             Text(
@@ -61,27 +60,19 @@ class Select_Package extends StatelessWidget {
             height20(),
             SizedBox(
               height: 70.h,
-              child:
-                  DropdownButtonFormField<String>(
+              child: DropdownButtonFormField<String>(
                 decoration: InputDecoration(
                     prefixIcon: Icon(
                       Icons.access_time_filled,
                       color: Colors.black,
                       size: 24.sp,
                     ),
-                    enabledBorder:
-                        OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
                       Radius.circular(15.r),
                     ))),
                 value: '30 Minutes',
-                items: <String>[
-                  '30 Minutes',
-                  '45 Minutes',
-                  '60 Minutes',
-                  '90 Minutes'
-                ].map((String value) {
+                items: <String>['30 Minutes', '45 Minutes', '60 Minutes', '90 Minutes'].map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value),
@@ -97,29 +88,45 @@ class Select_Package extends StatelessWidget {
             ),
             height20(),
             CustomIcon_Select_Package(
-              spicon: Icons.message_rounded,
               spText1: 'Messaging',
-              spText2: 'Chat message with doctor',
-              spMinutes: 30,
+              spText2: 'Chat message',
+              spMinutes: '30',
               spRate: 20,
+              spWidget: Flexible(
+                child: Radio(
+                  value: 1,
+                  groupValue: 'sd',
+                  onChanged: (index) {},
+                ),
+              ),
             ),
             height20(),
             CustomIcon_Select_Package(
-              spicon: Icons.message_rounded,
               spText1: 'Video Call',
-              spText2:
-                  'Chat video call with doctor',
+              spText2: 'Chat video call',
               spRate: 20,
-              spMinutes: 30,
+              spMinutes: '30',
+              spWidget: Flexible(
+                child: Radio(
+                  value: 1,
+                  groupValue: 'sd',
+                  onChanged: (index) {},
+                ),
+              ),
             ),
             height20(),
             CustomIcon_Select_Package(
-              spicon: Icons.message_rounded,
               spText1: 'Voice Call',
-              spText2:
-                  'Chat voice call with doctor',
-              spMinutes: 20,
+              spText2: 'Chat voice sdsdsddffs',
+              spMinutes: '20',
               spRate: 30,
+              spWidget: Flexible(
+                child: Radio(
+                  value: 1,
+                  groupValue: 'sd',
+                  onChanged: (index) {},
+                ),
+              ),
             ),
           ],
         ),

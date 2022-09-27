@@ -29,10 +29,7 @@ class Canceled_Appointment extends StatelessWidget {
                     children: [
                       Text('Messaging  -', style: TextStyle(fontSize: 16.sp)),
                       width10(),
-                      myBorderText(
-                          my_text_color: Colors.red,
-                          myBorderText_borderColor: Colors.red,
-                          my_text: 'Canceled'),
+                      myBorderText(my_text_color: Colors.red, myBorderText_borderColor: Colors.red, my_text: 'Canceled'),
                     ],
                   ),
                   height10(),
@@ -40,7 +37,14 @@ class Canceled_Appointment extends StatelessWidget {
                 ],
               ),
               width10(),
-              Flexible(child: myCircleAvatarIcon(myIcon: Icons.message)),
+              Flexible(
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/Message_Appointment');
+                  },
+                  child: myCircleAvatarIcon(myIcon: Icons.message),
+                ),
+              ),
             ],
           ),
         );

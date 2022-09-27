@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/08_My_Appointment/a_Upcoming_Appointment.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
+import '../09_My_Appointment/a_Upcoming_Appointment.dart';
 import 'c_Canceled_Appointment.dart';
 import 'b_Completed_Appointment.dart';
 import 'Tab_Bar.dart';
@@ -46,7 +46,7 @@ class My_Appointment extends StatelessWidget {
                 size: 24.sp,
               ),
             )),
-        body: const TabBarView(children: [
+        body:  const TabBarView(children: [
           Upcoming_Appointment(),
           Completed_Appointment(),
           Canceled_Appointment(),

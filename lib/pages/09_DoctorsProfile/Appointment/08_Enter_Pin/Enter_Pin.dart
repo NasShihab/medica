@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/07_Enter_Pin/Enter_Pin_Widget.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+
+import 'Enter_Pin_Widget.dart';
 
 class Enter_Pin extends StatelessWidget {
   const Enter_Pin({Key? key}) : super(key: key);

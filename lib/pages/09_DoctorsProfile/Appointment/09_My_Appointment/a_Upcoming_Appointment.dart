@@ -36,8 +36,15 @@ class Upcoming_Appointment extends StatelessWidget {
                   Text('20 Feb 2022  |  10:00 PM', style: TextStyle(fontSize: 16.sp)),
                 ],
               ),
-              width10(), 
-              Flexible(child: myCircleAvatarIcon(myIcon: Icons.message)),
+              width10(),
+              Flexible(
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.pushNamed(context, '/Message_Appointment');
+                  },
+                  child: myCircleAvatarIcon(myIcon: Icons.message),
+                ),
+              ),
             ],
           ),
           myChart_Bottom: Column(

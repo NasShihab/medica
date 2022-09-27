@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-AppBar mycustomAppBar(BuildContext context,
-        {required String appBarTitle,
-          bool appBarCenter = false,
-         Widget actionBarIcons = const SizedBox.shrink(),
-          dynamic leadIcon = Icons.arrow_back,
-        }) =>
+AppBar mycustomAppBar(
+  BuildContext context, {
+  required String appBarTitle,
+  bool appBarCenter = false,
+  Widget actionBarIcons = const SizedBox.shrink(),
+  dynamic leadIcon = Icons.arrow_back,
+}) =>
     AppBar(
-      title: FittedBox(
-        fit: BoxFit.fitWidth,
-        child: Text(
-          appBarTitle,
-          style: TextStyle(
-              fontSize: 24.sp,
-              color: Colors.black),
-        ),
+      title: Text(
+        appBarTitle,
+        style: TextStyle(fontSize: 22.sp, color: Colors.black),
       ),
       centerTitle: appBarCenter,
       actions: [actionBarIcons],
@@ -31,4 +27,3 @@ AppBar mycustomAppBar(BuildContext context,
             color: Colors.black,
           )),
     );
-

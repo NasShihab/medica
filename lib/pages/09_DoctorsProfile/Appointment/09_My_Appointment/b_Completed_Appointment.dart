@@ -18,32 +18,36 @@ class Completed_Appointment extends StatelessWidget {
       itemBuilder: (context, index) {
         return myCustom_ListTile(
           myChart_Title: Row(
-        children: [
-        Flex(
-        direction: Axis.vertical,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            height10(),
-            Text('Alexa D Mex', style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold)),
-            height10(),
-            Row(
-              children: [
-                Text('Messaging  -', style: TextStyle(fontSize: 16.sp)),
-                width10(),
-                myBorderText(
-                  myBorderText_borderColor: Colors.green,
-                    my_text_color: Colors.green,
-                    my_text: 'Completed'),
-              ],
-            ),
-            height10(),
-            Text('20 Feb 2022  |  10:00 PM', style: TextStyle(fontSize: 16.sp)),
-          ],
-        ),
-        width10(),
-        Flexible(child: myCircleAvatarIcon(myIcon: Icons.message)),
-        ],
-        ),
+            children: [
+              Flex(
+                direction: Axis.vertical,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  height10(),
+                  Text('Alexa D Mex', style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold)),
+                  height10(),
+                  Row(
+                    children: [
+                      Text('Messaging  -', style: TextStyle(fontSize: 16.sp)),
+                      width10(),
+                      myBorderText(myBorderText_borderColor: Colors.green, my_text_color: Colors.green, my_text: 'Completed'),
+                    ],
+                  ),
+                  height10(),
+                  Text('20 Feb 2022  |  10:00 PM', style: TextStyle(fontSize: 16.sp)),
+                ],
+              ),
+              width10(),
+              Flexible(
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.pushNamed(context, '/Message_Appointment');
+                  },
+                  child: myCircleAvatarIcon(myIcon: Icons.message),
+                ),
+              ),
+            ],
+          ),
           myChart_Bottom: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
