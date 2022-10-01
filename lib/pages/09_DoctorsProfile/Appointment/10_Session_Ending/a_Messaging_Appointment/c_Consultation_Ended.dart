@@ -11,8 +11,7 @@ class Consultation_Ended extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar: mycustomAppBar(context, appBarTitle: ''),
+      appBar: mycustomAppBar(context, appBarTitle: 'Consultation Ended'),
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.symmetric(vertical: 15.h),
@@ -84,7 +83,9 @@ class Consultation_Ended extends StatelessWidget {
               child: myFullCustomButton(
                 myButtonTitle: 'Leave a Review',
                 myButtonFontSize: 18,
-                myOnPressed: () {},
+                myOnPressed: () {
+                  Navigator.pushNamed(context, '/Ended_Review');
+                },
               ),
             ),
           ],

@@ -8,9 +8,10 @@ Widget myCircleAvatarIcon({
   double myIcon_Size = 30,
   dynamic Circle_Background_Color = const Color(0xFFCFD8DC),
   Widget myIconUnderTitile = const SizedBox.shrink(),
+  double myPadding = 10,
 }) =>
     Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10.w),
+      padding: EdgeInsets.symmetric(horizontal: myPadding.w),
       child: Column(
         children: [
           CircleAvatar(

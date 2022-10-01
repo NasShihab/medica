@@ -7,10 +7,12 @@ Widget myBorderText({
   double my_text_fontSize = 14,
   double myBorderText_borderRadius = 8,
   dynamic myBorderText_borderColor = Colors.blue,
+  dynamic myBackColor = Colors.white,
 }) =>
     Container(
       padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 5.w),
       decoration: BoxDecoration(
+        color: myBackColor,
         borderRadius: BorderRadius.all(Radius.circular(myBorderText_borderRadius.r)),
         border: Border.all(color: myBorderText_borderColor),
       ),

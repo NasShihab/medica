@@ -13,12 +13,7 @@ class Message_Appointment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: myFullCustomButton(
-        myButtonFontSize: 18,
-        myButtonTitle: 'Message (Star at 16:00 PM)',
-        myOnPressed: () {},
-      ),
+
       appBar: mycustomAppBar(context,
           actionBarIcons: IconButton(
             onPressed: () {},
@@ -139,6 +134,14 @@ class Message_Appointment extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: myFullCustomButton(
+        myButtonFontSize: 18,
+        myButtonTitle: 'Message (Star at 16:00 PM)',
+        myOnPressed: () {
+          Navigator.pushNamed(context,'/Chat_Page');
+        },
       ),
     );
   }

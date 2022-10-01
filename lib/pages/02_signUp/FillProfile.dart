@@ -101,30 +101,30 @@ class FillProfile extends StatelessWidget {
 
   // My Shortcut
   // My Shortcut
-  Widget myTextField(
-      {required Icon myPrefixIcon, required Icon mySuffixIcon, required String htext}) =>
-      Expanded(
-        child: SizedBox(
-          height: 50.h,
-          width: double.infinity,
-          child: TextField(
-            decoration: InputDecoration(
-                prefixIcon: myPrefixIcon,
-                suffixIcon: mySuffixIcon,
-                hintText: htext,
-                hintStyle: TextStyle(fontSize: 12.sp),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.r),
-                  borderSide: BorderSide(color: Colors.grey, width: 1.w),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.r),
-                  borderSide: BorderSide(color: Colors.grey, width: 1.w),
-                ),
-                contentPadding:
-                EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
-          ),
-        ),
-      );
   }
 
+Widget myTextField(
+    {required Icon myPrefixIcon, required Icon mySuffixIcon, required String htext}) =>
+    Expanded(
+      child: SizedBox(
+        height: 50.h,
+        width: double.infinity,
+        child: TextField(
+          decoration: InputDecoration(
+              prefixIcon: myPrefixIcon,
+              suffixIcon: mySuffixIcon,
+              hintText: htext,
+              hintStyle: TextStyle(fontSize: 12.sp),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: Colors.grey, width: 1.w),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: Colors.grey, width: 1.w),
+              ),
+              contentPadding:
+              EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+        ),
+      ),
+    );

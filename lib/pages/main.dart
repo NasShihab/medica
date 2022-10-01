@@ -27,8 +27,10 @@ import '09_DoctorsProfile/Appointment/09_My_Appointment/c_Canceled_Appointment.d
 import '09_DoctorsProfile/Appointment/09_My_Appointment/0_MyAppointment.dart';
 import '09_DoctorsProfile/Appointment/09_My_Appointment/d_Reschedule_Appoinment.dart';
 import '09_DoctorsProfile/Appointment/09_My_Appointment/e_Canceled_Reason.dart';
-import '09_DoctorsProfile/Appointment/10_Session_Ending/0_Consultation_Ended.dart';
-import '09_DoctorsProfile/Appointment/10_Session_Ending/a_Messaging_Appointment/Message_Appointment.dart';
+import '09_DoctorsProfile/Appointment/10_Session_Ending/z_Ended_Review.dart';
+import '09_DoctorsProfile/Appointment/10_Session_Ending/a_Messaging_Appointment/c_Consultation_Ended.dart';
+import '09_DoctorsProfile/Appointment/10_Session_Ending/a_Messaging_Appointment/a_Message_Appointment.dart';
+import '09_DoctorsProfile/Appointment/10_Session_Ending/a_Messaging_Appointment/b_Chat_Page.dart';
 import '09_DoctorsProfile/DoctorsProfile.dart';
 import '09_DoctorsProfile/Review/DoctorsReviews.dart';
 
@@ -45,7 +47,7 @@ class MyApp extends StatelessWidget {
 
         initialRoute: '/',
         routes: {
-          '/' : (context) => const Consultation_Ended(),
+          '/' : (context) => const Chat_Page(),
           '/welcome' : (context) => const welcome(),
           '/login' : (context) => const login(),
           '/sign_up' : (context) => const SignUp(),
@@ -79,6 +81,8 @@ class MyApp extends StatelessWidget {
           '/Message_Appointment' : (context) =>  const Message_Appointment(),
           // messaging baki ase
           '/Consultation_Ended' : (context) =>  const Consultation_Ended(),
+          '/Ended_Review' : (context) =>  const Ended_Review(),
+          '/Chat_Page' : (context) =>  const Chat_Page(),
 
 
         },
