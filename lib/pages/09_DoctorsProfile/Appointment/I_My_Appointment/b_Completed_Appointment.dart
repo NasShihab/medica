@@ -73,7 +73,9 @@ class Completed_Appointment extends StatelessWidget {
                         myButtonFontSize: 16,
                         myButtonTitle: 'Leave a review',
                         myButtonHeight: 35,
-                        myOnPressed: () {},
+                        myOnPressed: () {
+                          Navigator.pushNamed(context, '/Ended_Review');
+                        },
                       ),
                     ),
                   ],

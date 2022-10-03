@@ -20,7 +20,7 @@ class Video_Consultation extends StatelessWidget {
             onPressed: () {},
             icon: Icon(Icons.more_vert, size: 24.sp, color: Colors.black),
           ),
-          appBarTitle: 'My Appointment (Voice)'),
+          appBarTitle: 'Video Call Consultation'),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
@@ -120,7 +120,7 @@ class Video_Consultation extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.h),
               child: CustomIcon_Select_Package(
-                spicon: Icons.call,
+                spicon: Icons.video_camera_back,
                 spText1: 'Voice Call',
                 spText2: 'Voice call with doctor',
                 spRate: 21,
@@ -133,9 +133,9 @@ class Video_Consultation extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: myFullCustomButton(
         myButtonFontSize: 18,
-        myButtonTitle: 'Voice Call (Start at 16:00 PM)',
+        myButtonTitle: 'Video Call (Start at 16:00 PM)',
         myOnPressed: () {
-          Navigator.pushNamed(context, '/Call_Ringing_Page');
+          Navigator.pushNamed(context, '/Video_Ringing_Page');
         },
       ),
     );

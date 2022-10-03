@@ -26,28 +26,33 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.transparent,
-                        child: Image.asset('assets/images/profile2.png'),
-                      ),
-                      SizedBox(width: 10.w),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Good Morning',
-                            style:
-                                TextStyle(fontSize: 15.sp, color: Colors.grey),
-                          ),
-                          Text(
-                            'Andrew Morgan',
-                            style: TextStyle(fontSize: 15.sp),
-                          ),
-                        ],
-                      ),
-                    ],
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, '/My_Appointment');
+                    },
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.transparent,
+                          child: Image.asset('assets/images/profile2.png'),
+                        ),
+                        SizedBox(width: 10.w),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Good Morning',
+                              style:
+                                  TextStyle(fontSize: 15.sp, color: Colors.grey),
+                            ),
+                            Text(
+                              'Andrew Morgan',
+                              style: TextStyle(fontSize: 15.sp),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                   Row(
                     children: [

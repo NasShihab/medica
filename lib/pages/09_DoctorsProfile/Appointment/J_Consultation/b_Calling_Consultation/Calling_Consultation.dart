@@ -18,7 +18,7 @@ class Calling_Consultation extends StatelessWidget {
             onPressed: () {},
             icon: Icon(Icons.more_vert, size: 24.sp, color: Colors.black),
           ),
-          appBarTitle: 'My Appointment (Voice)'),
+          appBarTitle: 'Voice Call Consultation'),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
