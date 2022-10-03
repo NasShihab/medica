@@ -40,9 +40,9 @@ class Canceled_Appointment extends StatelessWidget {
               Flexible(
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, '/Message_Appointment');
+                    Navigator.pushNamed(context, '/Video_Consultation');
                   },
-                  child: myCircleAvatarIcon(myIcon: Icons.message),
+                  child: myCircleAvatarIcon(myIcon: Icons.video_camera_back),
                 ),
               ),
             ],

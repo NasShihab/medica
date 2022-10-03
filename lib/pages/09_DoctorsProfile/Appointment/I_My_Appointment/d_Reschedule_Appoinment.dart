@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/03_Patient_Details/Patient_Details_Widget.dart';
+import 'package:medica/pages/09_DoctorsProfile/Appointment/C_Patient_Details/Patient_Details_Widget.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
-
-import '../01_Book_Appointment/Book_Appointment_Widget.dart';
-import '../08_Enter_Pin/Enter_Pin_Widget.dart';
+import '../H_Enter_Pin/Enter_Pin_Widget.dart';
+import '../a_Book_Appointment/Book_Appointment_Widget.dart';
 
 class Reschedule_Appointment extends StatelessWidget {
   const Reschedule_Appointment({Key? key}) : super(key: key);

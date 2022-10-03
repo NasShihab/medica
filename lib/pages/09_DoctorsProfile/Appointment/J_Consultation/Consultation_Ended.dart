@@ -23,7 +23,7 @@ class Consultation_Ended extends StatelessWidget {
                 height: 200.h,
                 width: 200.w,
                 image: const AssetImage(
-                  'assets/images/google.png',
+                  'assets/images/asset1.png',
                 ),
               ),
               height20(),

@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../Z_other/myFullCustomButton.dart';
 import '../../../Z_other/myCuston_Appbar.dart';
 import '../../../Z_other/mySizedBox.dart';
-import '../03_Patient_Details/Patient_Details_Widget.dart';
-import '../08_Enter_Pin/Enter_Pin_Widget.dart';
+import '../C_Patient_Details/Patient_Details_Widget.dart';
+import '../H_Enter_Pin/Enter_Pin_Widget.dart';
 
 class Canceled_Reason extends StatelessWidget {
   const Canceled_Reason({Key? key}) : super(key: key);

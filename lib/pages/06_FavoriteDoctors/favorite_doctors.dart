@@ -59,7 +59,11 @@ class FavoriteDoctors extends StatelessWidget {
                             IconButton(
                               onPressed: () {
                                 showModalBottomSheet(
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(30.r))),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.vertical(
+                                        top: Radius.circular(30.r),
+                                      ),
+                                    ),
                                     context: context,
                                     builder: (context) {
                                       return const RemoveFavorite();
