@@ -16,7 +16,8 @@ class Book_Appointment extends StatelessWidget {
         context,
         appBarTitle: 'Book Appointment',
       ),
-      body: Padding(
+      body: Container(
+        height: MediaQuery.of(context).size.height * .80,
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -29,7 +30,8 @@ class Book_Appointment extends StatelessWidget {
               ),
               height10(),
               Container(
-                height: 300,
+
+                height: MediaQuery.of(context).size.height * .35,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(18.r)),
@@ -40,45 +42,52 @@ class Book_Appointment extends StatelessWidget {
                     CalendarDatePicker(initialDate: DateTime.now(), firstDate: DateTime.now(), lastDate: DateTime.now(), onDateChanged: (newDate) {}),
               ),
               height20(),
-              Text(
-                'Select Hour',
-                style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
-              ),
-              height20(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  hoursTime(book_time: '09:00 AM'),
-                  hoursTime(book_time: '09:30 AM'),
-                  hoursTime(book_time: '10:00 AM'),
-                ],
-              ),
-              height15(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  hoursTime(book_time: '10:30 AM'),
-                  hoursTime(book_time: '11:00 AM'),
-                  hoursTime(book_time: '11:30 AM'),
-                ],
-              ),
-              height15(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  hoursTime(book_time: '12:00 PM'),
-                  hoursTime(book_time: '12:30 PM'),
-                  hoursTime(book_time: '15:00 PM'),
-                ],
-              ),
-              height15(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  hoursTime(book_time: '15:30 PM'),
-                  hoursTime(book_time: '16:00 PM'),
-                  hoursTime(book_time: '16:30 PM'),
-                ],
+
+              SizedBox(
+                height: MediaQuery.of(context).size.height * .35,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Select Hour',
+                      style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
+                    ),
+                    height20(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        hoursTime(book_time: '09:00 AM'),
+                        hoursTime(book_time: '09:30 AM'),
+                        hoursTime(book_time: '10:00 AM'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        hoursTime(book_time: '10:30 AM'),
+                        hoursTime(book_time: '11:00 AM'),
+                        hoursTime(book_time: '11:30 AM'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        hoursTime(book_time: '12:00 PM'),
+                        hoursTime(book_time: '12:30 PM'),
+                        hoursTime(book_time: '15:00 PM'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        hoursTime(book_time: '15:30 PM'),
+                        hoursTime(book_time: '16:00 PM'),
+                        hoursTime(book_time: '16:30 PM'),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

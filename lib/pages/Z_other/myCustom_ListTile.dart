@@ -6,7 +6,6 @@ import 'package:medica/pages/Z_other/mySizedBox.dart';
 Widget myCustom_ListTile({
   Widget myChart_Leading = const Image(image: AssetImage('assets/images/doctors/doctor3.png')),
   Widget myChart_Title = const SizedBox.shrink(),
-  Widget myChart_Subtitle = const SizedBox.shrink(),
   Widget myChart_MinTitle = const SizedBox.shrink(),
   Widget myChart_Bottom = const SizedBox.shrink(),
 }) =>
@@ -21,8 +20,8 @@ Widget myCustom_ListTile({
       child: Column(
         children: [
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
                 flex: 1,

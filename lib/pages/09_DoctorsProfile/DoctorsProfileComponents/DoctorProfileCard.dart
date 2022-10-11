@@ -185,7 +185,7 @@ Widget DoctorsReviewC(BuildContext context) => Column(
       'Neurology is the branch of medicine concerned with the study and '
           'treatment of disorders of the nervous system. The nervous'
           'system is a complex system that regulates'
-          'and coordinates body activities.',
+          'and coordinates body activities........',
       textAlign: TextAlign.start,
       style: TextStyle(fontSize: 16.sp),
     ),

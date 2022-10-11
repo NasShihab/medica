@@ -18,25 +18,28 @@ class Canceled_Appointment extends StatelessWidget {
         return myCustom_ListTile(
           myChart_Title: Row(
             children: [
-              Flex(
-                direction: Axis.vertical,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  height10(),
-                  Text('Alexa D Mex', style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold)),
-                  height10(),
-                  Row(
-                    children: [
-                      Text('Messaging  -', style: TextStyle(fontSize: 16.sp)),
-                      width10(),
-                      myBorderText(my_text_color: Colors.red, myBorderText_borderColor: Colors.red, my_text: 'Canceled'),
-                    ],
-                  ),
-                  height10(),
-                  Text('20 Feb 2022  |  10:00 PM', style: TextStyle(fontSize: 16.sp)),
-                ],
+              SizedBox(
+                height: MediaQuery.of(context).size.height * .12,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Alexa D Mex', style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text('Messaging  -', style: TextStyle(fontSize: 16.sp)),
+                        width10(),
+                        myBorderText(
+                          my_text_color: Colors.red,
+                          myBorderText_borderColor: Colors.red,
+                          my_text: 'Canceled',
+                        ),
+                      ],
+                    ),
+                    Text('20 Feb 2022  |  10:00 PM', style: TextStyle(fontSize: 16.sp)),
+                  ],
+                ),
               ),
-              width10(),
               Flexible(
                 child: GestureDetector(
                   onTap: () {

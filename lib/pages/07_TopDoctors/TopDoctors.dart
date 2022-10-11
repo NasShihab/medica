@@ -5,7 +5,6 @@ import '../06_FavoriteDoctors/ListItem_FavoriteDoctors.dart';
 import '../06_FavoriteDoctors/remove_favorite.dart';
 import '../Z_other/myColor.dart';
 import '../Z_other/myCustom_ListTile.dart';
-import '../Z_other/mySizedBox.dart';
 
 class TopDoctors extends StatelessWidget {
   const TopDoctors({Key? key}) : super(key: key);
@@ -63,63 +62,63 @@ class TopDoctors extends StatelessWidget {
                     itemCount: fvDoctorsList.length,
                     itemBuilder: (context, index) {
                       return myCustom_ListTile(
-                        myChart_Title: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(right: 10.w),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    '${fvDoctorsList[index].doctorsName}',
-                                    style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
-                                  ),
-                                  IconButton(
-                                    onPressed: () {
-                                      showModalBottomSheet(
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.vertical(
-                                              top: Radius.circular(30.r),
-                                            ),
-                                          ),
-                                          context: context,
-                                          builder: (context) {
-                                            return const RemoveFavorite();
-                                          });
-                                    },
-                                    icon: Icon(
-                                      Icons.favorite_border_sharp,
-                                      color: myBlueAccent,
-                                      size: 24.sp,
+                        myChart_Title: SizedBox(
+                          height: MediaQuery.of(context).size.height * .12,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(right: 10.w),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '${fvDoctorsList[index].doctorsName}',
+                                      style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
                                     ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(vertical: 5.h),
-                              child: Divider(
-                                thickness: 2,
-                                height: 2.h,
-                              ),
-                            ),
-                            height10(),
-                            Text('${fvDoctorsList[index].doctorsCategory}   |   ${fvDoctorsList[index].doctorsHospital}',
-                                style: TextStyle(fontSize: 16.sp)),
-                            height10(),
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.star,
-                                  color: myBlueAccent,
-                                  size: 20.sp,
+                                    GestureDetector(
+                                      onTap: (){
+                                        showModalBottomSheet(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.vertical(
+                                                top: Radius.circular(30.r),
+                                              ),
+                                            ),
+                                            context: context,
+                                            builder: (context) {
+                                              return const RemoveFavorite();
+                                            });
+                                      },
+                                      child: Icon(Icons.favorite_border_sharp,
+                                          color: myBlueAccent,
+                                          size: 24.sp,),
+                                    ),
+                                  ],
                                 ),
-                                Text('${fvDoctorsList[index].doctorsRating}'
-                                    '(${fvDoctorsList[index].doctorsReviews} Reviews)'),
-                              ],
-                            )
-                          ],
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(vertical: 5.h),
+                                child: Divider(
+                                  thickness: 2,
+                                  height: 2.h,
+                                ),
+                              ),
+                              Text('${fvDoctorsList[index].doctorsCategory}   |   ${fvDoctorsList[index].doctorsHospital}',
+                                  style: TextStyle(fontSize: 16.sp)),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: myBlueAccent,
+                                    size: 20.sp,
+                                  ),
+                                  Text('${fvDoctorsList[index].doctorsRating}'
+                                      '(${fvDoctorsList[index].doctorsReviews} Reviews)'),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       );
                     }),

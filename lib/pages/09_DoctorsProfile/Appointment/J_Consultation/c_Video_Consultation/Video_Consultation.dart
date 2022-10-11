@@ -28,10 +28,11 @@ class Video_Consultation extends StatelessWidget {
           children: [
             myCustom_ListTile(
               myChart_Leading: Image.asset('assets/images/doctors/doctor1.jpg'),
-              myChart_Title: Padding(
-                padding: EdgeInsets.symmetric(vertical: 5.h),
+              myChart_Title: SizedBox(
+                height: MediaQuery.of(context).size.height * .12,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Alexa De Mex',
@@ -104,8 +105,11 @@ class Video_Consultation extends StatelessWidget {
                     ),
                     Expanded(
                       child: GestureDetector(
-                          onTap: (){},
-                          child: Text('view more', style: TextStyle(fontSize: 18.sp, color: myBlueAccent),)),
+                          onTap: () {},
+                          child: Text(
+                            'view more',
+                            style: TextStyle(fontSize: 18.sp, color: myBlueAccent),
+                          )),
                     )
                   ],
                 ),

@@ -34,24 +34,30 @@ class Review_Summary extends StatelessWidget {
       body: Column(
         children: [
           myCustom_ListTile(
-            myChart_Title: Text('Alexa De Mex',
-              style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
-            ),
-            myChart_Subtitle: Divider(
-              thickness: 2.sp,
-            ),
-            myChart_MinTitle: Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    height10(),
-                    Text('Nurologist', style: TextStyle(fontSize: 16.sp)),
-                    height15(),
-                    Text('Ibne Sina Hospital', style: TextStyle(fontSize: 16.sp)),
-                  ],
-                ),
-              ],
+            myChart_Title: SizedBox(
+              height: MediaQuery.of(context).size.height * .12,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Alexa De Mexs',
+                    style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
+                  ),
+                  Divider(
+                    height: 2.h,
+                    thickness: 2,
+                  ),
+                  Text(
+                    'Nurologist',
+                    style: TextStyle(fontSize: 16.sp),
+                  ),
+                  Text(
+                    'Ibne Sina Hospital',
+                    style: TextStyle(fontSize: 16.sp),
+                  ),
+
+                ],
+              ),
             ),
           ),
           height30(),

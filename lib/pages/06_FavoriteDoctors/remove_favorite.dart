@@ -4,7 +4,6 @@ import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 
 import '../Z_other/myColor.dart';
 import '../Z_other/myCustom_ListTile.dart';
-import '../Z_other/mySizedBox.dart';
 import 'ListItem_FavoriteDoctors.dart';
 
 class RemoveFavorite extends StatelessWidget {
@@ -26,61 +25,57 @@ class RemoveFavorite extends StatelessWidget {
                       style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
                     )),
                 myCustom_ListTile(
-                  myChart_Title: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(right: 10.w),
-                        child: Row(
+                  myChart_Leading: const Image(
+                    image: AssetImage('assets/images/doctors/doctor3.png'),
+                  ),
+                  myChart_Title: Container(
+                    height: MediaQuery.of(context).size.height * .12,
+                    padding: EdgeInsets.only(right: 10.w),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
                               '${fvDoctorsList[index].doctorsName}',
                               style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
                             ),
-                            IconButton(
-                              padding: const EdgeInsets.all(0),
-                              onPressed: () {
-                                showModalBottomSheet(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.vertical(
-                                        top: Radius.circular(30.r),
-                                      ),
-                                    ),
-                                    context: context,
-                                    builder: (context) {
-                                      return const RemoveFavorite();
-                                    });
-                              },
-                              icon: Icon(
+                            GestureDetector(
+                              onTap: () {},
+                              child: Icon(
                                 Icons.favorite_sharp,
                                 color: myBlueAccent,
                                 size: 24.sp,
                               ),
-                            )
+                            ),
                           ],
                         ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                        height: 2.h,
-                      ),
-                      height10(),
-                      Text('${fvDoctorsList[index].doctorsCategory}   |   ${fvDoctorsList[index].doctorsHospital}',
-                          style: TextStyle(fontSize: 16.sp)),
-                      height10(),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.star,
-                            color: myBlueAccent,
-                            size: 20.sp,
-                          ),
-                          Text('${fvDoctorsList[index].doctorsRating} (${fvDoctorsList[index].doctorsReviews} Reviews)'),
-                        ],
-                      )
-                    ],
+                        Divider(
+                          thickness: 2,
+                          height: 2.h,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              '${fvDoctorsList[index].doctorsCategory}   |   ${fvDoctorsList[index].doctorsHospital}',
+                              style: TextStyle(fontSize: 16.sp),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.star,
+                              color: myBlueAccent,
+                              size: 20.sp,
+                            ),
+                            Text('${fvDoctorsList[index].doctorsRating} (${fvDoctorsList[index].doctorsReviews} Reviews)'),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 Container(

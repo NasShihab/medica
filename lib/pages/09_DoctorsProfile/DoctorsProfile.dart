@@ -37,50 +37,53 @@ class DoctorsProfile extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          child: Padding(
+          child: Container(
+            height: MediaQuery.of(context).size.height * .80,
             padding: EdgeInsets.symmetric(horizontal: 15.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                DoctorsProfileCard(),
-                height10(),
-                Row(
-                  children: [
-                    DoctorProfileIcon(dcCategory: 'Patients', dcicon: Icons.people, dcPoint: '500+'),
-                    DoctorProfileIcon(dcCategory: 'Years Experience', dcicon: Icons.medical_services_sharp, dcPoint: '10+'),
-                    DoctorProfileIcon(dcCategory: 'Ratings', dcicon: Icons.star, dcPoint: '4.5'),
-                    DoctorProfileIcon(dcCategory: 'Reviews', dcicon: Icons.mark_chat_read, dcPoint: '4989'),
-                  ],
-                ),
-                height20(),
-                Text(
-                  'About Me',
-                  style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
-                ),
-                height10(),
-                Text(
-                  'Neurology is the branch of medicine concerned with the study and '
-                  'treatment of disorders of the nervous system. The nervous'
-                  'system is a complex system that regulates'
-                  'and coordinates body activities.',
-                  textAlign: TextAlign.start,
-                  style: TextStyle(fontSize: 16.sp),
-                ),
-                height20(),
-                Text(
-                  'Working Time',
-                  style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
-                ),
-                height10(),
-                Text(
-                  'Monday to Friday 08.00 AM - 20.00 PM',
-                  style: TextStyle(fontSize: 16.sp),
-                ),
-                height20(),
-                //Reviews
-                DoctorsReviewC(context),
-                height20(),
-              ],
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  DoctorsProfileCard(),
+                  height10(),
+                  Row(
+                    children: [
+                      DoctorProfileIcon(dcCategory: 'Patients', dcicon: Icons.people, dcPoint: '500+'),
+                      DoctorProfileIcon(dcCategory: 'Years Experience', dcicon: Icons.medical_services_sharp, dcPoint: '10+'),
+                      DoctorProfileIcon(dcCategory: 'Ratings', dcicon: Icons.star, dcPoint: '4.5'),
+                      DoctorProfileIcon(dcCategory: 'Reviews', dcicon: Icons.mark_chat_read, dcPoint: '4989'),
+                    ],
+                  ),
+                  height20(),
+                  Text(
+                    'About Me',
+                    style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
+                  ),
+                  height10(),
+                  Text(
+                    'Neurology is the branch of medicine concerned with the study and '
+                    'treatment of disorders of the nervous system. The nervous'
+                    'system is a complex system that regulates'
+                    'and coordinates body activities.',
+                    textAlign: TextAlign.start,
+                    style: TextStyle(fontSize: 16.sp),
+                  ),
+                  height20(),
+                  Text(
+                    'Working Time',
+                    style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
+                  ),
+                  height10(),
+                  Text(
+                    'Monday to Friday 08.00 AM - 20.00 PM',
+                    style: TextStyle(fontSize: 16.sp),
+                  ),
+                  height20(),
+                  //Reviews
+                  DoctorsReviewC(context),
+                ],
+              ),
             ),
           ),
         ),

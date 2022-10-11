@@ -8,6 +8,8 @@ Widget height20() => SizedBox(height: 20.h);
 Widget height30() => SizedBox(height: 30.h);
 Widget height40() => SizedBox(height: 40.h);
 Widget height50() => SizedBox(height: 50.h);
+Widget height55() => SizedBox(height: 55.h);
+Widget height60() => SizedBox(height: 60.h);
 
 Widget width5() => SizedBox(width: 5.w);
 Widget width10() => SizedBox(width: 10.w);
