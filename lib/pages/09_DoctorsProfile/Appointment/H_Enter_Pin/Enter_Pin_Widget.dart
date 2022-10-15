@@ -8,7 +8,7 @@ import '../../../Z_other/myFullCustomButton.dart';
 Widget success_AlertDialog(BuildContext context, {required String message}) => AlertDialog(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.r))),
     content: SizedBox(
-      height: 500.h,
+      height: MediaQuery.of(context).size.height * .55,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -68,7 +68,7 @@ Widget success_AlertDialog(BuildContext context, {required String message}) => A
 Widget errorAlert_Widget(BuildContext context) => AlertDialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.r))),
       content: SizedBox(
-        height: 500.h,
+        height: MediaQuery.of(context).size.height * .55,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
