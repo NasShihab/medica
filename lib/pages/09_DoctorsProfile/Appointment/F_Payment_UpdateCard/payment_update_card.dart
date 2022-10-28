@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../Z_other/mySizedBox.dart';
 import '../D_Payments/payments_page_widget.dart';
 
-class Payment_UpdateCard extends StatelessWidget {
-  const Payment_UpdateCard({Key? key}) : super(key: key);
+class PaymentUpdateCard extends StatelessWidget {
+  const PaymentUpdateCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
