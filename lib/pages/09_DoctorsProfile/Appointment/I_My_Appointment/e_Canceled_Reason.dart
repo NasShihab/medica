@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../Z_other/myFullCustomButton.dart';
 import '../../../Z_other/myCuston_Appbar.dart';
 import '../../../Z_other/mySizedBox.dart';
-import '../C_Patient_Details/Patient_Details_Widget.dart';
+import '../C_Patient_Details/patient_details_widget.dart';
 import '../H_Enter_Pin/Enter_Pin_Widget.dart';
 
 class Canceled_Reason extends StatelessWidget {
@@ -55,7 +55,7 @@ class Canceled_Reason extends StatelessWidget {
               ],
             ),
             height10(),
-            long_Text_Box(pdHintText: 'Other'),
+            longTextBox(pdHintText: 'Other'),
           ],
         ),
       ),

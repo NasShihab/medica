@@ -5,7 +5,7 @@ import 'package:medica/pages/Z_other/mySizedBox.dart';
 
 import '../../../Z_other/myColor.dart';
 import '../../../Z_other/myFullCustomButton.dart';
-import '../C_Patient_Details/Patient_Details_Widget.dart';
+import '../C_Patient_Details/patient_details_widget.dart';
 
 class Ended_Review extends StatelessWidget {
   const Ended_Review({Key? key}) : super(key: key);
@@ -73,7 +73,7 @@ class Ended_Review extends StatelessWidget {
               height10(),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: long_Text_Box(
+                child: longTextBox(
                   ltMaxLine: 5,
                   pdHintText: 'Your review here',
                 ),

@@ -34,7 +34,7 @@ Widget ganderDropDown() => DropdownButtonFormField<String>(
     }).toList(),
     onChanged: (_) {});
 
-Widget age_DropDown() => DropdownButtonFormField<String>(
+Widget ageDropDown() => DropdownButtonFormField<String>(
     decoration: InputDecoration(
         prefixIcon: Icon(
           Icons.access_time_filled,
@@ -67,7 +67,7 @@ Widget pdTextField({required String pdHintText}) => SizedBox(
       ),
     );
 
-Widget long_Text_Box({
+Widget longTextBox({
   required String pdHintText,
   int ltMaxLine = 10,
   double ltHeight = 200,

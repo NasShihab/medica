@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../Z_other/mySizedBox.dart';
-import 'Patient_Details_Widget.dart';
+import 'patient_details_widget.dart';
 
-class Patient_Details extends StatelessWidget {
-  const Patient_Details({Key? key}) : super(key: key);
+class PatientDetails extends StatelessWidget {
+  const PatientDetails({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,14 +68,14 @@ class Patient_Details extends StatelessWidget {
               style: TextStyle(fontSize: 20.sp),
             ),
             height20(),
-            age_DropDown(),
+            ageDropDown(),
             height30(),
             Text(
               'Write your problem',
               style: TextStyle(fontSize: 20.sp),
             ),
             height20(),
-            long_Text_Box(pdHintText: 'Hello Doctor, my problem is.............'),
+            longTextBox(pdHintText: 'Hello Doctor, my problem is.............'),
           ],
         ),
       ),

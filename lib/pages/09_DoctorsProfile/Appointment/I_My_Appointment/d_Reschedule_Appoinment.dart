@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/C_Patient_Details/Patient_Details_Widget.dart';
+import 'package:medica/pages/09_DoctorsProfile/Appointment/C_Patient_Details/patient_details_widget.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
@@ -57,7 +57,7 @@ class Reschedule_Appointment extends StatelessWidget {
               ],
             ),
             height10(),
-            long_Text_Box(pdHintText: 'Other'),
+            longTextBox(pdHintText: 'Other'),
           ],
         ),
       ),
