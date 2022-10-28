@@ -4,7 +4,7 @@ import 'package:medica/pages/09_DoctorsProfile/Appointment/C_Patient_Details/pat
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
-import '../H_Enter_Pin/Enter_Pin_Widget.dart';
+import '../H_Enter_Pin/booking_enter_pin_widget.dart';
 import '../a_Book_Appointment/book_appointment_widget.dart';
 
 class Reschedule_Appointment extends StatelessWidget {
@@ -159,7 +159,7 @@ class Reschedule_Appointment2 extends StatelessWidget {
       floatingActionButton: myFullCustomButton(
         myButtonTitle: 'Submit',
         myOnPressed: () {
-          showDialog(context: context, builder: (context) => success_AlertDialog(context, message: 'Congrats'));
+          showDialog(context: context, builder: (context) => successAlertDialog(context, message: 'Congrats'));
         },
       ),
     );

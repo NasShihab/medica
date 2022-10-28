@@ -5,7 +5,7 @@ import 'package:medica/pages/Z_other/mySizedBox.dart';
 
 import '../../../Z_other/myFullCustomButton.dart';
 
-Widget success_AlertDialog(BuildContext context, {required String message}) => AlertDialog(
+Widget successAlertDialog(BuildContext context, {required String message}) => AlertDialog(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.r))),
     content: SizedBox(
       height: MediaQuery.of(context).size.height * .55,
@@ -65,7 +65,7 @@ Widget success_AlertDialog(BuildContext context, {required String message}) => A
       ),
     ));
 
-Widget errorAlert_Widget(BuildContext context) => AlertDialog(
+Widget errorAlertWidget(BuildContext context) => AlertDialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.r))),
       content: SizedBox(
         height: MediaQuery.of(context).size.height * .55,
@@ -101,7 +101,7 @@ Widget errorAlert_Widget(BuildContext context) => AlertDialog(
                       myOnPressed: () {
                         showDialog(
                           context: context,
-                          builder: (context) => success_AlertDialog(context, message: 'Congratulations'),
+                          builder: (context) => successAlertDialog(context, message: 'Congratulations'),
                         );
                       },
                     ),

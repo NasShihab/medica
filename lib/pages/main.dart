@@ -22,8 +22,8 @@ import '09_DoctorsProfile/Appointment/C_Patient_Details/patient_details.dart';
 import '09_DoctorsProfile/Appointment/D_Payments/payments_page.dart';
 import '09_DoctorsProfile/Appointment/E_Add_New_Card/add_new_card.dart';
 import '09_DoctorsProfile/Appointment/F_Payment_UpdateCard/payment_update_card.dart';
-import '09_DoctorsProfile/Appointment/G_Review_Summary/Review_Summary.dart';
-import '09_DoctorsProfile/Appointment/H_Enter_Pin/Enter_Pin.dart';
+import '09_DoctorsProfile/Appointment/G_Review_Summary/review_summary.dart';
+import '09_DoctorsProfile/Appointment/H_Enter_Pin/booking_enter_pin.dart';
 import '09_DoctorsProfile/Appointment/I_My_Appointment/b_Completed_Appointment.dart';
 import '09_DoctorsProfile/Appointment/I_My_Appointment/c_Canceled_Appointment.dart';
 import '09_DoctorsProfile/Appointment/I_My_Appointment/0_MyAppointment.dart';
@@ -73,8 +73,8 @@ class MyApp extends StatelessWidget {
           '/Payments_Page' : (context) =>  const PaymentsPage(),
           '/Add_New_Card' : (context) =>  const AddNewCard(),
           '/Payment_UpdateCard' : (context) =>  const PaymentUpdateCard(),
-          '/Review_Summary' : (context) =>  const Review_Summary(),
-          '/Enter_Pin' : (context) =>  const Enter_Pin(),
+          '/Review_Summary' : (context) =>  const ReviewSummary(),
+          '/Enter_Pin' : (context) =>  const BookingEnterPin(),
           '/My_Appointment' : (context) =>  const My_Appointment(),
           '/Completed_Appointment' : (context) =>  const Completed_Appointment(),
           '/Canceled_Appointment' : (context) =>  const Canceled_Appointment(),

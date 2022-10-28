@@ -5,10 +5,10 @@ import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import 'Enter_Pin_Widget.dart';
+import 'booking_enter_pin_widget.dart';
 
-class Enter_Pin extends StatelessWidget {
-  const Enter_Pin({Key? key}) : super(key: key);
+class BookingEnterPin extends StatelessWidget {
+  const BookingEnterPin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class Enter_Pin extends StatelessWidget {
       floatingActionButton: myFullCustomButton(
         myButtonTitle: 'Continue',
         myOnPressed: () {
-          showDialog(context: context, builder: (context) => errorAlert_Widget(context));
+          showDialog(context: context, builder: (context) => errorAlertWidget(context));
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

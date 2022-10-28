@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 import '../../../Z_other/myCustom_ListTile.dart';
-import 'Review_Summary_Widget.dart';
+import 'review_summary_widget.dart';
 
-class Review_Summary extends StatelessWidget {
-  const Review_Summary({Key? key}) : super(key: key);
+class ReviewSummary extends StatelessWidget {
+  const ReviewSummary({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
