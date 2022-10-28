@@ -5,8 +5,8 @@ import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 
-class Consultation_Ended extends StatelessWidget {
-  const Consultation_Ended({Key? key}) : super(key: key);
+class ConsultationEnded extends StatelessWidget {
+  const ConsultationEnded({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

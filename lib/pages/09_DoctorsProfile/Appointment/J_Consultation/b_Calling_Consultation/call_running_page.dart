@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
 
-class Call_Ringing_Page extends StatelessWidget {
-  const Call_Ringing_Page({Key? key}) : super(key: key);
+import '../../../../Z_other/myCuston_Appbar.dart';
+import '../../../../Z_other/mySizedBox.dart';
+
+class CallRunningPage extends StatelessWidget {
+  const CallRunningPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,15 +23,10 @@ class Call_Ringing_Page extends StatelessWidget {
         floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GestureDetector(
-              onTap: (){
-                Navigator.pushNamed(context, '/Call_Running_Page');
-              },
-              child: CircleAvatar(
-                radius: 40.r,
-                backgroundColor: Colors.blueGrey,
-                child: Icon(Icons.volume_up, size: 30.sp, color: Colors.white),
-              ),
+            CircleAvatar(
+              radius: 40.r,
+              backgroundColor: Colors.blueGrey,
+              child: Icon(Icons.volume_up, size: 30.sp, color: Colors.white),
             ),
             width10(),
             CircleAvatar(
@@ -39,10 +35,15 @@ class Call_Ringing_Page extends StatelessWidget {
               child: Icon(Icons.mic, size: 30.sp, color: Colors.white),
             ),
             width10(),
-            CircleAvatar(
-              radius: 40.r,
-              backgroundColor: Colors.red[700],
-              child: Icon(Icons.add_ic_call, size: 30.sp, color: Colors.white),
+            GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, '/Consultation_Ended');
+              },
+              child: CircleAvatar(
+                radius: 40.r,
+                backgroundColor: Colors.red[700],
+                child: Icon(Icons.add_ic_call, size: 30.sp, color: Colors.white),
+              ),
             ),
           ],
         ),
@@ -72,7 +73,13 @@ class Call_Ringing_Page extends StatelessWidget {
               ),
               height30(),
               Text(
-                'Ringing',
+                '16:25 Min',
+                style: TextStyle(color: Colors.white, fontSize: 22.sp),
+              ),
+              height50(),
+              height50(),
+              Text(
+                'Audio record is active',
                 style: TextStyle(color: Colors.white, fontSize: 22.sp),
               ),
             ],

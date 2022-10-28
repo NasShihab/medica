@@ -7,7 +7,7 @@ import '../../../../Z_other/myCuston_Appbar.dart';
 import '../../../../Z_other/myFullCustomButton.dart';
 import '../../../../Z_other/mySizedBox.dart';
 import '../../B_Select_Package/select_package_widget.dart';
-import '../b_Calling_Consultation/Calling_Consultation.dart';
+import '../b_Calling_Consultation/calling_consultation.dart';
 
 class Video_Consultation extends StatelessWidget {
   const Video_Consultation({Key? key}) : super(key: key);
@@ -99,7 +99,7 @@ class Video_Consultation extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Expanded(
-                      child: custom_Text_CC(
+                      child: customTextCC(
                         myText: 'So many prob  sd sd  sds lem',
                       ),
                     ),

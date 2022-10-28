@@ -6,7 +6,7 @@ import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import '../../../../Z_other/mySizedBox.dart';
 import '../../B_Select_Package/select_package_widget.dart';
-import '../b_Calling_Consultation/Calling_Consultation.dart';
+import '../b_Calling_Consultation/calling_consultation.dart';
 
 class MessagingConsultation extends StatelessWidget {
   const MessagingConsultation({Key? key}) : super(key: key);
@@ -77,7 +77,7 @@ class MessagingConsultation extends StatelessWidget {
               text1: 'Gander',
               text2: Row(
                 children: [
-                  custom_Text_CC(myText: 'Female'),
+                  customTextCC(myText: 'Female'),
                 ],
               ),
             ),
@@ -85,7 +85,7 @@ class MessagingConsultation extends StatelessWidget {
               text1: 'Age',
               text2: Row(
                 children: [
-                  custom_Text_CC(myText: '26'),
+                  customTextCC(myText: '26'),
                 ],
               ),
             ),
@@ -98,14 +98,17 @@ class MessagingConsultation extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Expanded(
-                      child: custom_Text_CC(
+                      child: customTextCC(
                         myText: 'So many prob  sd sd  sds lem',
                       ),
                     ),
                     Expanded(
                       child: GestureDetector(
-                          onTap: (){},
-                          child: Text('view more', style: TextStyle(fontSize: 18.sp, color: myBlueAccent),)),
+                          onTap: () {},
+                          child: Text(
+                            'view more',
+                            style: TextStyle(fontSize: 18.sp, color: myBlueAccent),
+                          )),
                     )
                   ],
                 ),
@@ -141,7 +144,6 @@ class MessagingConsultation extends StatelessWidget {
     );
   }
 }
-
 
 Text customtextMessegingConsultation({
   required String myText,

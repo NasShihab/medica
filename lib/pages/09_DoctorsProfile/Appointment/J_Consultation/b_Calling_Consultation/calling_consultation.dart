@@ -7,8 +7,8 @@ import '../../../../Z_other/myCuston_Appbar.dart';
 import '../../../../Z_other/myFullCustomButton.dart';
 import '../../../../Z_other/mySizedBox.dart';
 
-class Calling_Consultation extends StatelessWidget {
-  const Calling_Consultation({Key? key}) : super(key: key);
+class CallingConsultation extends StatelessWidget {
+  const CallingConsultation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class Calling_Consultation extends StatelessWidget {
               text1: 'Full Name',
               text2: Row(
                 children: [
-                  custom_Text_CC(myText: 'Morocco Nager'),
+                  customTextCC(myText: 'Morocco Nager'),
                 ],
               ),
             ),
@@ -76,7 +76,7 @@ class Calling_Consultation extends StatelessWidget {
               text1: 'Gander',
               text2: Row(
                 children: [
-                  custom_Text_CC(myText: 'Female'),
+                  customTextCC(myText: 'Female'),
                 ],
               ),
             ),
@@ -84,7 +84,7 @@ class Calling_Consultation extends StatelessWidget {
               text1: 'Age',
               text2: Row(
                 children: [
-                  custom_Text_CC(myText: '26'),
+                  customTextCC(myText: '26'),
                 ],
               ),
             ),
@@ -97,7 +97,7 @@ class Calling_Consultation extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Expanded(
-                      child: custom_Text_CC(
+                      child: customTextCC(
                         myText: 'So many prob  sd sd  sds lem',
                       ),
                     ),
@@ -141,7 +141,7 @@ class Calling_Consultation extends StatelessWidget {
   }
 }
 
-Text custom_Text_CC({
+Text customTextCC({
   required String myText,
 }) =>
     Text(
@@ -169,8 +169,8 @@ Widget mypatientInfo({
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  custom_Text_CC(myText: text1),
-                  custom_Text_CC(myText: ':'),
+                  customTextCC(myText: text1),
+                  customTextCC(myText: ':'),
                 ],
               ),
             ),

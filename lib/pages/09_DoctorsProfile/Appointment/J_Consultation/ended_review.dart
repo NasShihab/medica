@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 
 import '../../../Z_other/myColor.dart';
 import '../../../Z_other/myFullCustomButton.dart';
 import '../C_Patient_Details/patient_details_widget.dart';
 
-class Ended_Review extends StatelessWidget {
-  const Ended_Review({Key? key}) : super(key: key);
+class EndedReview extends StatelessWidget {
+  const EndedReview({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

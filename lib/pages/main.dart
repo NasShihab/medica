@@ -5,7 +5,7 @@ import 'package:medica/pages/05_notification/notification.dart';
 import 'package:medica/pages/07_TopDoctors/top_doctors.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/a_Messaging_Consultation/Chart_Page/chat_page.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/a_Messaging_Consultation/messaging_consultation.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/Call_Ringing_Page.dart';
+import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/call_ringing_page.dart';
 import '01_login/login.dart';
 import '01_login/welcome.dart';
 import '02_signUp/create_pin.dart';
@@ -28,13 +28,13 @@ import '09_DoctorsProfile/Appointment/I_My_Appointment/completed_appointment.dar
 import '09_DoctorsProfile/Appointment/I_My_Appointment/canceled_appointment.dart';
 import '09_DoctorsProfile/Appointment/I_My_Appointment/my_appointment_view.dart';
 import '09_DoctorsProfile/Appointment/I_My_Appointment/reschedule_appoinment.dart';
-import '09_DoctorsProfile/Appointment/I_My_Appointment/canceled_reason.dart';import '09_DoctorsProfile/Appointment/J_Consultation/Consultation_Ended.dart';
-import '09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/Call_Running_Page.dart';
-import '09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/Calling_Consultation.dart';
+import '09_DoctorsProfile/Appointment/I_My_Appointment/canceled_reason.dart';import '09_DoctorsProfile/Appointment/J_Consultation/consultation_ended.dart';
+import '09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/call_running_page.dart';
+import '09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/calling_consultation.dart';
 import '09_DoctorsProfile/Appointment/J_Consultation/c_Video_Consultation/Video_Consultation.dart';
 import '09_DoctorsProfile/Appointment/J_Consultation/c_Video_Consultation/Video_Ringing_Page.dart';
 import '09_DoctorsProfile/Appointment/J_Consultation/c_Video_Consultation/Video_Runnig_Page.dart';
-import '09_DoctorsProfile/Appointment/J_Consultation/z_Ended_Review.dart';
+import '09_DoctorsProfile/Appointment/J_Consultation/ended_review.dart';
 import '09_DoctorsProfile/DoctorsProfile.dart';
 import '09_DoctorsProfile/Review/DoctorsReviews.dart';
 
@@ -85,16 +85,16 @@ class MyApp extends StatelessWidget {
           '/Messaging_Consultation' : (context) =>  const MessagingConsultation(),
           '/Chat_Page' : (context) =>  const ChatPage(),
 
-          '/Calling_Consultation' : (context) =>  const Calling_Consultation(),
-          '/Call_Ringing_Page' : (context) =>  const Call_Ringing_Page(),
-          '/Call_Running_Page' : (context) =>  const Call_Running_Page(),
+          '/Calling_Consultation' : (context) =>  const CallingConsultation(),
+          '/Call_Ringing_Page' : (context) =>  const CallRingingPage(),
+          '/Call_Running_Page' : (context) =>  const CallRunningPage(),
 
           '/Video_Consultation' : (context) =>  const Video_Consultation(),
           '/Video_Ringing_Page' : (context) =>  const Video_Ringing_Page(),
           '/Video_Runnig_Page' : (context) =>  const Video_Runnig_Page(),
 
-          '/Consultation_Ended' : (context) =>  const Consultation_Ended(),
-          '/Ended_Review' : (context) =>  const Ended_Review(),
+          '/Consultation_Ended' : (context) =>  const ConsultationEnded(),
+          '/Ended_Review' : (context) =>  const EndedReview(),
 
         },
         theme: ThemeData(fontFamily: 'Roboto',
