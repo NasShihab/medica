@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/home_page.dart';
 import 'package:medica/pages/05_notification/notification.dart';
 import 'package:medica/pages/07_TopDoctors/top_doctors.dart';
-import 'package:medica/pages/08_SearchDoctors/SearchPage.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/a_Messaging_Consultation/Chart_Page/Chat_Page.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/a_Messaging_Consultation/Messaging_Consultation.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/Call_Ringing_Page.dart';
@@ -66,7 +65,6 @@ class MyApp extends StatelessWidget {
           '/notification' : (context) =>  const NotificationPage(),
           '/favorite_doctors' : (context) =>  const FavoriteDoctors(),
           '/TopDoctors' : (context) =>  const TopDoctors(),
-          '/SearchPage' : (context) =>  const SearchPage(),
           '/DoctorsProfile' : (context) =>  const DoctorsProfile(),
           '/DoctorsReviews' : (context) =>  const DoctorsReviews(),
           '/Book_Appointment' : (context) =>  const Book_Appointment(),
