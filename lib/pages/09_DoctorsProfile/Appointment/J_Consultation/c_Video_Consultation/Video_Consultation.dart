@@ -6,7 +6,7 @@ import '../../../../Z_other/myCustom_ListTile.dart';
 import '../../../../Z_other/myCuston_Appbar.dart';
 import '../../../../Z_other/myFullCustomButton.dart';
 import '../../../../Z_other/mySizedBox.dart';
-import '../../B_Select_Package/Select_Package_Widget.dart';
+import '../../B_Select_Package/select_package_widget.dart';
 import '../b_Calling_Consultation/Calling_Consultation.dart';
 
 class Video_Consultation extends StatelessWidget {
@@ -123,7 +123,7 @@ class Video_Consultation extends StatelessWidget {
             height20(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.h),
-              child: CustomIcon_Select_Package(
+              child: customSelectPackage(
                 spicon: Icons.video_camera_back,
                 spText1: 'Voice Call',
                 spText2: 'Voice call with doctor',

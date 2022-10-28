@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../Z_other/myColor.dart';
 import '../../../Z_other/mySizedBox.dart';
 
-Widget CustomIcon_Select_Package({
+Widget customSelectPackage({
   dynamic spicon = Icons.message,
   String spText1 = 'Messaging',
   String spText2 = 'Chat With',

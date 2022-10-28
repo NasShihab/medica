@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/B_Select_Package/Select_Package_Widget.dart';
+import 'package:medica/pages/09_DoctorsProfile/Appointment/B_Select_Package/select_package_widget.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 import '../../../../Z_other/myCustom_ListTile.dart';
 import '../../../../Z_other/myCuston_Appbar.dart';
@@ -118,7 +118,7 @@ class Calling_Consultation extends StatelessWidget {
             height20(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.h),
-              child: CustomIcon_Select_Package(
+              child: customSelectPackage(
                 spicon: Icons.call,
                 spText1: 'Voice Call',
                 spText2: 'Voice call with doctor',

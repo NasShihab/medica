@@ -5,7 +5,7 @@ import 'package:medica/pages/Z_other/myCustom_ListTile.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import '../../../../Z_other/mySizedBox.dart';
-import '../../B_Select_Package/Select_Package_Widget.dart';
+import '../../B_Select_Package/select_package_widget.dart';
 import '../b_Calling_Consultation/Calling_Consultation.dart';
 
 class Messaging_Consultation extends StatelessWidget {
@@ -119,7 +119,7 @@ class Messaging_Consultation extends StatelessWidget {
             height20(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.h),
-              child: CustomIcon_Select_Package(
+              child: customSelectPackage(
                 spicon: Icons.message,
                 spText1: 'Message',
                 spText2: 'Chat with doctor',

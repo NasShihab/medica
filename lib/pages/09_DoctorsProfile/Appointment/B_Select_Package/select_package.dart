@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
-import 'Select_Package_Widget.dart';
+import 'select_package_widget.dart';
 
-class Select_Package extends StatelessWidget {
-  const Select_Package({Key? key}) : super(key: key);
+class SelectPackage extends StatelessWidget {
+  const SelectPackage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +87,7 @@ class Select_Package extends StatelessWidget {
               style: TextStyle(fontSize: 20.sp),
             ),
             height20(),
-            CustomIcon_Select_Package(
+            customSelectPackage(
               spText1: 'Messaging',
               spText2: 'Chat message',
               spMinutes: '30',
@@ -101,7 +101,7 @@ class Select_Package extends StatelessWidget {
               ),
             ),
             height20(),
-            CustomIcon_Select_Package(
+            customSelectPackage(
               spText1: 'Video Call',
               spText2: 'Chat video call',
               spRate: 20,
@@ -115,7 +115,7 @@ class Select_Package extends StatelessWidget {
               ),
             ),
             height20(),
-            CustomIcon_Select_Package(
+            customSelectPackage(
               spText1: 'Voice Call',
               spText2: 'Chat voice sdsdsddffs',
               spMinutes: '20',
