@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myFullCustomButton.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/full_custom_button.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 import 'select_package_widget.dart';
 
 class SelectPackage extends StatelessWidget {
@@ -12,7 +12,7 @@ class SelectPackage extends StatelessWidget {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: myFullCustomButton(
-          myButtonTitle: 'Next',
+          buttonTitle: 'Next',
           myOnPressed: () {
             Navigator.pushNamed(context, '/Patient_Details');
           }),

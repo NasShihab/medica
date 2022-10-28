@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../Z_other/myColor.dart';
-import '../Z_other/mySizedBox.dart';
+import '../Z_other/custom_color.dart';
+import '../Z_other/custom_sized_box.dart';
 
 class DoctorSpeciality extends StatelessWidget {
   const DoctorSpeciality({Key? key}) : super(key: key);

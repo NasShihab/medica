@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
-import '../Z_other/myFullCustomButton.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
+import '../Z_other/full_custom_button.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: mycustomAppBar(context, appBarTitle: 'Forget Your Password'),
+      appBar: customAppBar(context, appBarTitle: 'Forget Your Password'),
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
@@ -100,7 +100,7 @@ class ForgetPassword extends StatelessWidget {
         ),
       )),
       floatingActionButton: myFullCustomButton(
-        myButtonTitle: 'Next',
+        buttonTitle: 'Next',
         myOnPressed: () {
           Navigator.pushNamed(context, '/HomePage');
         },

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../Z_other/mySizedBox.dart';
+import '../../../Z_other/custom_sized_box.dart';
 import 'patient_details_widget.dart';
 
 class PatientDetails extends StatelessWidget {

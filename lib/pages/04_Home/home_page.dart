@@ -5,8 +5,8 @@ import 'package:medica/pages/04_Home/doctor_speciality.dart';
 import 'package:medica/pages/04_Home/slide_show.dart';
 import 'package:medica/pages/07_TopDoctors/top_doctors_category.dart';
 import 'package:medica/pages/08_SearchDoctors/search_filter.dart';
-import 'package:medica/pages/Z_other/myColor.dart';
-import '../Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/custom_color.dart';
+import '../Z_other/custom_sized_box.dart';
 import 'bottom_navigation_bar_page.dart';
 
 class HomePage extends StatelessWidget {

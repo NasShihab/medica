@@ -1,13 +1,12 @@
-// ignore_for_file: non_constant_identifier_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 
-Widget myCustom_ListTile({
-  Widget myChart_Leading = const Image(image: AssetImage('assets/images/doctors/doctor3.png')),
-  Widget myChart_Title = const SizedBox.shrink(),
-  Widget myChart_MinTitle = const SizedBox.shrink(),
-  Widget myChart_Bottom = const SizedBox.shrink(),
+Widget customListTile({
+  Widget myChartLeading = const Image(image: AssetImage('assets/images/doctors/doctor3.png')),
+  Widget myChartTitle = const SizedBox.shrink(),
+  Widget myChartMinTitle = const SizedBox.shrink(),
+  Widget myChartBottom = const SizedBox.shrink(),
 }) =>
     Container(
       margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10),
@@ -30,18 +29,18 @@ Widget myCustom_ListTile({
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(10.r)),
                     // Leading
-                    child: myChart_Leading,
+                    child: myChartLeading,
                   ),
                 ),
               ),
               width10(),
               Expanded(
                 flex: 2,
-                child: myChart_Title,
+                child: myChartTitle,
               ),
             ],
           ),
-          myChart_Bottom,
+          myChartBottom,
         ],
       ),
     );

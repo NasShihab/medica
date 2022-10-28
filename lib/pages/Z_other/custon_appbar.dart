@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-AppBar mycustomAppBar(
+AppBar customAppBar(
   BuildContext context, {
   required String appBarTitle,
   bool appBarCenter = false,

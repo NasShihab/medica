@@ -35,8 +35,8 @@ import '09_DoctorsProfile/Appointment/J_Consultation/c_Video_Consultation/Video_
 import '09_DoctorsProfile/Appointment/J_Consultation/c_Video_Consultation/Video_Ringing_Page.dart';
 import '09_DoctorsProfile/Appointment/J_Consultation/c_Video_Consultation/Video_Runnig_Page.dart';
 import '09_DoctorsProfile/Appointment/J_Consultation/ended_review.dart';
-import '09_DoctorsProfile/DoctorsProfile.dart';
-import '09_DoctorsProfile/Review/DoctorsReviews.dart';
+import '09_DoctorsProfile/doctors_profile.dart';
+import '09_DoctorsProfile/Review/doctor_reviews_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
 
         initialRoute: '/',
         routes: {
-          '/' : (context) => const MyAppointmentView(),
+          '/' : (context) => const DoctorsProfile(),
           '/welcome' : (context) => const Welcome(),
           '/login' : (context) => const Login(),
           '/sign_up' : (context) => const SignUp(),
@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
           '/favorite_doctors' : (context) =>  const FavoriteDoctors(),
           '/TopDoctors' : (context) =>  const TopDoctors(),
           '/DoctorsProfile' : (context) =>  const DoctorsProfile(),
-          '/DoctorsReviews' : (context) =>  const DoctorsReviews(),
+          '/DoctorsReviews' : (context) =>  const DoctorReviewPage(),
           '/Book_Appointment' : (context) =>  const BookAppointment(),
           '/Select_Package' : (context) =>  const SelectPackage(),
           '/Patient_Details' : (context) =>  const PatientDetails(),

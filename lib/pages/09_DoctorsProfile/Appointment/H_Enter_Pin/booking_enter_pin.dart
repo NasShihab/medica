@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myFullCustomButton.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/full_custom_button.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import 'booking_enter_pin_widget.dart';
@@ -15,7 +15,7 @@ class BookingEnterPin extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: mycustomAppBar(context, appBarTitle: 'Enter Pin'),
+      appBar: customAppBar(context, appBarTitle: 'Enter Pin'),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
@@ -45,7 +45,7 @@ class BookingEnterPin extends StatelessWidget {
         ),
       ),
       floatingActionButton: myFullCustomButton(
-        myButtonTitle: 'Continue',
+        buttonTitle: 'Continue',
         myOnPressed: () {
           showDialog(context: context, builder: (context) => errorAlertWidget(context));
         },

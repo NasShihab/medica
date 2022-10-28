@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../Z_other/myFullCustomButton.dart';
-import '../../../Z_other/myCuston_Appbar.dart';
-import '../../../Z_other/mySizedBox.dart';
+import '../../../Z_other/full_custom_button.dart';
+import '../../../Z_other/custon_appbar.dart';
+import '../../../Z_other/custom_sized_box.dart';
 import '../C_Patient_Details/patient_details_widget.dart';
 import '../H_Enter_Pin/booking_enter_pin_widget.dart';
 
@@ -12,7 +12,7 @@ class CanceledReason extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: mycustomAppBar(
+      appBar: customAppBar(
         context,
         appBarTitle: 'Cancel Appoinment',
         actionBarIcons: const SizedBox.shrink(),
@@ -61,7 +61,7 @@ class CanceledReason extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: myFullCustomButton(
-        myButtonTitle: 'Submit',
+        buttonTitle: 'Submit',
         myOnPressed: () {
           showDialog(
             context: context,

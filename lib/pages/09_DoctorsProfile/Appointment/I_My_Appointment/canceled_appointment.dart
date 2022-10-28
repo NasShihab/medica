@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../Z_other/myBorderText.dart';
-import '../../../Z_other/myCircleAvatarIcon.dart';
-import '../../../Z_other/myCustom_ListTile.dart';
-import '../../../Z_other/mySizedBox.dart';
+import '../../../Z_other/custom_border_text.dart';
+import '../../../Z_other/custom_circle_avatar_icon.dart';
+import '../../../Z_other/custom_list_tile.dart';
+import '../../../Z_other/custom_sized_box.dart';
 
 class CanceledAppointment extends StatelessWidget {
   const CanceledAppointment({Key? key}) : super(key: key);
@@ -14,8 +14,8 @@ class CanceledAppointment extends StatelessWidget {
     return ListView.builder(
       itemCount: 5,
       itemBuilder: (context, index) {
-        return myCustom_ListTile(
-          myChart_Title: Row(
+        return customListTile(
+          myChartTitle: Row(
             children: [
               SizedBox(
                 height: MediaQuery.of(context).size.height * .12,
@@ -28,10 +28,10 @@ class CanceledAppointment extends StatelessWidget {
                       children: [
                         Text('Messaging  -', style: TextStyle(fontSize: 16.sp)),
                         width10(),
-                        myBorderText(
-                          my_text_color: Colors.red,
-                          myBorderText_borderColor: Colors.red,
-                          my_text: 'Canceled',
+                        customBorderText(
+                          myTextColor: Colors.red,
+                          myBorderTextBorderColor: Colors.red,
+                          myText: 'Canceled',
                         ),
                       ],
                     ),
@@ -44,7 +44,7 @@ class CanceledAppointment extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, '/Video_Consultation');
                   },
-                  child: myCircleAvatarIcon(myIcon: Icons.video_camera_back),
+                  child: customCircleAvatarIcon(myIcon: Icons.video_camera_back),
                 ),
               ),
             ],

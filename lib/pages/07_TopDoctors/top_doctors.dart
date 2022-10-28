@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
 import '../06_FavoriteDoctors/favorit_doctors_list.dart';
 import '../06_FavoriteDoctors/remove_favorite.dart';
-import '../Z_other/myColor.dart';
-import '../Z_other/myCustom_ListTile.dart';
+import '../Z_other/custom_color.dart';
+import '../Z_other/custom_list_tile.dart';
 
 class TopDoctors extends StatelessWidget {
   const TopDoctors({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class TopDoctors extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: mycustomAppBar(context,
+      appBar: customAppBar(context,
           appBarTitle: 'Top Doctors',
           actionBarIcons: Row(
             children: [
@@ -61,8 +61,8 @@ class TopDoctors extends StatelessWidget {
                 child: ListView.builder(
                     itemCount: favoriteDoctorList.length,
                     itemBuilder: (context, index) {
-                      return myCustom_ListTile(
-                        myChart_Title: SizedBox(
+                      return customListTile(
+                        myChartTitle: SizedBox(
                           height: MediaQuery.of(context).size.height * .12,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

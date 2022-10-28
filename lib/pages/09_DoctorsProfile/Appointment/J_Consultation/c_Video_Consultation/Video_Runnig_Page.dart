@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../Z_other/myCuston_Appbar.dart';
-import '../../../../Z_other/mySizedBox.dart';
+import '../../../../Z_other/custon_appbar.dart';
+import '../../../../Z_other/custom_sized_box.dart';
 
 class Video_Runnig_Page extends StatelessWidget {
   const Video_Runnig_Page({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class Video_Runnig_Page extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        appBar: mycustomAppBar(context, appBarTitle: ''),
+        appBar: customAppBar(context, appBarTitle: ''),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.center,

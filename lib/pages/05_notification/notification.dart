@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myColor.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
+import 'package:medica/pages/Z_other/custom_color.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
 
 import 'notification_listitem.dart';
 
@@ -13,7 +13,7 @@ class NotificationPage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: mycustomAppBar(
+      appBar: customAppBar(
         context,
         appBarTitle: 'Notification',
         actionBarIcons: IconButton(

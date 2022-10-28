@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myColor.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/custom_color.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 import 'chart_page_widget.dart';
 
 class ChatPage extends StatelessWidget {
@@ -42,7 +42,7 @@ class ChatPage extends StatelessWidget {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      appBar: mycustomAppBar(context,
+      appBar: customAppBar(context,
           appBarTitle: 'Dr Angela D Consta',
           actionBarIcons: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),

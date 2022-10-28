@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myFullCustomButton.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
-import '../../../Z_other/myCuston_Appbar.dart';
+import 'package:medica/pages/Z_other/full_custom_button.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
+import '../../../Z_other/custon_appbar.dart';
 import 'book_appointment_widget.dart';
 
 class BookAppointment extends StatelessWidget {
@@ -12,7 +12,7 @@ class BookAppointment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: mycustomAppBar(
+      appBar: customAppBar(
         context,
         appBarTitle: 'Book Appointment',
       ),
@@ -94,7 +94,7 @@ class BookAppointment extends StatelessWidget {
         ),
       ),
       floatingActionButton: myFullCustomButton(
-        myButtonTitle: 'Next',
+        buttonTitle: 'Next',
         myOnPressed: () {
           Navigator.pushNamed(context, '/Select_Package');
         },

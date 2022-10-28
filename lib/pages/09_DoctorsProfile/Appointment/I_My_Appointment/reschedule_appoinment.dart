@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/C_Patient_Details/patient_details_widget.dart';
-import 'package:medica/pages/Z_other/myFullCustomButton.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/full_custom_button.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 import '../H_Enter_Pin/booking_enter_pin_widget.dart';
 import '../a_Book_Appointment/book_appointment_widget.dart';
 
@@ -14,7 +14,7 @@ class RescheduleAppointment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: mycustomAppBar(
+      appBar: customAppBar(
         context,
         appBarTitle: 'Reschedule Appoinment',
         actionBarIcons: const SizedBox.shrink(),
@@ -62,7 +62,7 @@ class RescheduleAppointment extends StatelessWidget {
         ),
       ),
       floatingActionButton: myFullCustomButton(
-        myButtonTitle: 'Next',
+        buttonTitle: 'Next',
         myOnPressed: () {
           Navigator.pushNamed(context, '/Reschedule_Appointment2');
         },
@@ -78,7 +78,7 @@ class RescheduleAppointment2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: mycustomAppBar(
+      appBar: customAppBar(
         context,
         appBarTitle: 'Reschedule Appoinment',
         actionBarIcons: const SizedBox.shrink(),
@@ -156,7 +156,7 @@ class RescheduleAppointment2 extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: myFullCustomButton(
-        myButtonTitle: 'Submit',
+        buttonTitle: 'Submit',
         myOnPressed: () {
           showDialog(context: context, builder: (context) => successAlertDialog(context, message: 'Congrats'));
         },

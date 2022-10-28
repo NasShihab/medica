@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 
-import '../../../Z_other/myColor.dart';
-import '../../../Z_other/myFullCustomButton.dart';
+import '../../../Z_other/custom_color.dart';
+import '../../../Z_other/full_custom_button.dart';
 import '../C_Patient_Details/patient_details_widget.dart';
 
 class EndedReview extends StatelessWidget {
@@ -14,7 +14,7 @@ class EndedReview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: mycustomAppBar(context, appBarTitle: 'Write a Review'),
+      appBar: customAppBar(context, appBarTitle: 'Write a Review'),
       body: SafeArea(
         child: SizedBox(
           width: double.infinity,
@@ -105,18 +105,18 @@ class EndedReview extends StatelessWidget {
           children: [
             Flexible(
               child: myFullCustomButton(
-                myButtonBackgroundColor: myBluegrey,
-                myButtonBorderColor: myBluegrey,
-                myButtonForgroundColor: myBlueAccent,
-                myButtonFontSize: 18,
-                myButtonTitle: 'Cancel',
+                buttonBackgroundColor: myBluegrey,
+                buttonBorderColor: myBluegrey,
+                buttonForgroundColor: myBlueAccent,
+                buttonFontSize: 18,
+                buttonTitle: 'Cancel',
                 myOnPressed: () {},
               ),
             ),
             Flexible(
               child: myFullCustomButton(
-                myButtonTitle: 'Submit',
-                myButtonFontSize: 18,
+                buttonTitle: 'Submit',
+                buttonFontSize: 18,
                 myOnPressed: () {
                   showDialog(
                     context: context,
@@ -159,7 +159,7 @@ class EndedReview extends StatelessWidget {
                                   children: [
                                     Flexible(
                                       child: myFullCustomButton(
-                                        myButtonTitle: 'Ok',
+                                        buttonTitle: 'Ok',
                                         myOnPressed: () {
                                           Navigator.pushNamed(context, '/HomePage');
                                         },

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
 
 
 class Fingerprint extends StatelessWidget {
@@ -12,7 +12,7 @@ class Fingerprint extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: mycustomAppBar(context, appBarTitle: 'Set Your Fingerprint'),
+      appBar: customAppBar(context, appBarTitle: 'Set Your Fingerprint'),
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),

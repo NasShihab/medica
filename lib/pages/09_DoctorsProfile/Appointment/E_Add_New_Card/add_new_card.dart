@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../Z_other/mySizedBox.dart';
+import '../../../Z_other/custom_sized_box.dart';
 import '../C_Patient_Details/patient_details_widget.dart';
 import 'add_new_card_widget.dart';
 

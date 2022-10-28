@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../Z_other/myBorderText.dart';
-import '../../../Z_other/myCircleAvatarIcon.dart';
-import '../../../Z_other/myFullCustomButton.dart';
-import '../../../Z_other/myColor.dart';
-import '../../../Z_other/myCustom_ListTile.dart';
-import '../../../Z_other/mySizedBox.dart';
+import '../../../Z_other/custom_border_text.dart';
+import '../../../Z_other/custom_circle_avatar_icon.dart';
+import '../../../Z_other/full_custom_button.dart';
+import '../../../Z_other/custom_color.dart';
+import '../../../Z_other/custom_list_tile.dart';
+import '../../../Z_other/custom_sized_box.dart';
 
 class CompletedAppointment extends StatelessWidget {
   const CompletedAppointment({Key? key}) : super(key: key);
@@ -15,8 +15,8 @@ class CompletedAppointment extends StatelessWidget {
     return ListView.builder(
       itemCount: 5,
       itemBuilder: (context, index) {
-        return myCustom_ListTile(
-          myChart_Title: Row(
+        return customListTile(
+          myChartTitle: Row(
             children: [
               SizedBox(
                 height: MediaQuery.of(context).size.height * .12,
@@ -29,7 +29,7 @@ class CompletedAppointment extends StatelessWidget {
                       children: [
                         Text('Messaging  -', style: TextStyle(fontSize: 16.sp)),
                         width10(),
-                        myBorderText(myBorderText_borderColor: Colors.green, my_text_color: Colors.green, my_text: 'Completed'),
+                        customBorderText(myBorderTextBorderColor: Colors.green, myTextColor: Colors.green, myText: 'Completed'),
                       ],
                     ),
                     Text('20 Feb 2022  |  10:00 PM', style: TextStyle(fontSize: 16.sp)),
@@ -41,12 +41,12 @@ class CompletedAppointment extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, '/Calling_Consultation');
                   },
-                  child: myCircleAvatarIcon(myIcon: Icons.call),
+                  child: customCircleAvatarIcon(myIcon: Icons.call),
                 ),
               ),
             ],
           ),
-          myChart_Bottom: Column(
+          myChartBottom: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -58,19 +58,19 @@ class CompletedAppointment extends StatelessWidget {
                   children: [
                     Expanded(
                       child: myFullCustomButton(
-                        myButtonTitle: 'Book Again',
-                        myButtonFontSize: 16,
-                        myButtonForgroundColor: myBlueAccent,
-                        myButtonBackgroundColor: Colors.white,
-                        myButtonHeight: 35,
+                        buttonTitle: 'Book Again',
+                        buttonFontSize: 16,
+                        buttonForgroundColor: myBlueAccent,
+                        buttonBackgroundColor: Colors.white,
+                        buttonHeight: 35,
                         myOnPressed: () {},
                       ),
                     ),
                     Expanded(
                       child: myFullCustomButton(
-                        myButtonFontSize: 16,
-                        myButtonTitle: 'Leave a review',
-                        myButtonHeight: 35,
+                        buttonFontSize: 16,
+                        buttonTitle: 'Leave a review',
+                        buttonHeight: 35,
                         myOnPressed: () {
                           Navigator.pushNamed(context, '/Ended_Review');
                         },

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class CreatePin extends StatelessWidget {
@@ -11,7 +11,7 @@ class CreatePin extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: mycustomAppBar(context, appBarTitle: 'Create New Pin'),
+      appBar: customAppBar(context, appBarTitle: 'Create New Pin'),
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),

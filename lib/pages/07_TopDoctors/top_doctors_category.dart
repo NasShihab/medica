@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
-import '../Z_other/myColor.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
+import '../Z_other/custom_color.dart';
 
 class TopDoctorsCategory extends StatelessWidget {
   const TopDoctorsCategory({Key? key}) : super(key: key);

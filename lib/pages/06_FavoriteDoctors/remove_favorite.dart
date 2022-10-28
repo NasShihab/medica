@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myFullCustomButton.dart';
+import 'package:medica/pages/Z_other/full_custom_button.dart';
 
-import '../Z_other/myColor.dart';
-import '../Z_other/myCustom_ListTile.dart';
+import '../Z_other/custom_color.dart';
+import '../Z_other/custom_list_tile.dart';
 import 'favorit_doctors_list.dart';
 
 class RemoveFavorite extends StatelessWidget {
@@ -24,11 +24,11 @@ class RemoveFavorite extends StatelessWidget {
                       'Remove From Favorites',
                       style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
                     )),
-                myCustom_ListTile(
-                  myChart_Leading: const Image(
+                customListTile(
+                  myChartLeading: const Image(
                     image: AssetImage('assets/images/doctors/doctor3.png'),
                   ),
-                  myChart_Title: Container(
+                  myChartTitle: Container(
                     height: MediaQuery.of(context).size.height * .12,
                     padding: EdgeInsets.only(right: 10.w),
                     child: Column(
@@ -85,12 +85,12 @@ class RemoveFavorite extends StatelessWidget {
                     children: [
                       Expanded(
                         child: myFullCustomButton(
-                          myButtonBackgroundColor: myBluegrey,
-                          myButtonForgroundColor: myBlueAccent,
-                          myButtonBorderColor: myBluegrey,
-                          myButtonHeight: 50,
-                          myButtonFontSize: 18,
-                          myButtonTitle: 'Cancel',
+                          buttonBackgroundColor: myBluegrey,
+                          buttonForgroundColor: myBlueAccent,
+                          buttonBorderColor: myBluegrey,
+                          buttonHeight: 50,
+                          buttonFontSize: 18,
+                          buttonTitle: 'Cancel',
                           myOnPressed: () {
                             Navigator.pop(context);
                           },
@@ -98,9 +98,9 @@ class RemoveFavorite extends StatelessWidget {
                       ),
                       Expanded(
                         child: myFullCustomButton(
-                          myButtonHeight: 50,
-                          myButtonFontSize: 18,
-                          myButtonTitle: 'Yes, Remove',
+                          buttonHeight: 50,
+                          buttonFontSize: 18,
+                          buttonTitle: 'Yes, Remove',
                           myOnPressed: () {
                             Navigator.pop(context);
                           },

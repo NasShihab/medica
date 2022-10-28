@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myColor.dart';
+import 'package:medica/pages/Z_other/custom_color.dart';
 
 class BottomNavigationBarPage extends StatelessWidget {
   const BottomNavigationBarPage({Key? key}) : super(key: key);

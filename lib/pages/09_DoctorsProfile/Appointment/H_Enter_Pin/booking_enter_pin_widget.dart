@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myColor.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/custom_color.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 
-import '../../../Z_other/myFullCustomButton.dart';
+import '../../../Z_other/full_custom_button.dart';
 
 Widget successAlertDialog(BuildContext context, {required String message}) => AlertDialog(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.r))),
@@ -38,7 +38,7 @@ Widget successAlertDialog(BuildContext context, {required String message}) => Al
               children: [
                 Flexible(
                   child: myFullCustomButton(
-                    myButtonTitle: 'View Appointment',
+                    buttonTitle: 'View Appointment',
                     myOnPressed: () {
                       Navigator.pushNamed(context, '/My_Appointment');
                     },
@@ -48,9 +48,9 @@ Widget successAlertDialog(BuildContext context, {required String message}) => Al
                 height10(),
                 Flexible(
                   child: myFullCustomButton(
-                    myButtonBackgroundColor: Colors.lightBlue[100],
-                    myButtonForgroundColor: myBlueAccent,
-                    myButtonTitle: 'Cancel',
+                    buttonBackgroundColor: Colors.lightBlue[100],
+                    buttonForgroundColor: myBlueAccent,
+                    buttonTitle: 'Cancel',
                     myOnPressed: () {
                       Navigator.pop(context);
                     },
@@ -97,7 +97,7 @@ Widget errorAlertWidget(BuildContext context) => AlertDialog(
                 children: [
                   Flexible(
                     child: myFullCustomButton(
-                      myButtonTitle: 'Try Again',
+                      buttonTitle: 'Try Again',
                       myOnPressed: () {
                         showDialog(
                           context: context,
@@ -109,10 +109,10 @@ Widget errorAlertWidget(BuildContext context) => AlertDialog(
                   height10(),
                   Flexible(
                       child: myFullCustomButton(
-                    myButtonTitle: 'Cancel',
-                    myButtonForgroundColor: myBlueAccent,
-                    myButtonBackgroundColor: Colors.lightBlue[100],
-                    myButtonBorderColor: Colors.transparent,
+                    buttonTitle: 'Cancel',
+                    buttonForgroundColor: myBlueAccent,
+                    buttonBackgroundColor: Colors.lightBlue[100],
+                    buttonBorderColor: Colors.transparent,
                     myOnPressed: () {},
                   ))
                 ],

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myColor.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import 'package:medica/pages/Z_other/myFullCustomButton.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/custom_color.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
+import 'package:medica/pages/Z_other/full_custom_button.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 
 class ConsultationEnded extends StatelessWidget {
   const ConsultationEnded({Key? key}) : super(key: key);
@@ -11,7 +11,7 @@ class ConsultationEnded extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: mycustomAppBar(context, appBarTitle: 'Consultation Ended'),
+      appBar: customAppBar(context, appBarTitle: 'Consultation Ended'),
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.symmetric(vertical: 15.h),
@@ -71,18 +71,18 @@ class ConsultationEnded extends StatelessWidget {
           children: [
             Flexible(
               child: myFullCustomButton(
-                myButtonBackgroundColor: myBluegrey,
-                myButtonBorderColor: myBluegrey,
-                myButtonForgroundColor: myBlueAccent,
-                myButtonFontSize: 18,
-                myButtonTitle: 'Back to Home',
+                buttonBackgroundColor: myBluegrey,
+                buttonBorderColor: myBluegrey,
+                buttonForgroundColor: myBlueAccent,
+                buttonFontSize: 18,
+                buttonTitle: 'Back to Home',
                 myOnPressed: () {},
               ),
             ),
             Flexible(
               child: myFullCustomButton(
-                myButtonTitle: 'Leave a Review',
-                myButtonFontSize: 18,
+                buttonTitle: 'Leave a Review',
+                buttonFontSize: 18,
                 myOnPressed: () {
                   Navigator.pushNamed(context, '/Ended_Review');
                 },

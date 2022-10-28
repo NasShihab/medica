@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../Z_other/myColor.dart';
-import '../../../../Z_other/myCustom_ListTile.dart';
-import '../../../../Z_other/myCuston_Appbar.dart';
-import '../../../../Z_other/myFullCustomButton.dart';
-import '../../../../Z_other/mySizedBox.dart';
+import '../../../../Z_other/custom_color.dart';
+import '../../../../Z_other/custom_list_tile.dart';
+import '../../../../Z_other/custon_appbar.dart';
+import '../../../../Z_other/full_custom_button.dart';
+import '../../../../Z_other/custom_sized_box.dart';
 import '../../B_Select_Package/select_package_widget.dart';
 import '../b_Calling_Consultation/calling_consultation.dart';
 
@@ -15,7 +15,7 @@ class Video_Consultation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: mycustomAppBar(context,
+      appBar: customAppBar(context,
           actionBarIcons: IconButton(
             onPressed: () {},
             icon: Icon(Icons.more_vert, size: 24.sp, color: Colors.black),
@@ -26,9 +26,9 @@ class Video_Consultation extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            myCustom_ListTile(
-              myChart_Leading: Image.asset('assets/images/doctors/doctor1.jpg'),
-              myChart_Title: SizedBox(
+            customListTile(
+              myChartLeading: Image.asset('assets/images/doctors/doctor1.jpg'),
+              myChartTitle: SizedBox(
                 height: MediaQuery.of(context).size.height * .12,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,8 +136,8 @@ class Video_Consultation extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: myFullCustomButton(
-        myButtonFontSize: 18,
-        myButtonTitle: 'Video Call (Start at 16:00 PM)',
+        buttonFontSize: 18,
+        buttonTitle: 'Video Call (Start at 16:00 PM)',
         myOnPressed: () {
           Navigator.pushNamed(context, '/Video_Ringing_Page');
         },

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
-import 'DoctorsReviews_Model.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
+import 'doctors_reviews_widget.dart';
 
-class DoctorsReviews extends StatelessWidget {
-  const DoctorsReviews({Key? key}) : super(key: key);
+class DoctorReviewPage extends StatelessWidget {
+  const DoctorReviewPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: mycustomAppBar(context, appBarTitle: '4.8(4,200 reviews)',
-          actionBarIcons: IconButton(onPressed: (){}, icon: Icon(Icons.expand_circle_down_outlined, color: Colors.black,)),
+      appBar: customAppBar(context, appBarTitle: '4.8(4,200 reviews)',
+          actionBarIcons: IconButton(onPressed: (){}, icon: const Icon(Icons.expand_circle_down_outlined, color: Colors.black,)),
       ),
       body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),
@@ -32,7 +32,7 @@ class DoctorsReviews extends StatelessWidget {
               ),
               height20(),
               Flexible(
-                child: DoctorsReviewCard(context),
+                child: doctorsReviewCard(context),
               ),
             ],
           )),

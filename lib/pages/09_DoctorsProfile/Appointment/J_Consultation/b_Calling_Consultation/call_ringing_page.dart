@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/custon_appbar.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 
 class CallRingingPage extends StatelessWidget {
   const CallRingingPage({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class CallRingingPage extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        appBar: mycustomAppBar(context, appBarTitle: ''),
+        appBar: customAppBar(context, appBarTitle: ''),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.center,

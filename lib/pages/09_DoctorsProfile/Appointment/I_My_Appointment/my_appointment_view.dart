@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myColor.dart';
+import 'package:medica/pages/Z_other/custom_color.dart';
 import '../I_My_Appointment/upcoming_appointment.dart';
 import 'canceled_appointment.dart';
 import 'completed_appointment.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/home_page.dart';
-import '../Z_other/myFullCustomButton.dart';
+import '../Z_other/full_custom_button.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -61,8 +61,8 @@ class Login extends StatelessWidget {
             ),
             SizedBox(height: 10.h),
             myFullCustomButton(
-                myButtonTitle: 'Sign in',
-                outsidePaddingHorizontal: 0,
+                buttonTitle: 'Sign in',
+                buttonOoutsidePaddingHorizontal: 0,
                 myOnPressed: () {
                   Navigator.pushNamed(context, '/HomePage');
                 }),

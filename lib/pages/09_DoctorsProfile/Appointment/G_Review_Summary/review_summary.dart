@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myFullCustomButton.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
-import '../../../Z_other/myCustom_ListTile.dart';
+import 'package:medica/pages/Z_other/full_custom_button.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
+import '../../../Z_other/custom_list_tile.dart';
 import 'review_summary_widget.dart';
 
 class ReviewSummary extends StatelessWidget {
@@ -33,8 +33,8 @@ class ReviewSummary extends StatelessWidget {
       ),
       body: Column(
         children: [
-          myCustom_ListTile(
-            myChart_Title: SizedBox(
+          customListTile(
+            myChartTitle: SizedBox(
               height: MediaQuery.of(context).size.height * .12,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -129,7 +129,7 @@ class ReviewSummary extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: myFullCustomButton(
-        myButtonTitle: 'Next',
+        buttonTitle: 'Next',
         myOnPressed: () {
           Navigator.pushNamed(context, '/Enter_Pin');
         },

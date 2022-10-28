@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myFullCustomButton.dart';
-import 'package:medica/pages/Z_other/mySizedBox.dart';
+import 'package:medica/pages/Z_other/full_custom_button.dart';
+import 'package:medica/pages/Z_other/custom_sized_box.dart';
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
 
@@ -69,8 +69,8 @@ class Welcome extends StatelessWidget {
             ),
             height20(),
             myFullCustomButton(
-                myButtonTitle: 'Sign in with password',
-                outsidePaddingHorizontal: 0,
+                buttonTitle: 'Sign in with password',
+                buttonOoutsidePaddingHorizontal: 0,
                 myOnPressed: () {
                   Navigator.pushNamed(context, '/login');
                 }),
