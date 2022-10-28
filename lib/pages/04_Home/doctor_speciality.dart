@@ -1,8 +1,5 @@
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../Z_other/myColor.dart';
 import '../Z_other/mySizedBox.dart';
 
@@ -28,10 +25,10 @@ class DoctorSpeciality extends StatelessWidget {
           children: [
             Row(
               children: [
-                DocSpeciality(dcCategory: 'General', dcicon: Icons.generating_tokens),
-                DocSpeciality(dcCategory: 'Dentist', dcicon: Icons.table_bar_outlined),
-                DocSpeciality(dcCategory: 'Ophthalmologist', dcicon: Icons.accessible),
-                DocSpeciality(dcCategory: 'Nutrition', dcicon: Icons.food_bank_outlined),
+                docSpeciality(dcCategory: 'General', dcicon: Icons.generating_tokens),
+                docSpeciality(dcCategory: 'Dentist', dcicon: Icons.table_bar_outlined),
+                docSpeciality(dcCategory: 'Ophthalmologist', dcicon: Icons.accessible),
+                docSpeciality(dcCategory: 'Nutrition', dcicon: Icons.food_bank_outlined),
               ],
             ),
             height20(),
@@ -45,10 +42,10 @@ class DoctorSpeciality extends StatelessWidget {
                 //       style: TextStyle(fontSize: 16.sp),
                 //     ),
                 //     myIcon: Icons.back_hand_outlined),
-                DocSpeciality(dcCategory: 'Neurologist', dcicon: Icons.back_hand_outlined),
-                DocSpeciality(dcCategory: 'Pediatric', dcicon: Icons.adb_rounded),
-                DocSpeciality(dcCategory: 'Radiologist', dcicon: Icons.perm_camera_mic),
-                DocSpeciality(dcCategory: 'More', dcicon: Icons.more),
+                docSpeciality(dcCategory: 'Neurologist', dcicon: Icons.back_hand_outlined),
+                docSpeciality(dcCategory: 'Pediatric', dcicon: Icons.adb_rounded),
+                docSpeciality(dcCategory: 'Radiologist', dcicon: Icons.perm_camera_mic),
+                docSpeciality(dcCategory: 'More', dcicon: Icons.more),
               ],
             ),
           ],
@@ -58,7 +55,7 @@ class DoctorSpeciality extends StatelessWidget {
   }
 
   //My Shortcut
-  Widget DocSpeciality({required var dcicon, required String dcCategory}) => Expanded(
+  Widget docSpeciality({required var dcicon, required String dcCategory}) => Expanded(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),
           child: Column(

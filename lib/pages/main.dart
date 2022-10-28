@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/04_Home/HomePage.dart';
+import 'package:medica/pages/04_Home/home_page.dart';
 import 'package:medica/pages/05_notification/notification.dart';
 import 'package:medica/pages/07_TopDoctors/TopDoctors.dart';
 import 'package:medica/pages/08_SearchDoctors/SearchPage.dart';

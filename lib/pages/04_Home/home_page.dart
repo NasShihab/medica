@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/04_Home/DoctorSpeciality.dart';
-import 'package:medica/pages/04_Home/SlideShow.dart';
+import 'package:medica/pages/04_Home/doctor_speciality.dart';
+import 'package:medica/pages/04_Home/slide_show.dart';
 import 'package:medica/pages/07_TopDoctors/TopDoctorsCategory.dart';
 import 'package:medica/pages/08_SearchDoctors/SearchFilter.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 import '../Z_other/mySizedBox.dart';
-import 'bottomNavigationBarPage.dart';
+import 'bottom_navigation_bar_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      bottomNavigationBar: const bottomNavigationBarPage(),
+      bottomNavigationBar: const BottomNavigationBarPage(),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 
-class bottomNavigationBarPage extends StatelessWidget {
-  const bottomNavigationBarPage({Key? key}) : super(key: key);
+class BottomNavigationBarPage extends StatelessWidget {
+  const BottomNavigationBarPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
