@@ -3,22 +3,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../Z_other/mySizedBox.dart';
 import '../C_Patient_Details/patient_details_widget.dart';
-import 'Add_New_Card_Widget.dart';
+import 'add_new_card_widget.dart';
 
-class Add_New_Card extends StatelessWidget {
-  const Add_New_Card({Key? key})
-      : super(key: key);
+class AddNewCard extends StatelessWidget {
+  const AddNewCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation
-              .centerFloat,
-      floatingActionButton: pdNextButton(context,
-          tdButtonName: 'Next',
-          tdPageName: '/Payment_UpdateCard'),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: pdNextButton(context, tdButtonName: 'Next', tdPageName: '/Payment_UpdateCard'),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -35,17 +30,14 @@ class Add_New_Card extends StatelessWidget {
           fit: BoxFit.fitWidth,
           child: Text(
             'Add New Card',
-            style: TextStyle(
-                fontSize: 24.sp,
-                color: Colors.black),
+            style: TextStyle(fontSize: 24.sp, color: Colors.black),
           ),
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
-              Navigator.pushNamed(
-                  context, '/HomePage');
+              Navigator.pushNamed(context, '/HomePage');
             },
             icon: Icon(
               Icons.arrow_back,
@@ -54,17 +46,12 @@ class Add_New_Card extends StatelessWidget {
             )),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: 22.w),
+        padding: EdgeInsets.symmetric(horizontal: 22.w),
         child: Column(
-          crossAxisAlignment:
-              CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             height10(),
-            const Image(
-                width: double.infinity,
-                image: AssetImage(
-                    'assets/images/visa_card.png')),
+            const Image(width: double.infinity, image: AssetImage('assets/images/visa_card.png')),
             Text('Card Name', style: TextStyle(fontSize: 18.sp)),
             height20(),
             add_Card_TextField(pdHintText: 'Antony Gomez'),

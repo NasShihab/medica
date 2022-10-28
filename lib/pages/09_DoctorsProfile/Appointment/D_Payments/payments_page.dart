@@ -69,7 +69,7 @@ class PaymentsPage extends StatelessWidget {
             SizedBox(
               height: 300.h,
               child: ListView.builder(
-                itemCount: PaymentMethodList.length,
+                itemCount: paymentMethodList.length,
                 itemBuilder: (context, index) {
                   return Column(
                     children: [
@@ -80,9 +80,9 @@ class PaymentsPage extends StatelessWidget {
                         leading: Image.asset(
                             height: 40,
                             width: 40,
-                            '${PaymentMethodList[index].paymentLogo}'),
+                            '${paymentMethodList[index].paymentLogo}'),
                         title: Text(
-                          '${PaymentMethodList[index].paymentName}',
+                          '${paymentMethodList[index].paymentName}',
                           style: TextStyle(
                               fontWeight:
                                   FontWeight.bold,
@@ -111,7 +111,7 @@ class PaymentsPage extends StatelessWidget {
   }
 }
 
-List PaymentMethodList = [
+List paymentMethodList = [
   PaymentMethodClass(
     'assets/images/paypal.png',
     'Paypal',

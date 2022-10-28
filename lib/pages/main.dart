@@ -20,7 +20,7 @@ import '09_DoctorsProfile/Appointment/A_Book_Appointment/book_appointment.dart';
 import '09_DoctorsProfile/Appointment/B_Select_Package/select_package.dart';
 import '09_DoctorsProfile/Appointment/C_Patient_Details/patient_details.dart';
 import '09_DoctorsProfile/Appointment/D_Payments/payments_page.dart';
-import '09_DoctorsProfile/Appointment/E_Add_New_Card/Add_New_Card.dart';
+import '09_DoctorsProfile/Appointment/E_Add_New_Card/add_new_card.dart';
 import '09_DoctorsProfile/Appointment/F_Payment_UpdateCard/Payment_UpdateCard.dart';
 import '09_DoctorsProfile/Appointment/G_Review_Summary/Review_Summary.dart';
 import '09_DoctorsProfile/Appointment/H_Enter_Pin/Enter_Pin.dart';
@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
           '/Select_Package' : (context) =>  const SelectPackage(),
           '/Patient_Details' : (context) =>  const PatientDetails(),
           '/Payments_Page' : (context) =>  const PaymentsPage(),
-          '/Add_New_Card' : (context) =>  const Add_New_Card(),
+          '/Add_New_Card' : (context) =>  const AddNewCard(),
           '/Payment_UpdateCard' : (context) =>  const Payment_UpdateCard(),
           '/Review_Summary' : (context) =>  const Review_Summary(),
           '/Enter_Pin' : (context) =>  const Enter_Pin(),
