@@ -52,9 +52,9 @@ class MyApp extends StatelessWidget {
 
         initialRoute: '/',
         routes: {
-          '/' : (context) => const welcome(),
-          '/welcome' : (context) => const welcome(),
-          '/login' : (context) => const login(),
+          '/' : (context) => const Welcome(),
+          '/welcome' : (context) => const Welcome(),
+          '/login' : (context) => const Login(),
           '/sign_up' : (context) => const SignUp(),
           '/FillProfile' : (context) => const FillProfile(),
           '/fingerprint' : (context) => const fingerprint(),

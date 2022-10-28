@@ -1,12 +1,10 @@
-// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
-
-// ignore: camel_case_types
-class welcome extends StatelessWidget {
-  const welcome({Key? key}) : super(key: key);
+class Welcome extends StatelessWidget {
+  const Welcome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
