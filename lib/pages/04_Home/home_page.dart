@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/doctor_speciality.dart';
 import 'package:medica/pages/04_Home/slide_show.dart';
-import 'package:medica/pages/07_TopDoctors/TopDoctorsCategory.dart';
+import 'package:medica/pages/07_TopDoctors/top_doctors_category.dart';
 import 'package:medica/pages/08_SearchDoctors/SearchFilter.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 import '../Z_other/mySizedBox.dart';

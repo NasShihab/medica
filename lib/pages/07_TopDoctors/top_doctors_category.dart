@@ -1,12 +1,8 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
-
 import '../Z_other/myColor.dart';
 
-// ignore: camel_case_types
 class TopDoctorsCategory extends StatelessWidget {
   const TopDoctorsCategory({Key? key}) : super(key: key);
 
