@@ -1,12 +1,11 @@
-// ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 
 
-class fingerprint extends StatelessWidget {
-  const fingerprint({Key? key}) : super(key: key);
+class Fingerprint extends StatelessWidget {
+  const Fingerprint({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

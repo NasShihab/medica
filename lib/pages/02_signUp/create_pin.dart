@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-// ignore: camel_case_types
 class CreatePin extends StatelessWidget {
   const CreatePin({Key? key}) : super(key: key);
 

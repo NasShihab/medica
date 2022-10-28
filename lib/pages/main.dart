@@ -9,9 +9,9 @@ import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/a_Mess
 import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/Call_Ringing_Page.dart';
 import '01_login/login.dart';
 import '01_login/welcome.dart';
-import '02_signUp/CreatePin.dart';
-import '02_signUp/FillProfile.dart';
-import '02_signUp/SignUp.dart';
+import '02_signUp/create_pin.dart';
+import '02_signUp/fill_profile.dart';
+import '02_signUp/sign_up.dart';
 import '02_signUp/fingerprint.dart';
 import '03_forget_password/CreatePassword.dart';
 import '03_forget_password/ForgetPassword.dart';
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
           '/login' : (context) => const Login(),
           '/sign_up' : (context) => const SignUp(),
           '/FillProfile' : (context) => const FillProfile(),
-          '/fingerprint' : (context) => const fingerprint(),
+          '/fingerprint' : (context) => const Fingerprint(),
           '/create_pin' : (context) => const CreatePin(),
           '/forget_password' : (context) => const ForgetPassword(),
           '/OtpCode' : (context) => const OtpCode(),
