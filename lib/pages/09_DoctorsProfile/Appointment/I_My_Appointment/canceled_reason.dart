@@ -6,8 +6,8 @@ import '../../../Z_other/mySizedBox.dart';
 import '../C_Patient_Details/patient_details_widget.dart';
 import '../H_Enter_Pin/booking_enter_pin_widget.dart';
 
-class Canceled_Reason extends StatelessWidget {
-  const Canceled_Reason({Key? key}) : super(key: key);
+class CanceledReason extends StatelessWidget {
+  const CanceledReason({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

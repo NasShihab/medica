@@ -1,4 +1,3 @@
-// ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,8 +6,8 @@ import '../../../Z_other/myCircleAvatarIcon.dart';
 import '../../../Z_other/myCustom_ListTile.dart';
 import '../../../Z_other/mySizedBox.dart';
 
-class Canceled_Appointment extends StatelessWidget {
-  const Canceled_Appointment({Key? key}) : super(key: key);
+class CanceledAppointment extends StatelessWidget {
+  const CanceledAppointment({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

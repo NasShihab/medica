@@ -7,8 +7,8 @@ import 'package:medica/pages/Z_other/mySizedBox.dart';
 import '../H_Enter_Pin/booking_enter_pin_widget.dart';
 import '../a_Book_Appointment/book_appointment_widget.dart';
 
-class Reschedule_Appointment extends StatelessWidget {
-  const Reschedule_Appointment({Key? key}) : super(key: key);
+class RescheduleAppointment extends StatelessWidget {
+  const RescheduleAppointment({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,13 +68,12 @@ class Reschedule_Appointment extends StatelessWidget {
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      //floatingActionButton: mycustom_button_Blue(context, btname: 'Next', pageName: '/Reschedule_Appointment2'),
     );
   }
 }
 
-class Reschedule_Appointment2 extends StatelessWidget {
-  const Reschedule_Appointment2({Key? key}) : super(key: key);
+class RescheduleAppointment2 extends StatelessWidget {
+  const RescheduleAppointment2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +81,7 @@ class Reschedule_Appointment2 extends StatelessWidget {
       appBar: mycustomAppBar(
         context,
         appBarTitle: 'Reschedule Appoinment',
-        actionBarIcons: SizedBox.shrink(),
+        actionBarIcons: const SizedBox.shrink(),
       ),
       resizeToAvoidBottomInset: false,
       body: SafeArea(

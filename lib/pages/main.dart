@@ -24,11 +24,11 @@ import '09_DoctorsProfile/Appointment/E_Add_New_Card/add_new_card.dart';
 import '09_DoctorsProfile/Appointment/F_Payment_UpdateCard/payment_update_card.dart';
 import '09_DoctorsProfile/Appointment/G_Review_Summary/review_summary.dart';
 import '09_DoctorsProfile/Appointment/H_Enter_Pin/booking_enter_pin.dart';
-import '09_DoctorsProfile/Appointment/I_My_Appointment/b_Completed_Appointment.dart';
-import '09_DoctorsProfile/Appointment/I_My_Appointment/c_Canceled_Appointment.dart';
-import '09_DoctorsProfile/Appointment/I_My_Appointment/0_MyAppointment.dart';
-import '09_DoctorsProfile/Appointment/I_My_Appointment/d_Reschedule_Appoinment.dart';
-import '09_DoctorsProfile/Appointment/I_My_Appointment/e_Canceled_Reason.dart';import '09_DoctorsProfile/Appointment/J_Consultation/Consultation_Ended.dart';
+import '09_DoctorsProfile/Appointment/I_My_Appointment/completed_appointment.dart';
+import '09_DoctorsProfile/Appointment/I_My_Appointment/canceled_appointment.dart';
+import '09_DoctorsProfile/Appointment/I_My_Appointment/my_appointment_view.dart';
+import '09_DoctorsProfile/Appointment/I_My_Appointment/reschedule_appoinment.dart';
+import '09_DoctorsProfile/Appointment/I_My_Appointment/canceled_reason.dart';import '09_DoctorsProfile/Appointment/J_Consultation/Consultation_Ended.dart';
 import '09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/Call_Running_Page.dart';
 import '09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/Calling_Consultation.dart';
 import '09_DoctorsProfile/Appointment/J_Consultation/c_Video_Consultation/Video_Consultation.dart';
@@ -75,12 +75,12 @@ class MyApp extends StatelessWidget {
           '/Payment_UpdateCard' : (context) =>  const PaymentUpdateCard(),
           '/Review_Summary' : (context) =>  const ReviewSummary(),
           '/Enter_Pin' : (context) =>  const BookingEnterPin(),
-          '/My_Appointment' : (context) =>  const My_Appointment(),
-          '/Completed_Appointment' : (context) =>  const Completed_Appointment(),
-          '/Canceled_Appointment' : (context) =>  const Canceled_Appointment(),
-          '/Reschedule_Appointment' : (context) =>  const Reschedule_Appointment(),
-          '/Reschedule_Appointment2' : (context) =>  const Reschedule_Appointment2(),
-          '/Canceled_Reason' : (context) =>  const Canceled_Reason(),
+          '/My_Appointment' : (context) =>  const MyAppointmentView(),
+          '/Completed_Appointment' : (context) =>  const CompletedAppointment(),
+          '/Canceled_Appointment' : (context) =>  const CanceledAppointment(),
+          '/Reschedule_Appointment' : (context) =>  const RescheduleAppointment(),
+          '/Reschedule_Appointment2' : (context) =>  const RescheduleAppointment2(),
+          '/Canceled_Reason' : (context) =>  const CanceledReason(),
 
           '/Messaging_Consultation' : (context) =>  const Messaging_Consultation(),
           '/Chat_Page' : (context) =>  const Chat_Page(),

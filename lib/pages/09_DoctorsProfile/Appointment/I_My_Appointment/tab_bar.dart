@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 AppBar myTabBar(
   BuildContext context, {
   required String appBarTitle2,
-  Widget action_IconBar = const SizedBox.shrink(),
+  Widget actionIconBar = const SizedBox.shrink(),
   Widget leadingIcon2 = const SizedBox.shrink(),
 }) =>
     AppBar(
@@ -27,7 +27,7 @@ AppBar myTabBar(
           style: TextStyle(fontSize: 24.sp, color: Colors.black),
         ),
       ),
-      actions: [action_IconBar],
+      actions: [actionIconBar],
       elevation: 0,
       leading: IconButton(
         onPressed: () {

@@ -1,11 +1,9 @@
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../Z_other/myFullCustomButton.dart';
 import '../../../Z_other/myColor.dart';
 
-Widget Cancel_Appointment_Dialog(BuildContext context) => SizedBox(
+Widget cancelAppointmentDialog(BuildContext context) => SizedBox(
       height: MediaQuery.of(context).size.height * 0.36,
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 20.h),
@@ -71,7 +69,7 @@ Widget Cancel_Appointment_Dialog(BuildContext context) => SizedBox(
       ),
     );
 
-Widget cancel_dialog(BuildContext context, {required String message}) => AlertDialog(
+Widget cancelDialog(BuildContext context, {required String message}) => AlertDialog(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.r))),
     content: SizedBox(
       height: 500.h,
@@ -119,5 +117,3 @@ Widget cancel_dialog(BuildContext context, {required String message}) => AlertDi
         ],
       ),
     ));
-
-

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import '../../../Z_other/myBorderText.dart';
 import '../../../Z_other/myCircleAvatarIcon.dart';
+import '../../../Z_other/myFullCustomButton.dart';
 import '../../../Z_other/myColor.dart';
 import '../../../Z_other/myCustom_ListTile.dart';
 import '../../../Z_other/mySizedBox.dart';
 
-class Upcoming_Appointment extends StatelessWidget {
-  const Upcoming_Appointment({Key? key}) : super(key: key);
+class CompletedAppointment extends StatelessWidget {
+  const CompletedAppointment({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class Upcoming_Appointment extends StatelessWidget {
                       children: [
                         Text('Messaging  -', style: TextStyle(fontSize: 16.sp)),
                         width10(),
-                        myBorderText(my_text: 'Upcoming'),
+                        myBorderText(myBorderText_borderColor: Colors.green, my_text_color: Colors.green, my_text: 'Completed'),
                       ],
                     ),
                     Text('20 Feb 2022  |  10:00 PM', style: TextStyle(fontSize: 16.sp)),
@@ -39,12 +39,9 @@ class Upcoming_Appointment extends StatelessWidget {
               Flexible(
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, '/Messaging_Consultation');
+                    Navigator.pushNamed(context, '/Calling_Consultation');
                   },
-                  child: myCircleAvatarIcon(
-                    myIcon_Size: 30,
-                    myIcon: Icons.message,
-                  ),
+                  child: myCircleAvatarIcon(myIcon: Icons.call),
                 ),
               ),
             ],
@@ -61,23 +58,21 @@ class Upcoming_Appointment extends StatelessWidget {
                   children: [
                     Expanded(
                       child: myFullCustomButton(
-                        myButtonTitle: 'Cancel Appointment',
+                        myButtonTitle: 'Book Again',
                         myButtonFontSize: 16,
                         myButtonForgroundColor: myBlueAccent,
                         myButtonBackgroundColor: Colors.white,
                         myButtonHeight: 35,
-                        myOnPressed: () {
-                          Navigator.pushNamed(context, '/Canceled_Reason');
-                        },
+                        myOnPressed: () {},
                       ),
                     ),
                     Expanded(
                       child: myFullCustomButton(
                         myButtonFontSize: 16,
-                        myButtonTitle: 'Reschedule',
+                        myButtonTitle: 'Leave a review',
                         myButtonHeight: 35,
                         myOnPressed: () {
-                          Navigator.pushNamed(context, '/Reschedule_Appointment');
+                          Navigator.pushNamed(context, '/Ended_Review');
                         },
                       ),
                     ),

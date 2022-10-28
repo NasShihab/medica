@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
-import '../I_My_Appointment/a_Upcoming_Appointment.dart';
-import 'c_Canceled_Appointment.dart';
-import 'b_Completed_Appointment.dart';
-import 'Tab_Bar.dart';
+import '../I_My_Appointment/upcoming_appointment.dart';
+import 'canceled_appointment.dart';
+import 'completed_appointment.dart';
+import 'tab_bar.dart';
 
-class My_Appointment extends StatelessWidget {
-  const My_Appointment({Key? key}) : super(key: key);
+class MyAppointmentView extends StatelessWidget {
+  const MyAppointmentView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class My_Appointment extends StatelessWidget {
       child: Scaffold(
         appBar: myTabBar(context,
             appBarTitle2: 'My Appointment',
-            action_IconBar: Row(
+            actionIconBar: Row(
               children: [
                 IconButton(
                     visualDensity: VisualDensity.compact,
@@ -47,9 +47,9 @@ class My_Appointment extends StatelessWidget {
               ),
             )),
         body:  const TabBarView(children: [
-          Upcoming_Appointment(),
-          Completed_Appointment(),
-          Canceled_Appointment(),
+          UpcomingAppointment(),
+          CompletedAppointment(),
+          CanceledAppointment(),
         ]),
       ),
     );
