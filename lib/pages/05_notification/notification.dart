@@ -1,14 +1,12 @@
-// ignore_for_file: camel_case_types
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 
-import 'listItem_notification.dart';
+import 'notification_listitem.dart';
 
-class notification extends StatelessWidget {
-  notification({Key? key}) : super(key: key);
+class NotificationPage extends StatelessWidget {
+  const NotificationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +23,9 @@ class notification extends StatelessWidget {
       ),
       body: SafeArea(
           child: ListView.builder(
-              itemCount: tdata.length,
+              itemCount: notificationList.length,
               itemBuilder: (context, index) {
-                final tdat = tdata[index];
+                final tdat = notificationList[index];
 
                 return Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),

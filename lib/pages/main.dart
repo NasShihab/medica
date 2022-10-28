@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
           '/OtpCode' : (context) => const OtpCode(),
           '/CreatePassword' : (context) => const CreatePassword(),
           '/HomePage' : (context) => const HomePage(),
-          '/notification' : (context) =>  notification(),
+          '/notification' : (context) =>  const NotificationPage(),
           '/favorite_doctors' : (context) =>  const FavoriteDoctors(),
           '/TopDoctors' : (context) =>  const TopDoctors(),
           '/SearchPage' : (context) =>  const SearchPage(),
