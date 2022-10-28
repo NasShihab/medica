@@ -16,7 +16,7 @@ import '03_forget_password/create_password.dart';
 import '03_forget_password/forget_password.dart';
 import '03_forget_password/otp_code.dart';
 import '06_FavoriteDoctors/favorite_doctors.dart';
-import '09_DoctorsProfile/Appointment/A_Book_Appointment/Book_Appointment.dart';
+import '09_DoctorsProfile/Appointment/A_Book_Appointment/book_appointment.dart';
 import '09_DoctorsProfile/Appointment/B_Select_Package/Select_Package.dart';
 import '09_DoctorsProfile/Appointment/C_Patient_Details/Patient_Details.dart';
 import '09_DoctorsProfile/Appointment/D_Payments/Payments_Page.dart';
@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
           '/TopDoctors' : (context) =>  const TopDoctors(),
           '/DoctorsProfile' : (context) =>  const DoctorsProfile(),
           '/DoctorsReviews' : (context) =>  const DoctorsReviews(),
-          '/Book_Appointment' : (context) =>  const Book_Appointment(),
+          '/Book_Appointment' : (context) =>  const BookAppointment(),
           '/Select_Package' : (context) =>  const Select_Package(),
           '/Patient_Details' : (context) =>  const Patient_Details(),
           '/Payments_Page' : (context) =>  const Payments_Page(),

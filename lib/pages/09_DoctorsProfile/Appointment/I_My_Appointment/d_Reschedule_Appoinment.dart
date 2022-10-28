@@ -5,7 +5,7 @@ import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 import '../H_Enter_Pin/Enter_Pin_Widget.dart';
-import '../a_Book_Appointment/Book_Appointment_Widget.dart';
+import '../a_Book_Appointment/book_appointment_widget.dart';
 
 class Reschedule_Appointment extends StatelessWidget {
   const Reschedule_Appointment({Key? key}) : super(key: key);
@@ -118,36 +118,36 @@ class Reschedule_Appointment2 extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    hoursTime(book_time: '09:00 AM'),
-                    hoursTime(book_time: '09:30 AM'),
-                    hoursTime(book_time: '10:00 AM'),
+                    hoursTime(bookingTime: '09:00 AM'),
+                    hoursTime(bookingTime: '09:30 AM'),
+                    hoursTime(bookingTime: '10:00 AM'),
                   ],
                 ),
                 height15(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    hoursTime(book_time: '10:30 AM'),
-                    hoursTime(book_time: '11:00 AM'),
-                    hoursTime(book_time: '11:30 AM'),
+                    hoursTime(bookingTime: '10:30 AM'),
+                    hoursTime(bookingTime: '11:00 AM'),
+                    hoursTime(bookingTime: '11:30 AM'),
                   ],
                 ),
                 height15(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    hoursTime(book_time: '12:00 PM'),
-                    hoursTime(book_time: '12:30 PM'),
-                    hoursTime(book_time: '15:00 PM'),
+                    hoursTime(bookingTime: '12:00 PM'),
+                    hoursTime(bookingTime: '12:30 PM'),
+                    hoursTime(bookingTime: '15:00 PM'),
                   ],
                 ),
                 height15(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    hoursTime(book_time: '15:30 PM'),
-                    hoursTime(book_time: '16:00 PM'),
-                    hoursTime(book_time: '16:30 PM'),
+                    hoursTime(bookingTime: '15:30 PM'),
+                    hoursTime(bookingTime: '16:00 PM'),
+                    hoursTime(bookingTime: '16:30 PM'),
                   ],
                 ),
               ],

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import '../../../Z_other/myColor.dart';
 
-Widget hoursTime({required String book_time}) =>
+Widget hoursTime({required String bookingTime}) =>
     GestureDetector(
       onTap: (){
         Fluttertoast.showToast(
@@ -25,7 +25,7 @@ Widget hoursTime({required String book_time}) =>
           padding: EdgeInsets.symmetric(
               horizontal: 15.w, vertical: 5.h),
           child: Text(
-            book_time,
+            bookingTime,
             style: TextStyle(
                 fontSize: 20.sp,
                 color: myBlueAccent),
