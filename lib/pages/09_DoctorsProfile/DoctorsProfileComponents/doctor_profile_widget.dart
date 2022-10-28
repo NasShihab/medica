@@ -1,4 +1,3 @@
-// ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../Z_other/myColor.dart';
 import '../../Z_other/mySizedBox.dart';
 
-Widget DoctorsProfileCard() => Column(
+Widget octorsProfileData() => Column(
       children: [
         Container(
           decoration: BoxDecoration(
@@ -72,7 +71,7 @@ Widget DoctorsProfileCard() => Column(
       ],
     );
 
-Widget DoctorProfileIcon(
+Widget doctorProfileIcon(
         {required var dcicon, required String dcCategory, required dcPoint}) =>
     Expanded(
       child: Column(
@@ -105,7 +104,7 @@ Widget DoctorProfileIcon(
       ),
     );
 
-Widget DoctorsReviewC(BuildContext context) => Column(
+Widget doctorsReviewC(BuildContext context) => Column(
   crossAxisAlignment: CrossAxisAlignment.start,
   children: [
     Row(

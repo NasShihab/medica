@@ -1,4 +1,4 @@
-List Review_List = [
+List eviewList = [
   ReviewListClass(
       'Charlee Hemlin',
       4.5,
@@ -27,16 +27,16 @@ List Review_List = [
 ];
 
 class ReviewListClass {
-  final String review_name;
-  final double review_rating;
-  final String review_comments;
-  final int review_likes;
+  final String reviewerName;
+  final double reviewerRating;
+  final String reviewerComments;
+  final int reviewerLikes;
 
 
   ReviewListClass(
-    this.review_name,
-    this.review_rating,
-    this.review_comments,
-    this.review_likes,
+    this.reviewerName,
+    this.reviewerRating,
+    this.reviewerComments,
+    this.reviewerLikes,
   );
 }

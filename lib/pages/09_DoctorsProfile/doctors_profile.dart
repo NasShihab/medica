@@ -1,10 +1,9 @@
-// ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
 import '../Z_other/myCuston_Appbar.dart';
-import 'DoctorsProfileComponents/DoctorProfileCard.dart';
+import 'DoctorsProfileComponents/doctor_profile_widget.dart';
 
 class DoctorsProfile extends StatelessWidget {
   const DoctorsProfile({Key? key}) : super(key: key);
@@ -45,14 +44,14 @@ class DoctorsProfile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  DoctorsProfileCard(),
+                  octorsProfileData(),
                   height10(),
                   Row(
                     children: [
-                      DoctorProfileIcon(dcCategory: 'Patients', dcicon: Icons.people, dcPoint: '500+'),
-                      DoctorProfileIcon(dcCategory: 'Years Experience', dcicon: Icons.medical_services_sharp, dcPoint: '10+'),
-                      DoctorProfileIcon(dcCategory: 'Ratings', dcicon: Icons.star, dcPoint: '4.5'),
-                      DoctorProfileIcon(dcCategory: 'Reviews', dcicon: Icons.mark_chat_read, dcPoint: '4989'),
+                      doctorProfileIcon(dcCategory: 'Patients', dcicon: Icons.people, dcPoint: '500+'),
+                      doctorProfileIcon(dcCategory: 'Years Experience', dcicon: Icons.medical_services_sharp, dcPoint: '10+'),
+                      doctorProfileIcon(dcCategory: 'Ratings', dcicon: Icons.star, dcPoint: '4.5'),
+                      doctorProfileIcon(dcCategory: 'Reviews', dcicon: Icons.mark_chat_read, dcPoint: '4989'),
                     ],
                   ),
                   height20(),
@@ -81,7 +80,7 @@ class DoctorsProfile extends StatelessWidget {
                   ),
                   height20(),
                   //Reviews
-                  DoctorsReviewC(context),
+                  doctorsReviewC(context),
                 ],
               ),
             ),
