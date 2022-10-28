@@ -4,7 +4,7 @@ import 'package:medica/pages/Z_other/myFullCustomButton.dart';
 
 import '../Z_other/myColor.dart';
 import '../Z_other/myCustom_ListTile.dart';
-import 'ListItem_FavoriteDoctors.dart';
+import 'favorit_doctors_list.dart';
 
 class RemoveFavorite extends StatelessWidget {
   const RemoveFavorite({Key? key}) : super(key: key);
@@ -39,7 +39,7 @@ class RemoveFavorite extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              '${fvDoctorsList[index].doctorsName}',
+                              '${favoriteDoctorList[index].doctorsName}',
                               style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
                             ),
                             GestureDetector(
@@ -59,7 +59,7 @@ class RemoveFavorite extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              '${fvDoctorsList[index].doctorsCategory}   |   ${fvDoctorsList[index].doctorsHospital}',
+                              '${favoriteDoctorList[index].doctorsCategory}   |   ${favoriteDoctorList[index].doctorsHospital}',
                               style: TextStyle(fontSize: 16.sp),
                             ),
                           ],
@@ -71,7 +71,7 @@ class RemoveFavorite extends StatelessWidget {
                               color: myBlueAccent,
                               size: 20.sp,
                             ),
-                            Text('${fvDoctorsList[index].doctorsRating} (${fvDoctorsList[index].doctorsReviews} Reviews)'),
+                            Text('${favoriteDoctorList[index].doctorsRating} (${favoriteDoctorList[index].doctorsReviews} Reviews)'),
                           ],
                         )
                       ],

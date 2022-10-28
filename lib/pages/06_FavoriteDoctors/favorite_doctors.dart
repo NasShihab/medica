@@ -4,7 +4,7 @@ import 'package:medica/pages/06_FavoriteDoctors/remove_favorite.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import '../Z_other/myCustom_ListTile.dart';
-import 'ListItem_FavoriteDoctors.dart';
+import 'favorit_doctors_list.dart';
 
 class FavoriteDoctors extends StatelessWidget {
   const FavoriteDoctors({Key? key}) : super(key: key);
@@ -40,7 +40,7 @@ class FavoriteDoctors extends StatelessWidget {
             Navigator.pushNamed(context, '/DoctorsProfile');
           },
           child: ListView.builder(
-              itemCount: fvDoctorsList.length,
+              itemCount: favoriteDoctorList.length,
               itemBuilder: (context, index) {
                 return myCustom_ListTile(
                   myChart_Leading: const Image(
@@ -57,7 +57,7 @@ class FavoriteDoctors extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              '${fvDoctorsList[index].doctorsName}',
+                              '${favoriteDoctorList[index].doctorsName}',
                               style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
                             ),
                             GestureDetector(
@@ -88,7 +88,7 @@ class FavoriteDoctors extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              '${fvDoctorsList[index].doctorsCategory}   |   ${fvDoctorsList[index].doctorsHospital}',
+                              '${favoriteDoctorList[index].doctorsCategory}   |   ${favoriteDoctorList[index].doctorsHospital}',
                               style: TextStyle(fontSize: 16.sp),
                             ),
                           ],
@@ -100,7 +100,7 @@ class FavoriteDoctors extends StatelessWidget {
                               color: myBlueAccent,
                               size: 20.sp,
                             ),
-                            Text('${fvDoctorsList[index].doctorsRating} (${fvDoctorsList[index].doctorsReviews} Reviews)'),
+                            Text('${favoriteDoctorList[index].doctorsRating} (${favoriteDoctorList[index].doctorsReviews} Reviews)'),
                           ],
                         )
                       ],

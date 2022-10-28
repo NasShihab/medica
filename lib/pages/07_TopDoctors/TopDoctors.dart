@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
-import '../06_FavoriteDoctors/ListItem_FavoriteDoctors.dart';
+import '../06_FavoriteDoctors/favorit_doctors_list.dart';
 import '../06_FavoriteDoctors/remove_favorite.dart';
 import '../Z_other/myColor.dart';
 import '../Z_other/myCustom_ListTile.dart';
@@ -59,7 +59,7 @@ class TopDoctors extends StatelessWidget {
                   Navigator.pushNamed(context, '/DoctorsProfile');
                 },
                 child: ListView.builder(
-                    itemCount: fvDoctorsList.length,
+                    itemCount: favoriteDoctorList.length,
                     itemBuilder: (context, index) {
                       return myCustom_ListTile(
                         myChart_Title: SizedBox(
@@ -74,7 +74,7 @@ class TopDoctors extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      '${fvDoctorsList[index].doctorsName}',
+                                      '${favoriteDoctorList[index].doctorsName}',
                                       style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
                                     ),
                                     GestureDetector(
@@ -104,7 +104,7 @@ class TopDoctors extends StatelessWidget {
                                   height: 2.h,
                                 ),
                               ),
-                              Text('${fvDoctorsList[index].doctorsCategory}   |   ${fvDoctorsList[index].doctorsHospital}',
+                              Text('${favoriteDoctorList[index].doctorsCategory}   |   ${favoriteDoctorList[index].doctorsHospital}',
                                   style: TextStyle(fontSize: 16.sp)),
                               Row(
                                 children: [
@@ -113,8 +113,8 @@ class TopDoctors extends StatelessWidget {
                                     color: myBlueAccent,
                                     size: 20.sp,
                                   ),
-                                  Text('${fvDoctorsList[index].doctorsRating}'
-                                      '(${fvDoctorsList[index].doctorsReviews} Reviews)'),
+                                  Text('${favoriteDoctorList[index].doctorsRating}'
+                                      '(${favoriteDoctorList[index].doctorsReviews} Reviews)'),
                                 ],
                               )
                             ],
