@@ -1,13 +1,13 @@
-// ignore_for_file: non_constant_identifier_names, camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 import 'package:medica/pages/Z_other/myCuston_Appbar.dart';
 import 'package:medica/pages/Z_other/mySizedBox.dart';
-import 'Chart_Page_Widget.dart';
+import 'chart_page_widget.dart';
 
-class Chat_Page extends StatelessWidget {
-  const Chat_Page({Key? key}) : super(key: key);
+class ChatPage extends StatelessWidget {
+  const ChatPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +21,19 @@ class Chat_Page extends StatelessWidget {
               Flexible(
                 child: ListView(
                   children: [
-                    myChatBox_Out(),
+                    myChatBoxOut(),
                     height20(),
-                    myChatBox_In(),
+                    myChatBoxIn(),
                     height20(),
-                    myChatBox_Out(),
+                    myChatBoxOut(),
                     height20(),
-                    myChatBox_In(),
+                    myChatBoxIn(),
                     height20(),
-                    myChatBox_In(),
+                    myChatBoxIn(),
                     height20(),
-                    myChatBox_Out(),
+                    myChatBoxOut(),
                     height20(),
-                    myChatBox_In(),
+                    myChatBoxIn(),
                   ],
                 ),
               ),

@@ -1,4 +1,3 @@
-// ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,10 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../Z_other/myColor.dart';
 import '../../../../../Z_other/mySizedBox.dart';
 
-Widget myChatBox_Out({
-  String my_text = 'the definition of chat refers to talking to other people who are using the internet at the same time you are.',
-  double my_text_fontSize = 18,
-  double myBorderText_borderRadius = 20,
+Widget myChatBoxOut({
+  String myText = 'the definition of chat refers to talking to other people who are using the internet at the same time you are.',
+  double myTextFontSize = 18,
+  double myBorderTextBorderRadius = 20,
 }) =>
     Row(
       mainAxisAlignment: MainAxisAlignment.end,
@@ -20,7 +19,7 @@ Widget myChatBox_Out({
             padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
             decoration: BoxDecoration(
               color: myBlueAccent,
-              borderRadius: BorderRadius.all(Radius.circular(myBorderText_borderRadius.r)),
+              borderRadius: BorderRadius.all(Radius.circular(myBorderTextBorderRadius.r)),
               border: Border.all(color: Colors.transparent),
             ),
             child: Row(
@@ -28,8 +27,8 @@ Widget myChatBox_Out({
               children: [
                 Expanded(
                   child: Text(
-                    my_text,
-                    style: TextStyle(color: Colors.white, fontSize: my_text_fontSize.sp),
+                    myText,
+                    style: TextStyle(color: Colors.white, fontSize: myTextFontSize.sp),
                   ),
                 ),
                 width10(),
@@ -50,10 +49,10 @@ Widget myChatBox_Out({
       ],
     );
 
-Widget myChatBox_In({
-  String my_text = 'the definition of chat refers to talking to other people who are using the internet at the same time you are.',
-  double my_text_fontSize = 18,
-  double myBorderText_borderRadius = 20,
+Widget myChatBoxIn({
+  String myText = 'the definition of chat refers to talking to other people who are using the internet at the same time you are.',
+  double myTextFontSize = 18,
+  double myBorderTextBorderRadius = 20,
 }) =>
     Row(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -64,7 +63,7 @@ Widget myChatBox_In({
             padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
             decoration: BoxDecoration(
               color: myBluegrey,
-              borderRadius: BorderRadius.all(Radius.circular(myBorderText_borderRadius.r)),
+              borderRadius: BorderRadius.all(Radius.circular(myBorderTextBorderRadius.r)),
               border: Border.all(color: Colors.transparent),
             ),
             child: Row(
@@ -72,8 +71,8 @@ Widget myChatBox_In({
               children: [
                 Expanded(
                   child: Text(
-                    my_text,
-                    style: TextStyle(color: Colors.black, fontSize: my_text_fontSize.sp),
+                    myText,
+                    style: TextStyle(color: Colors.black, fontSize: myTextFontSize.sp),
                   ),
                 ),
                 width10(),

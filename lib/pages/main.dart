@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/04_Home/home_page.dart';
 import 'package:medica/pages/05_notification/notification.dart';
 import 'package:medica/pages/07_TopDoctors/top_doctors.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/a_Messaging_Consultation/Chart_Page/Chat_Page.dart';
-import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/a_Messaging_Consultation/Messaging_Consultation.dart';
+import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/a_Messaging_Consultation/Chart_Page/chat_page.dart';
+import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/a_Messaging_Consultation/messaging_consultation.dart';
 import 'package:medica/pages/09_DoctorsProfile/Appointment/J_Consultation/b_Calling_Consultation/Call_Ringing_Page.dart';
 import '01_login/login.dart';
 import '01_login/welcome.dart';
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
 
         initialRoute: '/',
         routes: {
-          '/' : (context) => const Welcome(),
+          '/' : (context) => const MyAppointmentView(),
           '/welcome' : (context) => const Welcome(),
           '/login' : (context) => const Login(),
           '/sign_up' : (context) => const SignUp(),
@@ -82,8 +82,8 @@ class MyApp extends StatelessWidget {
           '/Reschedule_Appointment2' : (context) =>  const RescheduleAppointment2(),
           '/Canceled_Reason' : (context) =>  const CanceledReason(),
 
-          '/Messaging_Consultation' : (context) =>  const Messaging_Consultation(),
-          '/Chat_Page' : (context) =>  const Chat_Page(),
+          '/Messaging_Consultation' : (context) =>  const MessagingConsultation(),
+          '/Chat_Page' : (context) =>  const ChatPage(),
 
           '/Calling_Consultation' : (context) =>  const Calling_Consultation(),
           '/Call_Ringing_Page' : (context) =>  const Call_Ringing_Page(),

@@ -8,8 +8,8 @@ import '../../../../Z_other/mySizedBox.dart';
 import '../../B_Select_Package/select_package_widget.dart';
 import '../b_Calling_Consultation/Calling_Consultation.dart';
 
-class Messaging_Consultation extends StatelessWidget {
-  const Messaging_Consultation({Key? key}) : super(key: key);
+class MessagingConsultation extends StatelessWidget {
+  const MessagingConsultation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class Messaging_Consultation extends StatelessWidget {
               text1: 'Full Name',
               text2: Row(
                 children: [
-                  custom_Text_MC(myText: 'Morocco Nager'),
+                  customtextMessegingConsultation(myText: 'Morocco Nager'),
                 ],
               ),
             ),
@@ -143,7 +143,7 @@ class Messaging_Consultation extends StatelessWidget {
 }
 
 
-Text custom_Text_MC({
+Text customtextMessegingConsultation({
   required String myText,
 }) =>
     Text(
