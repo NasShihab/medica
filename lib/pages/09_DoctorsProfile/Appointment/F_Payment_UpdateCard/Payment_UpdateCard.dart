@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../Z_other/mySizedBox.dart';
-import '../D_Payments/Payments_page_Widget.dart';
+import '../D_Payments/payments_page_widget.dart';
 
 class Payment_UpdateCard extends StatelessWidget {
   const Payment_UpdateCard({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class Payment_UpdateCard extends StatelessWidget {
       floatingActionButtonLocation:
       FloatingActionButtonLocation
           .centerFloat,
-      floatingActionButton: pay_NextButton(
+      floatingActionButton: paymentNextButton(
           context,
           tdButtonName: 'Next',
           tdPageName: '/Review_Summary'),
@@ -101,9 +101,9 @@ class Payment_UpdateCard extends StatelessWidget {
                 },
               ),
             ),
-            pay_AddNewButton(context,
-                pay_pageName: '/Add_New_Card',
-                pay_AddNewButton_Name:
+            paymentAddNewButton(context,
+                paymentPageName: '/Add_New_Card',
+                paymentAddNewButtonName:
                 'Add New Card'),
           ],
         ),

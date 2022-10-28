@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/Z_other/myColor.dart';
 
-Widget pay_NextButton(BuildContext context,
+Widget paymentNextButton(BuildContext context,
         {required String tdButtonName,
         required String tdPageName}) =>
     Container(
@@ -37,9 +37,9 @@ Widget pay_NextButton(BuildContext context,
               style: TextStyle(fontSize: 20.sp),
             )));
 
-Widget pay_AddNewButton(BuildContext context,
-    {required String pay_AddNewButton_Name,
-      required String pay_pageName}) =>
+Widget paymentAddNewButton(BuildContext context,
+    {required String paymentAddNewButtonName,
+      required String paymentPageName}) =>
     Container(
         padding: EdgeInsets.symmetric(
             horizontal: 10.w),
@@ -65,9 +65,9 @@ Widget pay_AddNewButton(BuildContext context,
             ),
             onPressed: () {
               Navigator.pushNamed(
-                  context, pay_pageName);
+                  context, paymentPageName);
             },
             child: Text(
-              pay_AddNewButton_Name,
+              paymentAddNewButtonName,
               style: TextStyle(fontSize: 18.sp,color: myBlueAccent),
             )));
