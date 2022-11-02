@@ -79,13 +79,6 @@ class VideoRunnigPage extends StatelessWidget {
                   ],
                 ),
               ),
-              // Image(
-              //   height: 400.h,
-              //   width: 100.w,
-              //   image: const AssetImage(
-              //     'assets/images/people.jpg',
-              //   ),
-              // ),
               Container(
                 height: 220.h,
                 width: 110.w,

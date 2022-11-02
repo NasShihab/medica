@@ -48,7 +48,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: (_, child) => MaterialApp(
-
         initialRoute: '/',
         routes: {
           '/' : (context) => const Welcome(),
