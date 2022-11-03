@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../reusable_widget/sized_box.dart';
 import '../reusable_widget/full_custom_button.dart';
+
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
 
@@ -48,18 +48,18 @@ class Welcome extends StatelessWidget {
             ),
             height30(),
             myTextButton(
-              icoo: 'assets/images/facebook.png',
-              labell: 'Continue with Facebook',
+              icon: 'assets/images/facebook.png',
+              label: 'Continue with Facebook',
             ),
             height15(),
             myTextButton(
-              icoo: 'assets/images/google.png',
-              labell: 'Continue with Google',
+              icon: 'assets/images/google.png',
+              label: 'Continue with Google',
             ),
             height15(),
             myTextButton(
-              icoo: 'assets/images/apple.png',
-              labell: 'Continue with Apple',
+              icon: 'assets/images/apple.png',
+              label: 'Continue with Apple',
             ),
             height20(),
             Center(
@@ -87,14 +87,16 @@ class Welcome extends StatelessWidget {
                     ),
                   ),
                   Flexible(
-                      child: TextButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/sign_up');
-                          },
-                          child: Text(
-                            'Sign Up',
-                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.sp),
-                          ))),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/sign_up');
+                      },
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.sp),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -104,28 +106,4 @@ class Welcome extends StatelessWidget {
       )),
     );
   }
-
-  // My Shortcut
-  // My Shortcut
-  Widget myTextButton({required String icoo, required String labell}) => SizedBox(
-        height: 60.h,
-        width: double.infinity,
-        child: TextButton.icon(
-          onPressed: () {},
-          style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.white),
-              foregroundColor: MaterialStateProperty.all(Colors.black),
-              padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 18.h)),
-              elevation: MaterialStateProperty.all(.5)),
-          icon: CircleAvatar(
-            radius: 11.r,
-            backgroundImage: AssetImage(icoo),
-            backgroundColor: Colors.transparent,
-          ),
-          label: Text(
-            labell,
-            style: TextStyle(fontSize: 15.sp),
-          ),
-        ),
-      );
 }

@@ -47,9 +47,19 @@ class Login extends StatelessWidget {
             ),
             SizedBox(height: 30.h),
 
-            myTextField(ico: const Icon(Icons.email), htext: "Email", sfico: const Icon(null)),
+            myTextField(
+              icon: const Icon(Icons.email),
+              hintText: "Email",
+              suffixIcon: const Icon(null),
+            ),
             SizedBox(height: 10.h),
-            myPasswordField(ico: const Icon(Icons.lock), htext: "Password", sfico: const Icon(Icons.visibility_off)),
+            myPasswordField(
+              icon: const Icon(Icons.lock),
+              hintText: "Password",
+              suffixIcon: const Icon(
+                Icons.visibility_off,
+              ),
+            ),
             CheckboxListTile(
               contentPadding: EdgeInsets.symmetric(horizontal: 90.w),
               controlAffinity: ListTileControlAffinity.leading,
@@ -132,59 +142,9 @@ class Login extends StatelessWidget {
                 ],
               ),
             ),
-            Flexible(
-                child: SizedBox(
-              height: 20.h,
-            ))
           ],
         ),
       )),
     );
   }
-
-  // My Shortcut
-  // My Shortcut
-  Widget myTextField({required Icon ico, required Icon sfico, required String htext}) => SizedBox(
-        height: 50.h,
-        width: double.infinity,
-        child: TextField(
-          decoration: InputDecoration(
-              prefixIcon: ico,
-              suffixIcon: sfico,
-              hintText: htext,
-              hintStyle: TextStyle(fontSize: 12.sp),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
-                borderSide: BorderSide(color: Colors.grey, width: 1.w),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
-                borderSide: BorderSide(color: Colors.grey, width: 1.w),
-              ),
-              contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
-        ),
-      );
-  Widget myPasswordField({required Icon ico, required Icon sfico, required String htext}) => SizedBox(
-        height: 50.h,
-        width: double.infinity,
-        child: TextField(
-          obscureText: true,
-          enableSuggestions: false,
-          autocorrect: false,
-          decoration: InputDecoration(
-              prefixIcon: ico,
-              suffixIcon: sfico,
-              hintText: htext,
-              hintStyle: TextStyle(fontSize: 12.sp),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
-                borderSide: BorderSide(color: Colors.grey, width: 1.w),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
-                borderSide: BorderSide(color: Colors.grey, width: 1.w),
-              ),
-              contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
-        ),
-      );
 }
