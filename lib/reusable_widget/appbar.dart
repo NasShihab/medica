@@ -11,7 +11,6 @@ AppBar customAppBar(
     AppBar(
       title: Text(
         appBarTitle,
-        style: TextStyle(fontSize: 22.sp, color: Colors.black),
       ),
       centerTitle: appBarCenter,
       actions: [actionBarIcons],
