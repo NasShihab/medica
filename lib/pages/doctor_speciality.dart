@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
+import '../reusable_widget/toast_message.dart';
 
 class DoctorSpeciality extends StatelessWidget {
   const DoctorSpeciality({Key? key}) : super(key: key);
@@ -28,27 +29,19 @@ class DoctorSpeciality extends StatelessWidget {
           children: [
             Row(
               children: [
-                docSpeciality(dcCategory: 'General', dcicon: Icons.generating_tokens),
-                docSpeciality(dcCategory: 'Dentist', dcicon: Icons.table_bar_outlined),
-                docSpeciality(dcCategory: 'Ophthalmologist', dcicon: Icons.accessible),
-                docSpeciality(dcCategory: 'Nutrition', dcicon: Icons.food_bank_outlined),
+                circleAvatarDc(title: 'General', icon: Icons.generating_tokens, toastMsg: 'General'),
+                circleAvatarDc(title: 'Dentist', icon: Icons.table_bar_outlined, toastMsg: 'Dentist'),
+                circleAvatarDc(title: 'Ophthalmologist', icon: Icons.accessible, toastMsg: 'Ophthalmologist'),
+                circleAvatarDc(title: 'Nutrition', icon: Icons.food_bank_outlined, toastMsg: 'Nutrition'),
               ],
             ),
             height20(),
             Row(
               children: [
-                // myCircleAvatarIcon(
-                //     myIconUnderTitile: Text(
-                //       'Neurologist',
-                //       overflow: TextOverflow.ellipsis,
-                //       textAlign: TextAlign.center,
-                //       style: TextStyle(fontSize: 16.sp),
-                //     ),
-                //     myIcon: Icons.back_hand_outlined),
-                docSpeciality(dcCategory: 'Neurologist', dcicon: Icons.back_hand_outlined),
-                docSpeciality(dcCategory: 'Pediatric', dcicon: Icons.adb_rounded),
-                docSpeciality(dcCategory: 'Radiologist', dcicon: Icons.perm_camera_mic),
-                docSpeciality(dcCategory: 'More', dcicon: Icons.more),
+                circleAvatarDc(title: 'Neurologist', icon: Icons.back_hand_outlined, toastMsg: 'Neurologist'),
+                circleAvatarDc(title: 'Pediatric', icon: Icons.adb_rounded, toastMsg: 'Pediatric'),
+                circleAvatarDc(title: 'Radiologist', icon: Icons.perm_camera_mic, toastMsg: 'Radiologist'),
+                circleAvatarDc(title: 'More', icon: Icons.more, toastMsg: 'More'),
               ],
             ),
           ],
@@ -58,27 +51,39 @@ class DoctorSpeciality extends StatelessWidget {
   }
 
   //My Shortcut
-  Widget docSpeciality({required var dcicon, required String dcCategory}) => Expanded(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.w),
-          child: Column(
-            children: [
-              CircleAvatar(
-                  radius: 30.r,
-                  backgroundColor: myGrey,
-                  child: Icon(
-                    dcicon,
-                    size: 30.sp,
-                    color: myPinkAccent,
-                  )),
-              height10(),
-              Text(
-                dcCategory,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 15.sp,),
-              )
-            ],
+  Widget circleAvatarDc({
+    required var icon,
+    required String title,
+    required String toastMsg,
+  }) =>
+      Expanded(
+        child: GestureDetector(
+          onTap: () {
+            toastMessage(message: toastMsg);
+          },
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.w),
+            child: Column(
+              children: [
+                CircleAvatar(
+                    radius: 30.r,
+                    backgroundColor: myGrey,
+                    child: Icon(
+                      icon,
+                      size: 30.sp,
+                      color: myPinkAccent,
+                    )),
+                height10(),
+                Text(
+                  title,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 15.sp,
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       );
