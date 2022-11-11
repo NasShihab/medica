@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../list_item/favorit_doctors_list.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/list_tile.dart';
-import '../reusable_widget/appbar.dart';
+import '../reusable_widget/appbar_custom.dart';
 import 'remove_favorite.dart';
 
 class TopDoctors extends StatelessWidget {
@@ -91,7 +91,7 @@ class TopDoctors extends StatelessWidget {
                                             });
                                       },
                                       child: Icon(Icons.favorite_border_sharp,
-                                          color: myBlueAccent,
+                                          color: myPinkAccent,
                                           size: 24.sp,),
                                     ),
                                   ],
@@ -110,7 +110,7 @@ class TopDoctors extends StatelessWidget {
                                 children: [
                                   Icon(
                                     Icons.star,
-                                    color: myBlueAccent,
+                                    color: myPinkAccent,
                                     size: 20.sp,
                                   ),
                                   Text('${favoriteDoctorList[index].doctorsRating}'
@@ -138,7 +138,7 @@ class TopDoctors extends StatelessWidget {
             style: ButtonStyle(
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18.r),
-                  side: const BorderSide(color: Colors.blue),
+                  side: BorderSide(color: myPinkAccent),
                 )),
                 backgroundColor: MaterialStateProperty.all(Colors.white)),
             onPressed: () {
@@ -146,7 +146,7 @@ class TopDoctors extends StatelessWidget {
             },
             child: Text(
               tdButtonName,
-              style: TextStyle(fontSize: 16.sp, color: myBlueAccent, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.sp, color: myPinkAccent, fontWeight: FontWeight.bold),
             ),
           ),
         ),

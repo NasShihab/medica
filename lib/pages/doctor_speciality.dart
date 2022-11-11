@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
 
 class DoctorSpeciality extends StatelessWidget {
@@ -17,7 +17,10 @@ class DoctorSpeciality extends StatelessWidget {
               'Doctor Speciality',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
             ),
-            Text('See All', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp, color: myBlueAccent)),
+            Text(
+              'See All',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp, color: myPinkAccent),
+            ),
           ],
         ),
         height30(),
@@ -62,18 +65,18 @@ class DoctorSpeciality extends StatelessWidget {
             children: [
               CircleAvatar(
                   radius: 30.r,
-                  backgroundColor: Colors.blueGrey[100],
+                  backgroundColor: myGrey,
                   child: Icon(
                     dcicon,
                     size: 30.sp,
-                    color: myBlueAccent,
+                    color: myPinkAccent,
                   )),
               height10(),
               Text(
                 dcCategory,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16.sp),
+                style: TextStyle(fontSize: 15.sp,),
               )
             ],
           ),

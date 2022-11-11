@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../reusable_widget/sized_box.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../pages_widget/booking_enter_pin_widget.dart';
 import '../reusable_widget/appbar_custom.dart';
 import '../reusable_widget/button_custom.dart';
+import '../reusable_widget/sized_box.dart';
 
-class BookingEnterPin extends StatelessWidget {
-  const BookingEnterPin({Key? key}) : super(key: key);
+class CreateNewPin extends StatelessWidget {
+  const CreateNewPin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: customAppBar(context, appBarTitle: 'Enter Pin'),
+      appBar: customAppBar(context, appBarTitle: 'Create New Pin'),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
@@ -23,7 +22,7 @@ class BookingEnterPin extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Enter your pin to confirm your appointment',
+                'Add a PIN number to make your account more secure',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18.sp),
               ),
@@ -44,13 +43,13 @@ class BookingEnterPin extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: myFullCustomButton(
         buttonTitle: 'Continue',
         myOnPressed: () {
-          showDialog(context: context, builder: (context) => errorAlertWidget(context));
+          Navigator.pushNamed(context, '/fingerprint');
         },
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

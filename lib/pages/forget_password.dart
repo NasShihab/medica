@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/appbar.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/appbar_custom.dart';
+import '../reusable_widget/button_custom.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({Key? key}) : super(key: key);
@@ -103,7 +103,7 @@ class ForgetPassword extends StatelessWidget {
       floatingActionButton: myFullCustomButton(
         buttonTitle: 'Next',
         myOnPressed: () {
-          Navigator.pushNamed(context, '/HomePage');
+          Navigator.pushNamed(context, '/OtpCode');
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../reusable_widget/border_text.dart';
+import '../reusable_widget/border_text_custom.dart';
 import '../reusable_widget/circle_avatar_icon.dart';
 import '../reusable_widget/list_tile.dart';
 import '../reusable_widget/sized_box.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
 
 Widget octorsProfileData() => Column(
@@ -75,14 +75,14 @@ Widget doctorProfileIcon({required var dcicon, required String dcCategory, requi
               child: Icon(
                 dcicon,
                 size: 30.sp,
-                color: myBlueAccent,
+                color: myPinkAccent,
               )),
           height10(),
           Text(
             dcPoint,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold, color: myBlueAccent),
+            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold, color: myPinkAccent),
           ),
           Text(
             dcCategory,
@@ -108,7 +108,7 @@ Widget doctorsReviewC(BuildContext context) => Column(
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/DoctorsReviews');
               },
-              child: Text('See All', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp, color: myBlueAccent)),
+              child: Text('See All', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp, color: myPinkAccent)),
             ),
           ],
         ),

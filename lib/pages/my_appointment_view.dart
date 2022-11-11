@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import 'upcoming_appointment.dart';
 import 'canceled_appointment.dart';
 import 'completed_appointment.dart';
@@ -42,7 +42,7 @@ class MyAppointmentView extends StatelessWidget {
               },
               icon: Icon(
                 Icons.medical_services_sharp,
-                color: myBlueAccent,
+                color: myPinkAccent,
                 size: 24.sp,
               ),
             )),

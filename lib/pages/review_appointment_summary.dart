@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../pages_widget/review_appointment_summary_widget.dart';
 import '../reusable_widget/list_tile.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/button_custom.dart';
 
 class ReviewAppointmentSummary extends StatelessWidget {
   const ReviewAppointmentSummary({Key? key}) : super(key: key);

@@ -4,8 +4,8 @@ import 'package:medica/pages_widget/patient_details_widget.dart';
 import '../pages_widget/book_appointment_widget.dart';
 import '../pages_widget/booking_enter_pin_widget.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/appbar.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/appbar_custom.dart';
+import '../reusable_widget/button_custom.dart';
 
 class RescheduleAppointment extends StatelessWidget {
   const RescheduleAppointment({Key? key}) : super(key: key);

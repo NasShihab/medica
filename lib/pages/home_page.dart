@@ -6,7 +6,7 @@ import 'package:medica/pages_widget/top_doctors_category.dart';
 import 'package:medica/pages_widget/search_filter.dart';
 import 'package:medica/pages/slide_show.dart';
 import '../pages_widget/bottom_navigation_bar_page.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, '/My_Appointment');
                     },
                     child: Row(
@@ -42,8 +42,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             Text(
                               'Good Morning',
-                              style:
-                                  TextStyle(fontSize: 15.sp, color: Colors.grey),
+                              style: TextStyle(fontSize: 15.sp, color: Colors.grey),
                             ),
                             Text(
                               'Andrew Morgan',
@@ -83,10 +82,12 @@ class HomePage extends StatelessWidget {
               height10(),
               CupertinoSearchTextField(
                 padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 10.w),
-                onSuffixTap: (){
+                onSuffixTap: () {
                   showModalBottomSheet(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.vertical(top: Radius.circular(30.r))
+                        borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(30.r),
+                        ),
                       ),
                       context: context,
                       builder: (context) {
@@ -95,9 +96,15 @@ class HomePage extends StatelessWidget {
                 },
                 suffixIcon: Icon(
                   Icons.filter_list,
-                  color: myBlueAccent,
+                  color: myPinkAccent,
+                  size: 25.sp,
                 ),
                 suffixMode: OverlayVisibilityMode.always,
+                prefixIcon: Icon(
+                  Icons.search,
+                  color: myPinkAccent,
+                  size: 25.sp,
+                ),
               ),
               height20(),
               //Todo - Add Indicatior for SLide Image
@@ -105,7 +112,7 @@ class HomePage extends StatelessWidget {
               height20(),
               const DoctorSpeciality(),
               height30(),
-               const TopDoctorsCategory(),
+              const TopDoctorsCategory(),
             ],
           ),
         ),

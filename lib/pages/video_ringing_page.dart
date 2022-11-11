@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/appbar.dart';
+import '../reusable_widget/appbar_custom.dart';
 
 class VideoRingingPage extends StatelessWidget {
   const VideoRingingPage({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 
 Widget paymentNextButton(BuildContext context,
         {required String tdButtonName,
@@ -69,5 +69,5 @@ Widget paymentAddNewButton(BuildContext context,
             },
             child: Text(
               paymentAddNewButtonName,
-              style: TextStyle(fontSize: 18.sp,color: myBlueAccent),
+              style: TextStyle(fontSize: 18.sp,color: myPinkAccent),
             )));

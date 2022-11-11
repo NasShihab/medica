@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../list_item/favorit_doctors_list.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/list_tile.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/button_custom.dart';
 
 class RemoveFavorite extends StatelessWidget {
   const RemoveFavorite({Key? key}) : super(key: key);
@@ -45,7 +45,7 @@ class RemoveFavorite extends StatelessWidget {
                               onTap: () {},
                               child: Icon(
                                 Icons.favorite_sharp,
-                                color: myBlueAccent,
+                                color: myPinkAccent,
                                 size: 24.sp,
                               ),
                             ),
@@ -67,7 +67,7 @@ class RemoveFavorite extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.star,
-                              color: myBlueAccent,
+                              color: myPinkAccent,
                               size: 20.sp,
                             ),
                             Text('${favoriteDoctorList[index].doctorsRating} (${favoriteDoctorList[index].doctorsReviews} Reviews)'),
@@ -84,9 +84,9 @@ class RemoveFavorite extends StatelessWidget {
                     children: [
                       Expanded(
                         child: myFullCustomButton(
-                          buttonBackgroundColor: myBluegrey,
-                          buttonForgroundColor: myBlueAccent,
-                          buttonBorderColor: myBluegrey,
+                          buttonBackgroundColor: myGrey,
+                          buttonForgroundColor: myPinkAccent,
+                          buttonBorderColor: myGrey,
                           buttonHeight: 50,
                           buttonFontSize: 18,
                           buttonTitle: 'Cancel',

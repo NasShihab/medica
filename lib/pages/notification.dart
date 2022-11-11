@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../list_item/notification_listitem.dart';
-import '../reusable_widget/custom_color.dart';
-import '../reusable_widget/appbar.dart';
+import '../reusable_widget/color_custom.dart';
+import '../reusable_widget/appbar_custom.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({Key? key}) : super(key: key);
@@ -51,7 +51,7 @@ class NotificationPage extends StatelessWidget {
                         //Todo - Make New notification for newest only
                         trailing: Container(
                             padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 8.h),
-                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(8.r)), color: myBlueAccent),
+                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(8.r)), color: myPinkAccent),
                             child: Text(
                               '${tdat.nTrailing}',
                               style: TextStyle(fontSize: 16.sp, color: Colors.white),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages/home_page.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/button_custom.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);

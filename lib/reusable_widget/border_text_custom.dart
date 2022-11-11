@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget customBorderText({
   required String myText,
-  dynamic myTextColor = Colors.blue,
+  dynamic myTextColor = const Color(0xFFFF4D67),
   double myTextFontSize = 14,
   double myBorderTextBorderRadius = 8,
-  dynamic myBorderTextBorderColor = Colors.blue,
+  dynamic myBorderTextBorderColor = const Color(0xFFFF4D67),
   dynamic myBackGroundColor = Colors.white,
 }) =>
     Container(

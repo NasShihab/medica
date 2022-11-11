@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/appbar.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/appbar_custom.dart';
+import '../reusable_widget/button_custom.dart';
 
 class ConsultationEnded extends StatelessWidget {
   const ConsultationEnded({Key? key}) : super(key: key);
@@ -71,9 +71,9 @@ class ConsultationEnded extends StatelessWidget {
           children: [
             Flexible(
               child: myFullCustomButton(
-                buttonBackgroundColor: myBluegrey,
-                buttonBorderColor: myBluegrey,
-                buttonForgroundColor: myBlueAccent,
+                buttonBackgroundColor: myGrey,
+                buttonBorderColor: myGrey,
+                buttonForgroundColor: myPinkAccent,
                 buttonFontSize: 18,
                 buttonTitle: 'Back to Home',
                 myOnPressed: () {},

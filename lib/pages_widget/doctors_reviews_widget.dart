@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import '../list_item/review_list.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
 
 Widget doctorsReviewCard(BuildContext context) => ListView.builder(
@@ -43,11 +43,11 @@ Widget doctorsReviewCard(BuildContext context) => ListView.builder(
                           Icon(
                             Icons.star,
                             size: 25.sp,
-                            color: myBlueAccent,
+                            color: myPinkAccent,
                           ),
                           Text(
                             eviewList[index].reviewerRating.toString(),
-                            style: TextStyle(fontSize: 20.sp, color: myBlueAccent),
+                            style: TextStyle(fontSize: 20.sp, color: myPinkAccent),
                           )
                         ],
                       ),
@@ -82,7 +82,7 @@ Widget doctorsReviewCard(BuildContext context) => ListView.builder(
                 child: Icon(
                   Icons.favorite,
                   size: 28.sp,
-                  color: myBlueAccent,
+                  color: myPinkAccent,
                 ),
               ),
               width5(),
@@ -118,11 +118,11 @@ Widget starContainer({required String filterRating}) => Container(
             Icon(
               Icons.star,
               size: 18.sp,
-              color: myBlueAccent,
+              color: myPinkAccent,
             ),
             Text(
               filterRating,
-              style: TextStyle(fontSize: 20.sp, color: myBlueAccent),
+              style: TextStyle(fontSize: 20.sp, color: myPinkAccent),
             )
           ],
         ),

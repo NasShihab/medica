@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
 
 Widget myChatBoxOut({
@@ -18,7 +18,7 @@ Widget myChatBoxOut({
             margin: EdgeInsets.only(left: 60.w),
             padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
             decoration: BoxDecoration(
-              color: myBlueAccent,
+              color: myPinkAccent,
               borderRadius: BorderRadius.all(Radius.circular(myBorderTextBorderRadius.r)),
               border: Border.all(color: Colors.transparent),
             ),
@@ -62,7 +62,7 @@ Widget myChatBoxIn({
             margin: EdgeInsets.only(right: 60.w),
             padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
             decoration: BoxDecoration(
-              color: myBluegrey,
+              color: myGrey,
               borderRadius: BorderRadius.all(Radius.circular(myBorderTextBorderRadius.r)),
               border: Border.all(color: Colors.transparent),
             ),

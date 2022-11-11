@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 
 Widget hoursTime({required String bookingTime}) =>
     GestureDetector(
@@ -29,7 +29,7 @@ Widget hoursTime({required String bookingTime}) =>
             bookingTime,
             style: TextStyle(
                 fontSize: 20.sp,
-                color: myBlueAccent),
+                color: myPinkAccent),
           ),
         ),
       ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../pages_widget/chart_page_widget.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/appbar.dart';
+import '../reusable_widget/appbar_custom.dart';
 
 class ChatPage extends StatelessWidget {
   const ChatPage({Key? key}) : super(key: key);
@@ -113,7 +113,7 @@ class ChatPage extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: myBluegrey,
+                  color: myGrey,
                   borderRadius: BorderRadius.circular(35.0),
                 ),
                 child: Row(
@@ -122,7 +122,7 @@ class ChatPage extends StatelessWidget {
                       visualDensity: VisualDensity.standard,
                       icon: Icon(
                         Icons.face,
-                        color: myBlueAccent,
+                        color: myPinkAccent,
                         size: 24.sp,
                       ),
                       onPressed: () {},
@@ -177,7 +177,7 @@ class ChatPage extends StatelessWidget {
             width10(),
             CircleAvatar(
               radius: 25,
-              backgroundColor: myBlueAccent,
+              backgroundColor: myPinkAccent,
               foregroundColor: Colors.white,
               child: IconButton(
                 onPressed: () {

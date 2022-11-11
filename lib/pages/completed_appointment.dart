@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../reusable_widget/border_text.dart';
+import '../reusable_widget/border_text_custom.dart';
 import '../reusable_widget/circle_avatar_icon.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/list_tile.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/button_custom.dart';
 
 class CompletedAppointment extends StatelessWidget {
   const CompletedAppointment({Key? key}) : super(key: key);
@@ -60,7 +60,7 @@ class CompletedAppointment extends StatelessWidget {
                       child: myFullCustomButton(
                         buttonTitle: 'Book Again',
                         buttonFontSize: 16,
-                        buttonForgroundColor: myBlueAccent,
+                        buttonForgroundColor: myPinkAccent,
                         buttonBackgroundColor: Colors.white,
                         buttonHeight: 35,
                         myOnPressed: () {},

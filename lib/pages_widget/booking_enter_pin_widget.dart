@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/button_custom.dart';
 
 Widget successAlertDialog(BuildContext context, {required String message}) => AlertDialog(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.r))),
@@ -49,7 +49,7 @@ Widget successAlertDialog(BuildContext context, {required String message}) => Al
                 Flexible(
                   child: myFullCustomButton(
                     buttonBackgroundColor: Colors.lightBlue[100],
-                    buttonForgroundColor: myBlueAccent,
+                    buttonForgroundColor: myPinkAccent,
                     buttonTitle: 'Cancel',
                     myOnPressed: () {
                       Navigator.pop(context);
@@ -110,7 +110,7 @@ Widget errorAlertWidget(BuildContext context) => AlertDialog(
                   Flexible(
                       child: myFullCustomButton(
                     buttonTitle: 'Cancel',
-                    buttonForgroundColor: myBlueAccent,
+                    buttonForgroundColor: myPinkAccent,
                     buttonBackgroundColor: Colors.lightBlue[100],
                     buttonBorderColor: Colors.transparent,
                     myOnPressed: () {},

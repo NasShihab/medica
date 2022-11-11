@@ -1,22 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Widget myFullCustomButton(
-        {String buttonTitle = 'My Buttonm',
-        double buttonHeight = 60,
-        double buttonWidth = double.infinity,
-        double buttonFontSize = 20,
-        dynamic buttonFontWeight = FontWeight.normal,
-        dynamic buttonForgroundColor = Colors.white,
-        dynamic buttonBackgroundColor = const Color(0xFF2962FF),
-        dynamic buttonBorderColor = const Color(0xFF2962FF),
-        double buttonBorderWidth = 2,
-        double buttonBorderRadius = 30,
-        double buttonPaddingVerticle = 0,
-        double buttonPaddingHorizontal = 0,
-        double buttonOoutsidePaddingHorizontal = 10,
-        required VoidCallback myOnPressed}) =>
-    Container(
+Widget myFullCustomButton({String buttonTitle = 'My Buttonm', double buttonHeight = 60, double buttonWidth = double.infinity, double buttonFontSize = 20, dynamic buttonFontWeight = FontWeight.normal, dynamic buttonForgroundColor = Colors.white, dynamic buttonBackgroundColor = const Color(0xFFFF4D67), dynamic buttonBorderColor = const Color(0xFFFF4D67), double buttonBorderWidth = 2, double buttonBorderRadius = 30, double buttonPaddingVerticle = 0, double buttonPaddingHorizontal = 0, double buttonOoutsidePaddingHorizontal = 10, required VoidCallback myOnPressed}) => Container(
       padding: EdgeInsets.symmetric(horizontal: buttonOoutsidePaddingHorizontal.w),
       height: buttonHeight.h,
       width: buttonWidth.w,
@@ -51,11 +36,7 @@ Widget myTextButton({
       width: double.infinity,
       child: TextButton.icon(
         onPressed: () {},
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.white),
-            foregroundColor: MaterialStateProperty.all(Colors.black),
-            padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 18.h)),
-            elevation: MaterialStateProperty.all(.5)),
+        style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white), foregroundColor: MaterialStateProperty.all(Colors.black), padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 18.h)), elevation: MaterialStateProperty.all(.5)),
         icon: CircleAvatar(
           radius: 11.r,
           backgroundImage: AssetImage(icon),
@@ -119,5 +100,33 @@ Widget myPasswordField({
               borderSide: BorderSide(color: Colors.grey, width: 1.w),
             ),
             contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+      ),
+    );
+
+Widget myTextFieldPrefix({
+  required Icon myPrefixIcon,
+  required Icon mySuffixIcon,
+  required String htext,
+}) =>
+    Expanded(
+      child: SizedBox(
+        height: 50.h,
+        width: double.infinity,
+        child: TextField(
+          decoration: InputDecoration(
+              prefixIcon: myPrefixIcon,
+              suffixIcon: mySuffixIcon,
+              hintText: htext,
+              hintStyle: TextStyle(fontSize: 12.sp),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: Colors.grey, width: 1.w),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: Colors.grey, width: 1.w),
+              ),
+              contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+        ),
       ),
     );

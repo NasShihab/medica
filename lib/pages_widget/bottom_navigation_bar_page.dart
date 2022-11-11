@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 
 class BottomNavigationBarPage extends StatelessWidget {
   const BottomNavigationBarPage({Key? key}) : super(key: key);
@@ -13,16 +13,15 @@ class BottomNavigationBarPage extends StatelessWidget {
       currentIndex: 0,
       items: [
         BottomNavigationBarItem(
-
-            label: 'Home', icon: Icon(Icons.home_outlined, color: myBlueAccent, size: 30.sp,)),
+            label: 'Home', icon: Icon(Icons.home_outlined, color: myPinkAccent, size: 30.sp,)),
         BottomNavigationBarItem(
-            label: 'Appointment', icon: Icon(Icons.calendar_month_outlined, color: myBlueAccent, size: 30.sp,)),
+            label: 'Appointment', icon: Icon(Icons.calendar_month_outlined, color: myPinkAccent, size: 30.sp,)),
         BottomNavigationBarItem(
-            label: 'History', icon: Icon(Icons.history_edu_outlined, color: myBlueAccent, size: 30.sp,)),
+            label: 'History', icon: Icon(Icons.history_edu_outlined, color: myPinkAccent, size: 30.sp,)),
         BottomNavigationBarItem(
-            label: 'Articles', icon: Icon(Icons.article_outlined, color: myBlueAccent, size: 30.sp,)),
+            label: 'Articles', icon: Icon(Icons.article_outlined, color: myPinkAccent, size: 30.sp,)),
         BottomNavigationBarItem(
-            label: 'Profile', icon: Icon(Icons.person_outline, color: myBlueAccent, size: 30.sp,)),
+            label: 'Profile', icon: Icon(Icons.person_outline, color: myPinkAccent, size: 30.sp,)),
       ],
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
 
 class SearchFilter extends StatelessWidget {
@@ -170,7 +170,7 @@ class SearchFilter extends StatelessWidget {
               tdButtonName,
               style: TextStyle(
                   fontSize: 18.sp,
-                  color: myBlueAccent,
+                  color: myPinkAccent,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -193,11 +193,11 @@ class SearchFilter extends StatelessWidget {
               Icon(
                 Icons.star,
                 size: 22.sp,
-                color: myBlueAccent,
+                color: myPinkAccent,
               ),
               Text(
                 filterRating,
-                style: TextStyle(fontSize: 20.sp, color: myBlueAccent),
+                style: TextStyle(fontSize: 20.sp, color: myPinkAccent),
               )
             ],
           ),

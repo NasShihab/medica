@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../pages_widget/select_package_widget.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/button_custom.dart';
 
 class SelectPackage extends StatelessWidget {
   const SelectPackage({Key? key}) : super(key: key);

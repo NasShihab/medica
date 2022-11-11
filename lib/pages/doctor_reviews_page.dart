@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../pages_widget/doctors_reviews_widget.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/appbar.dart';
+import '../reusable_widget/appbar_custom.dart';
 
 class DoctorReviewPage extends StatelessWidget {
   const DoctorReviewPage({Key? key}) : super(key: key);

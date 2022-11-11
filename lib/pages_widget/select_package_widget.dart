@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
 
 Widget customSelectPackage({
@@ -27,11 +27,11 @@ Widget customSelectPackage({
             flex: 1,
             child: CircleAvatar(
                 radius: 30.r,
-                backgroundColor: Colors.blueGrey[100],
+                backgroundColor: myGrey,
                 child: Icon(
                   spicon,
                   size: 30.sp,
-                  color: myBlueAccent,
+                  color: myPinkAccent,
                 )),
           ),
           width10(),
@@ -70,7 +70,7 @@ Widget customSelectPackage({
                       '\$$spRate',
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: myBlueAccent, fontSize: 18.sp, fontWeight: FontWeight.bold),
+                      style: TextStyle(color: myPinkAccent, fontSize: 18.sp, fontWeight: FontWeight.bold),
                     ),
                     height10(),
                     Text(

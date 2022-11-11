@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/appbar.dart';
+import '../reusable_widget/appbar_custom.dart';
 import '../pages_widget/book_appointment_widget.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/button_custom.dart';
 
 class BookAppointment extends StatelessWidget {
   const BookAppointment({Key? key}) : super(key: key);

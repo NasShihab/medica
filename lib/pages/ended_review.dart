@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../pages_widget/patient_details_widget.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/appbar.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/appbar_custom.dart';
+import '../reusable_widget/button_custom.dart';
 
 class EndedReview extends StatelessWidget {
   const EndedReview({Key? key}) : super(key: key);
@@ -104,9 +104,9 @@ class EndedReview extends StatelessWidget {
           children: [
             Flexible(
               child: myFullCustomButton(
-                buttonBackgroundColor: myBluegrey,
-                buttonBorderColor: myBluegrey,
-                buttonForgroundColor: myBlueAccent,
+                buttonBackgroundColor: myGrey,
+                buttonBorderColor: myGrey,
+                buttonForgroundColor: myPinkAccent,
                 buttonFontSize: 18,
                 buttonTitle: 'Cancel',
                 myOnPressed: () {},
@@ -140,7 +140,7 @@ class EndedReview extends StatelessWidget {
                                 child: Text(
                                   'Review Sucessful',
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.sp, color: Colors.blueAccent[700]),
+                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.sp, color: myPinkAccent),
                                 ),
                               ),
                               Expanded(

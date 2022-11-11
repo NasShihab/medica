@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/pages_widget/select_package_widget.dart';
-import '../reusable_widget/custom_color.dart';
+import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/list_tile.dart';
 import '../reusable_widget/sized_box.dart';
-import '../reusable_widget/appbar.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/appbar_custom.dart';
+import '../reusable_widget/button_custom.dart';
 
 class CallingConsultation extends StatelessWidget {
   const CallingConsultation({Key? key}) : super(key: key);
@@ -104,7 +104,7 @@ class CallingConsultation extends StatelessWidget {
                     Expanded(
                       child: GestureDetector(
                           onTap: (){},
-                          child: Text('view more', style: TextStyle(fontSize: 18.sp, color: myBlueAccent),)),
+                          child: Text('view more', style: TextStyle(fontSize: 18.sp, color: myPinkAccent),)),
                     )
                   ],
                 ),
