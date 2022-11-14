@@ -2,49 +2,49 @@ import 'package:flutter/material.dart';
 import 'package:medica/opening_screens/screen_5.dart';
 import 'package:medica/opening_screens/screen_6.dart';
 import 'package:medica/opening_screens/screen_8.dart';
-import 'package:medica/pages/notification.dart';
-import 'package:medica/pages/top_doctors.dart';
-import 'package:medica/pages/chat_page.dart';
-import 'package:medica/pages/messaging_consultation.dart';
-import 'package:medica/pages/call_ringing_page.dart';
-import 'package:medica/pages_widget/bottom_navigation_bar_page.dart';
+import 'package:medica/dashboard/notification.dart';
+import 'package:medica/dashboard/top_doctors.dart';
+import 'package:medica/dashboard/bottom_navigation_bar_page.dart';
 import 'auth/login.dart';
+import 'dashboard/appointment_view/consultation/call_doctor/call_ringing_page.dart';
+import 'dashboard/appointment_view/consultation/call_doctor/call_running_page.dart';
+import 'dashboard/appointment_view/consultation/call_doctor/calling_consultation.dart';
+import 'dashboard/appointment_view/consultation/message_doctor/chat_page.dart';
+import 'dashboard/appointment_view/consultation/message_doctor/messaging_consultation.dart';
+import 'dashboard/appointment_view/consultation/video_call_doctor/video_consultation.dart';
+import 'dashboard/appointment_view/consultation/video_call_doctor/video_ringing_page.dart';
+import 'dashboard/appointment_view/consultation/video_call_doctor/video_runnig_page.dart';
 import 'opening_screens/screen_1.dart';
 import 'opening_screens/screen_2.dart';
 import 'opening_screens/screen_3.dart';
 import 'opening_screens/screen_4.dart';
 import 'opening_screens/screen_7.dart';
-import 'pages/welcome.dart';
+import 'opening_screens/welcome.dart';
 import 'auth/sign_up/create_pin.dart';
 import 'auth/sign_up/fill_profile.dart';
-import 'auth/sign_up.dart';
-import 'auth/fingerprint.dart';
+import 'auth/sign_up/sign_up.dart';
+import 'auth/sign_up/fingerprint.dart';
 import 'auth/forget_password/create_new_password.dart';
 import 'auth/forget_password/forget_password.dart';
 import 'auth/forget_password/otp_code_verification.dart';
-import 'pages/favorite_doctors.dart';
-import 'pages/book_appointment.dart';
-import 'pages/select_package.dart';
-import 'pages/patient_details.dart';
-import 'pages/payments_page.dart';
-import 'pages/add_new_card.dart';
-import 'pages/payment_update_card.dart';
-import 'pages/review_appointment_summary.dart';
-import 'pages/booking_enter_pin.dart';
-import 'pages/completed_appointment.dart';
-import 'pages/canceled_appointment.dart';
-import 'pages/my_appointment_view.dart';
-import 'pages/reschedule_appoinment.dart';
-import 'pages/canceled_reason.dart';
-import 'pages/consultation_ended.dart';
-import 'pages/call_running_page.dart';
-import 'pages/calling_consultation.dart';
-import 'pages/video_consultation.dart';
-import 'pages/video_ringing_page.dart';
-import 'pages/video_runnig_page.dart';
-import 'pages/ended_review.dart';
-import 'pages/doctors_profile.dart';
-import 'pages/doctor_reviews_page.dart';
+import 'dashboard/favorite_doctors.dart';
+import 'dashboard/doctors_profile/book_appointment/book_appointment.dart';
+import 'dashboard/doctors_profile/book_appointment/select_package/select_package.dart';
+import 'dashboard/doctors_profile/book_appointment/select_package/patient_details/patient_details.dart';
+import 'dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/payments_page.dart';
+import 'dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/add_new_card.dart';
+import 'dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/payment_update_card.dart';
+import 'dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/review_summary/review_appointment_summary.dart';
+import 'dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/review_summary/booking_enter_pin.dart';
+import 'dashboard/appointment_view/completed/completed_appointment.dart';
+import 'dashboard/appointment_view/canceled/canceled_appointment.dart';
+import 'dashboard/appointment_view/appointment_view.dart';
+import 'dashboard/appointment_view/reschedule_appoinment.dart';
+import 'dashboard/appointment_view/canceled_reason.dart';
+import 'dashboard/appointment_view/consultation/consultation_ended.dart';
+import 'dashboard/appointment_view/consultation/ended_review.dart';
+import 'dashboard/doctors_profile/doctors_profile.dart';
+import 'dashboard/appointment_view/consultation/doctor_reviews_page.dart';
 
 var myRoutes = <String, WidgetBuilder>{
   '/': (context) => const Screen1(),
@@ -63,7 +63,7 @@ var myRoutes = <String, WidgetBuilder>{
   '/fingerprint': (context) => const Fingerprint(),
   '/create_pin': (context) => const CreateNewPin(),
   '/forget_password': (context) => const ForgetPassword(),
-  '/OtpCode': (context) => const OtpCode(),
+  '/OtpCode': (context) => const OtpCodeVerification(),
   '/CreatePassword': (context) => const CreateNewPassword(),
   '/bottom_bar_page': (context) => const BottomNavigationBarPage(),
 

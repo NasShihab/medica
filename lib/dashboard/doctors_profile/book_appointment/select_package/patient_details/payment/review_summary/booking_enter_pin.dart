@@ -1,31 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/reusable_widget/appbar_custom.dart';
-import 'package:medica/reusable_widget/button_custom.dart';
+import '../../../../../../../reusable_widget/sized_box.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class OtpCodeVerification extends StatelessWidget {
-  const OtpCodeVerification({Key? key}) : super(key: key);
+import '../../../../../../../pages_widget/booking_enter_pin_widget.dart';
+import '../../../../../../../reusable_widget/appbar_custom.dart';
+import '../../../../../../../reusable_widget/button_custom.dart';
+
+class BookingEnterPin extends StatelessWidget {
+  const BookingEnterPin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: customAppBar(context, appBarTitle: 'Enter OTP code for verification'),
+      appBar: customAppBar(context, appBarTitle: 'Enter Pin'),
       body: SafeArea(
-        child: Container(
-          height: MediaQuery.of(context).size.height * .50,
+        child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 2.h),
               Text(
-                'Code has been sent to +880168****21',
+                'Enter your pin to confirm your appointment',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 18.sp, color: Colors.grey),
+                style: TextStyle(fontSize: 18.sp),
               ),
+              height50(),
               PinCodeTextField(
                 pinTheme: PinTheme(
                   inactiveColor: Colors.grey,
@@ -42,13 +44,13 @@ class OtpCodeVerification extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: myFullCustomButton(
-        buttonTitle: 'Verify',
+        buttonTitle: 'Continue',
         myOnPressed: () {
-          Navigator.pushNamed(context, '/CreatePassword');
+          showDialog(context: context, builder: (context) => errorAlertWidget(context));
         },
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
