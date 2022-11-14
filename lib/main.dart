@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/routes.dart';
+import 'package:medica/reusable_widget/routes.dart';
 
-import 'my_theme_data.dart';
+import 'reusable_widget/my_theme_data.dart';
 
 void main() {
   runApp(const MyApp());
