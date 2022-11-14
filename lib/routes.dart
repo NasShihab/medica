@@ -5,6 +5,7 @@ import 'package:medica/pages/top_doctors.dart';
 import 'package:medica/pages/chat_page.dart';
 import 'package:medica/pages/messaging_consultation.dart';
 import 'package:medica/pages/call_ringing_page.dart';
+import 'package:medica/pages_widget/bottom_navigation_bar_page.dart';
 import 'pages/login.dart';
 import 'pages/welcome.dart';
 import 'pages/create_new_pin.dart';
@@ -39,7 +40,7 @@ import 'pages/doctors_profile.dart';
 import 'pages/doctor_reviews_page.dart';
 
 var myRoutes = <String, WidgetBuilder>{
-  '/' : (context) => const Welcome(),
+  '/' : (context) => BottomNavigationBarPage(),
   '/welcome' : (context) => const Welcome(),
   '/login' : (context) => const Login(),
   '/sign_up' : (context) => const SignUp(),

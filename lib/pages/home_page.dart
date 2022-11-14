@@ -5,7 +5,6 @@ import 'package:medica/pages/doctor_speciality.dart';
 import 'package:medica/pages_widget/top_doctors_category.dart';
 import 'package:medica/pages_widget/search_filter.dart';
 import 'package:medica/pages/slide_show.dart';
-import '../pages_widget/bottom_navigation_bar_page.dart';
 import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
 
@@ -16,7 +15,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      bottomNavigationBar: const BottomNavigationBarPage(),
+      //bottomNavigationBar:  const BottomNavigationBarPage(),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),

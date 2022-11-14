@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../list_item/favorit_doctors_list.dart';
+import '../pages_widget/top_doctors_category.dart';
 import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/list_tile.dart';
 import '../reusable_widget/appbar_custom.dart';
@@ -44,11 +45,11 @@ class TopDoctors extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    topDoctorsButtons(context, tdButtonName: 'All', tdPageName: '/login'),
-                    topDoctorsButtons(context, tdButtonName: 'Dentist', tdPageName: '/login'),
-                    topDoctorsButtons(context, tdButtonName: 'Neurologist', tdPageName: '/login'),
-                    topDoctorsButtons(context, tdButtonName: 'Orthopedics', tdPageName: '/login'),
-                    topDoctorsButtons(context, tdButtonName: 'General', tdPageName: '/login'),
+                    categoryButton(context, titleButton: 'All', toastMsg: 'All',),
+                    categoryButton(context, titleButton: 'Dentist', toastMsg: 'Dentist',),
+                    categoryButton(context, titleButton: 'Neurologist', toastMsg: 'Neurologist',),
+                    categoryButton(context, titleButton: 'Orthopedics', toastMsg: 'Orthopedics',),
+                    categoryButton(context, titleButton: 'General', toastMsg: 'General',),
                   ],
                 ),
               ),
@@ -129,26 +130,4 @@ class TopDoctors extends StatelessWidget {
       ),
     );
   }
-
-  Widget topDoctorsButtons(BuildContext context, {required String tdButtonName, required String tdPageName}) => SizedBox(
-        height: 40.h,
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5.w),
-          child: ElevatedButton(
-            style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.r),
-                  side: BorderSide(color: myPinkAccent),
-                )),
-                backgroundColor: MaterialStateProperty.all(Colors.white)),
-            onPressed: () {
-              Navigator.pushNamed(context, tdPageName);
-            },
-            child: Text(
-              tdButtonName,
-              style: TextStyle(fontSize: 16.sp, color: myPinkAccent, fontWeight: FontWeight.bold),
-            ),
-          ),
-        ),
-      );
 }

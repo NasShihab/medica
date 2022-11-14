@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/reusable_widget/toast_message.dart';
 import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';
 
@@ -32,11 +33,11 @@ class TopDoctorsCategory extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              topDoctorsButton(context, tdButtonName: 'All', tdPageName: '/login'),
-              topDoctorsButton(context, tdButtonName: 'Dentist', tdPageName: '/login'),
-              topDoctorsButton(context, tdButtonName: 'Neurologist', tdPageName: '/login'),
-              topDoctorsButton(context, tdButtonName: 'Orthopedics', tdPageName: '/login'),
-              topDoctorsButton(context, tdButtonName: 'General', tdPageName: '/login'),
+              categoryButton(context, titleButton: 'All', toastMsg: 'All',),
+              categoryButton(context, titleButton: 'Dentist', toastMsg: 'Dentist',),
+              categoryButton(context, titleButton: 'Neurologist', toastMsg: 'Neurologist',),
+              categoryButton(context, titleButton: 'Orthopedics', toastMsg: 'Orthopedics',),
+              categoryButton(context, titleButton: 'General', toastMsg: 'General',),
             ],
           ),
         ),
@@ -44,25 +45,30 @@ class TopDoctorsCategory extends StatelessWidget {
     );
   }
 
-  Widget topDoctorsButton(BuildContext context, {required String tdButtonName, required String tdPageName}) => SizedBox(
-        height: 35.h,
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3.w),
-          child: ElevatedButton(
-            style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.r),
-                  side: BorderSide(color: myPinkAccent),
-                )),
-                backgroundColor: MaterialStateProperty.all(Colors.white)),
-            onPressed: () {
-              Navigator.pushNamed(context, tdPageName);
-            },
-            child: Text(
-              tdButtonName,
-              style: TextStyle(fontSize: 18.sp, color: myPinkAccent, fontWeight: FontWeight.bold),
-            ),
+}
+Widget categoryButton(
+    BuildContext context, {
+      required String titleButton,
+      required String toastMsg,
+    }) =>
+    SizedBox(
+      height: 35.h,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 3.w),
+        child: ElevatedButton(
+          style: ButtonStyle(
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.r),
+                side: BorderSide(color: myPinkAccent),
+              )),
+              backgroundColor: MaterialStateProperty.all(Colors.white)),
+          onPressed: () {
+            toastMessage(message: toastMsg);
+          },
+          child: Text(
+            titleButton,
+            style: TextStyle(fontSize: 18.sp, color: myPinkAccent, fontWeight: FontWeight.bold),
           ),
         ),
-      );
-}
+      ),
+    );
