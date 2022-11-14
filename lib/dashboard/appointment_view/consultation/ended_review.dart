@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../pages_widget/patient_details_widget.dart';
+import '../../doctors_profile/book_appointment/select_package/patient_details/patient_details_widget.dart';
 import '../../../reusable_widget/color_custom.dart';
 import '../../../reusable_widget/sized_box.dart';
 import '../../../reusable_widget/appbar_custom.dart';

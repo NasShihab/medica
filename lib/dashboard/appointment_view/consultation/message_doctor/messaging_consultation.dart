@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../pages_widget/select_package_widget.dart';
+import '../../../doctors_profile/book_appointment/select_package/select_package_widget.dart';
 import '../../../../reusable_widget/appbar_custom.dart';
 import '../../../../reusable_widget/button_custom.dart';
 import '../../../../reusable_widget/color_custom.dart';

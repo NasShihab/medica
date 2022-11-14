@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../reusable_widget/sized_box.dart';
 import '../../reusable_widget/appbar_custom.dart';
 import '../../reusable_widget/button_custom.dart';
-import '../../pages_widget/patient_details_widget.dart';
-import '../../pages_widget/booking_enter_pin_widget.dart';
+import '../doctors_profile/book_appointment/select_package/patient_details/patient_details_widget.dart';
+import '../dashboard_widget.dart';
 
 class CanceledReason extends StatelessWidget {
   const CanceledReason({Key? key}) : super(key: key);

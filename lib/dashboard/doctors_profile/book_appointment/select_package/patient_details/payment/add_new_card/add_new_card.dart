@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../pages_widget/patient_details_widget.dart';
-import '../../../../../../pages_widget/add_new_card_widget.dart';
-import '../../../../../../reusable_widget/sized_box.dart';
+import '../../patient_details_widget.dart';
+import '../../../../../../../reusable_widget/sized_box.dart';
+import 'add_new_card_widget.dart';
 
 class AddNewCard extends StatelessWidget {
   const AddNewCard({Key? key}) : super(key: key);

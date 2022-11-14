@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../pages_widget/payments_page_widget.dart';
-import '../../../../../../reusable_widget/sized_box.dart';
+import '../payments_page_widget.dart';
+import '../../../../../../../reusable_widget/sized_box.dart';
 
 class PaymentUpdateCard extends StatelessWidget {
   const PaymentUpdateCard({Key? key}) : super(key: key);

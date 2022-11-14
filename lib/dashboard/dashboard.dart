@@ -7,14 +7,14 @@ import 'package:medica/dashboard/notification.dart';
 import 'appointment_view/consultation/doctor_reviews_page.dart';
 import '../reusable_widget/color_custom.dart';
 
-class BottomNavigationBarPage extends StatefulWidget {
-  const BottomNavigationBarPage({Key? key}) : super(key: key);
+class Dashboard extends StatefulWidget {
+  const Dashboard({Key? key}) : super(key: key);
 
   @override
-  State<BottomNavigationBarPage> createState() => _BottomNavigationBarPageState();
+  State<Dashboard> createState() => _DashboardState();
 }
 
-class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
+class _DashboardState extends State<Dashboard> {
 
   final List<Widget> screens = [
     const HomePage(),

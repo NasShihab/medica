@@ -4,7 +4,7 @@ import '../../reusable_widget/color_custom.dart';
 import 'upcoming/upcoming_appointment.dart';
 import 'canceled/canceled_appointment.dart';
 import 'completed/completed_appointment.dart';
-import '../../pages_widget/tab_bar.dart';
+import 'tab_bar.dart';
 
 class MyAppointmentView extends StatelessWidget {
   const MyAppointmentView({Key? key}) : super(key: key);

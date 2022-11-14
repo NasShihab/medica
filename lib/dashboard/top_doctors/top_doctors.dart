@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../list_item/favorit_doctors_list.dart';
-import '../pages_widget/top_doctors_category.dart';
-import '../reusable_widget/color_custom.dart';
-import '../reusable_widget/list_tile.dart';
-import '../reusable_widget/appbar_custom.dart';
-import '../pages_widget/remove_favorite.dart';
+import '../../list_item/favorit_doctors_list.dart';
+import 'top_doctors_category.dart';
+import '../../reusable_widget/color_custom.dart';
+import '../../reusable_widget/list_tile.dart';
+import '../../reusable_widget/appbar_custom.dart';
+import '../favorite_doctors/remove_favorite.dart';
 
 class TopDoctors extends StatelessWidget {
   const TopDoctors({Key? key}) : super(key: key);

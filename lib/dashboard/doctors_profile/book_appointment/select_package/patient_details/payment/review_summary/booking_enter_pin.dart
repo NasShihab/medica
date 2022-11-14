@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../../reusable_widget/sized_box.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../../../../../../../pages_widget/booking_enter_pin_widget.dart';
+import '../../../../../../dashboard_widget.dart';
 import '../../../../../../../reusable_widget/appbar_custom.dart';
 import '../../../../../../../reusable_widget/button_custom.dart';
 

@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages_widget/doctor_speciality.dart';
-import 'package:medica/pages_widget/top_doctors_category.dart';
-import 'package:medica/pages_widget/search_filter.dart';
+import 'package:medica/pages_widget/doctor_speciality_widget.dart';
+import 'package:medica/dashboard/top_doctors/top_doctors_category.dart';
+import 'package:medica/dashboard/search/search_filter.dart';
 import 'package:medica/dashboard/slide_show.dart';
 import '../reusable_widget/color_custom.dart';
 import '../reusable_widget/sized_box.dart';

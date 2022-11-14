@@ -3,8 +3,8 @@ import 'package:medica/opening_screens/screen_5.dart';
 import 'package:medica/opening_screens/screen_6.dart';
 import 'package:medica/opening_screens/screen_8.dart';
 import 'package:medica/dashboard/notification.dart';
-import 'package:medica/dashboard/top_doctors.dart';
-import 'package:medica/dashboard/bottom_navigation_bar_page.dart';
+import 'package:medica/dashboard/top_doctors/top_doctors.dart';
+import 'package:medica/dashboard/dashboard.dart';
 import '../auth/login.dart';
 import '../dashboard/appointment_view/consultation/call_doctor/call_ringing_page.dart';
 import '../dashboard/appointment_view/consultation/call_doctor/call_running_page.dart';
@@ -27,13 +27,13 @@ import '../auth/sign_up/fingerprint.dart';
 import '../auth/forget_password/create_new_password.dart';
 import '../auth/forget_password/forget_password.dart';
 import '../auth/forget_password/otp_code_verification.dart';
-import '../dashboard/favorite_doctors.dart';
+import '../dashboard/favorite_doctors/favorite_doctors.dart';
 import '../dashboard/doctors_profile/book_appointment/book_appointment.dart';
 import '../dashboard/doctors_profile/book_appointment/select_package/select_package.dart';
 import '../dashboard/doctors_profile/book_appointment/select_package/patient_details/patient_details.dart';
 import '../dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/payments_page.dart';
-import '../dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/add_new_card.dart';
-import '../dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/payment_update_card.dart';
+import '../dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/add_new_card/add_new_card.dart';
+import '../dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/add_new_card/payment_update_card.dart';
 import '../dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/review_summary/review_appointment_summary.dart';
 import '../dashboard/doctors_profile/book_appointment/select_package/patient_details/payment/review_summary/booking_enter_pin.dart';
 import '../dashboard/appointment_view/completed/completed_appointment.dart';
@@ -65,7 +65,7 @@ var myRoutes = <String, WidgetBuilder>{
   '/forget_password': (context) => const ForgetPassword(),
   '/OtpCode': (context) => const OtpCodeVerification(),
   '/CreatePassword': (context) => const CreateNewPassword(),
-  '/bottom_bar_page': (context) => const BottomNavigationBarPage(),
+  '/bottom_bar_page': (context) => const Dashboard(),
 
   '/notification': (context) => const NotificationPage(),
   '/favorite_doctors': (context) => const FavoriteDoctors(),

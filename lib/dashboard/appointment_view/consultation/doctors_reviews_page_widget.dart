@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import '../list_item/review_list.dart';
-import '../reusable_widget/color_custom.dart';
-import '../reusable_widget/sized_box.dart';
+
+import '../../../list_item/review_list.dart';
+import '../../../reusable_widget/color_custom.dart';
+import '../../../reusable_widget/sized_box.dart';
 
 Widget doctorsReviewCard(BuildContext context) => ListView.builder(
       itemCount: eviewList.length,
