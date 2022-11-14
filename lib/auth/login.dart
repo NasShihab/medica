@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/pages/home_page.dart';
 import '../reusable_widget/button_custom.dart';
 
 class Login extends StatelessWidget {
@@ -11,18 +10,6 @@ class Login extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => const HomePage()));
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-            )),
-      ),
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -74,7 +61,7 @@ class Login extends StatelessWidget {
                 buttonTitle: 'Sign in',
                 buttonOoutsidePaddingHorizontal: 0,
                 myOnPressed: () {
-                  Navigator.pushNamed(context, '/HomePage');
+                  Navigator.pushNamed(context, '/bottom_bar_page');
                 }),
             TextButton(
                 onPressed: () {

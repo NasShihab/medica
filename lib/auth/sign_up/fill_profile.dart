@@ -4,7 +4,7 @@ import 'package:medica/reusable_widget/color_custom.dart';
 import 'package:medica/reusable_widget/button_custom.dart';
 import 'package:medica/reusable_widget/sized_box.dart';
 
-import '../reusable_widget/appbar_custom.dart';
+import '../../reusable_widget/appbar_custom.dart';
 
 class FillProfile extends StatelessWidget {
   const FillProfile({Key? key}) : super(key: key);

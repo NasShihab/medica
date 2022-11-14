@@ -86,7 +86,7 @@ class Fingerprint extends StatelessWidget {
                                 Flexible(
                                   child: GestureDetector(
                                     onTap: (){
-                                      Navigator.pushNamed(context, '/HomePage');
+                                      Navigator.pushNamed(context, '/bottom_bar_page');
                                     },
                                     child: CircleAvatar(
                                       radius: 40.r,

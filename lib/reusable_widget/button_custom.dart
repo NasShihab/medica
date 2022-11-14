@@ -78,9 +78,10 @@ Widget myPasswordField({
   required Icon icon,
   required Icon suffixIcon,
   required String hintText,
+  double height = 50,
 }) =>
     SizedBox(
-      height: 50.h,
+      height: height.h,
       width: double.infinity,
       child: TextField(
         obscureText: true,

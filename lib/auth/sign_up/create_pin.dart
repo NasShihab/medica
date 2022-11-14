@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../reusable_widget/appbar_custom.dart';
-import '../reusable_widget/button_custom.dart';
-import '../reusable_widget/sized_box.dart';
+import '../../reusable_widget/appbar_custom.dart';
+import '../../reusable_widget/button_custom.dart';
+import '../../reusable_widget/sized_box.dart';
 
 class CreateNewPin extends StatelessWidget {
   const CreateNewPin({Key? key}) : super(key: key);

@@ -11,18 +11,6 @@ class SignUp extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/HomePage');
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-            )),
-      ),
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -123,18 +111,19 @@ class SignUp extends StatelessWidget {
                     ),
                   ),
                   Flexible(
-                      child: TextButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/login');
-                          },
-                          child: Text(
-                            'Login',
-                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.sp),
-                          ))),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
+                      child: Text(
+                        'Login',
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.sp),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
-            SizedBox(height: 20.h),
           ],
         ),
       )),
