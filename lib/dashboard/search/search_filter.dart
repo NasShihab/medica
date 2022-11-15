@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/reusable_widget/button_custom.dart';
 
 import '../../reusable_widget/color_custom.dart';
 import '../../reusable_widget/sized_box.dart';
@@ -22,8 +23,7 @@ class SearchFilter extends StatelessWidget {
                       margin: EdgeInsets.symmetric(vertical: 25.h),
                       child: Text(
                         'Filter',
-                        style: TextStyle(
-                            fontSize: 24.sp, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
                       )),
                   height10(),
                   Column(
@@ -34,8 +34,7 @@ class SearchFilter extends StatelessWidget {
                         children: [
                           Text(
                             'Top Doctors',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18.sp),
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
                           ),
                         ],
                       ),
@@ -45,18 +44,11 @@ class SearchFilter extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            topDoctorsButton(context,
-                                tdButtonName: 'All', tdPageName: '/login'),
-                            topDoctorsButton(context,
-                                tdButtonName: 'Dentist', tdPageName: '/login'),
-                            topDoctorsButton(context,
-                                tdButtonName: 'Neurologist',
-                                tdPageName: '/login'),
-                            topDoctorsButton(context,
-                                tdButtonName: 'Orthopedics',
-                                tdPageName: '/login'),
-                            topDoctorsButton(context,
-                                tdButtonName: 'General', tdPageName: '/login'),
+                            topDoctorsButton(context, tdButtonName: 'All', tdPageName: '/login'),
+                            topDoctorsButton(context, tdButtonName: 'Dentist', tdPageName: '/login'),
+                            topDoctorsButton(context, tdButtonName: 'Neurologist', tdPageName: '/login'),
+                            topDoctorsButton(context, tdButtonName: 'Orthopedics', tdPageName: '/login'),
+                            topDoctorsButton(context, tdButtonName: 'General', tdPageName: '/login'),
                           ],
                         ),
                       ),
@@ -66,8 +58,7 @@ class SearchFilter extends StatelessWidget {
                         children: [
                           Text(
                             'Rating',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18.sp),
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
                           ),
                         ],
                       ),
@@ -89,55 +80,25 @@ class SearchFilter extends StatelessWidget {
                   ),
                   height15(),
                   Container(
-                    margin:
-                        EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
+                    margin: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
-                          child: TextButton(
-                              onPressed: () {},
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Colors.lightBlue[100]),
-                                foregroundColor:
-                                    MaterialStateProperty.all(Colors.white),
-                                padding: MaterialStateProperty.all(
-                                    EdgeInsets.symmetric(vertical: 14.h)),
-                                shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(50.r))),
-                              ),
-                              child: Text(
-                                'Reset',
-                                style: TextStyle(
-                                    fontSize: 18.sp,
-                                    color: Colors.blueAccent[700]),
-                              )),
+                          child: myFullCustomButton(
+                            buttonForgroundColor: myPinkAccent,
+                            buttonBorderColor: myGrey,
+                            buttonBackgroundColor: myGrey,
+                            buttonTitle: 'Reset',
+                            myOnPressed: () {},
+                          ),
                         ),
                         width15(),
                         Expanded(
-                          child: TextButton(
-                              onPressed: () {},
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Colors.blueAccent[700]),
-                                foregroundColor:
-                                    MaterialStateProperty.all(Colors.white),
-                                padding: MaterialStateProperty.all(
-                                    EdgeInsets.symmetric(vertical: 14.h)),
-                                shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(50.r))),
-                              ),
-                              child: Text(
-                                'Apply',
-                                style: TextStyle(fontSize: 18.sp),
-                              )),
+                          child: myFullCustomButton(
+                            buttonTitle: 'Apply',
+                            myOnPressed: () {},
+                          ),
                         ),
                       ],
                     ),
@@ -149,16 +110,13 @@ class SearchFilter extends StatelessWidget {
     );
   }
 
-  Widget topDoctorsButton(BuildContext context,
-          {required String tdButtonName, required String tdPageName}) =>
-      SizedBox(
+  Widget topDoctorsButton(BuildContext context, {required String tdButtonName, required String tdPageName}) => SizedBox(
         height: 35.h,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 3.w),
           child: ElevatedButton(
             style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18.r),
                   side: const BorderSide(color: Colors.blue),
                 )),
@@ -168,10 +126,7 @@ class SearchFilter extends StatelessWidget {
             },
             child: Text(
               tdButtonName,
-              style: TextStyle(
-                  fontSize: 18.sp,
-                  color: myPinkAccent,
-                  fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18.sp, color: myPinkAccent, fontWeight: FontWeight.bold),
             ),
           ),
         ),
