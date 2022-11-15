@@ -47,7 +47,7 @@ import 'dashboard/doctors_profile/doctors_profile.dart';
 import 'dashboard/appointment_view/consultation/doctor_reviews_page.dart';
 
 var myRoutes = <String, WidgetBuilder>{
-  '/': (context) => const Dashboard(),
+  '/': (context) => const Screen1(),
   '/screen_1': (context) => const Screen1(),
   '/screen_2': (context) => const Screen2(),
   '/screen_3': (context) => const Screen3(),
