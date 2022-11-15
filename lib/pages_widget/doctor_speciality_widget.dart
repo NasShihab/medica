@@ -29,7 +29,7 @@ class DoctorSpeciality extends StatelessWidget {
           children: [
             Row(
               children: [
-                circleAvatarDc(title: 'General', icon: Icons.generating_tokens, toastMsg: 'General'),
+                circleAvatarDc(title: 'Generals', icon: Icons.generating_tokens, toastMsg: 'General'),
                 circleAvatarDc(title: 'Dentist', icon: Icons.table_bar_outlined, toastMsg: 'Dentist'),
                 circleAvatarDc(title: 'Ophthalmologist', icon: Icons.accessible, toastMsg: 'Ophthalmologist'),
                 circleAvatarDc(title: 'Nutrition', icon: Icons.food_bank_outlined, toastMsg: 'Nutrition'),
