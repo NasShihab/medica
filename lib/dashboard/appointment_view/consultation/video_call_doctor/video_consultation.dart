@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../doctors_profile/book_appointment/select_package/select_package_widget.dart';
-import '../../../../reusable_widget/appbar_custom.dart';
 import '../../../../reusable_widget/button_custom.dart';
 import '../../../../reusable_widget/color_custom.dart';
 import '../../../../reusable_widget/list_tile.dart';
@@ -14,12 +13,6 @@ class VideoConsultation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar(context,
-          actionBarIcons: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.more_vert, size: 24.sp, color: Colors.black),
-          ),
-          appBarTitle: 'Video Call Consultation'),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(

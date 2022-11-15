@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../reusable_widget/appbar_custom.dart';
 import '../../../../reusable_widget/sized_box.dart';
 
 
@@ -18,7 +17,6 @@ class CallRingingPage extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        appBar: customAppBar(context, appBarTitle: ''),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.center,
