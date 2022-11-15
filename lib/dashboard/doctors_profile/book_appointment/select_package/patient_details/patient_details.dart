@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medica/reusable_widget/button_custom.dart';
+import '../../../../../reusable_widget/appbar_custom.dart';
 import 'patient_details_widget.dart';
 import '../../../../../reusable_widget/sized_box.dart';
 
@@ -11,37 +13,27 @@ class PatientDetails extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: pdNextButton(context, tdButtonName: 'Next', tdPageName: '/Payments_Page'),
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.zero,
+      floatingActionButton: myFullCustomButton(
+        buttonTitle: 'Next',
+        myOnPressed: () {
+          Navigator.pushNamed(context, '/Payments_Page');
+        },
+      ),
+      appBar: customAppBar(
+        context,
+        appBarTitle: 'Patient Details',
+        actionBarIcons: Row(
+          children: [
+            IconButton(
+              visualDensity: VisualDensity.compact,
               onPressed: () {},
               icon: Icon(
-                Icons.expand_circle_down_outlined,
-                color: Colors.black,
+                Icons.arrow_drop_down_circle,
                 size: 30.sp,
-              )),
-        ],
-        title: FittedBox(
-          fit: BoxFit.fitWidth,
-          child: Text(
-            'Patient Details',
-            style: TextStyle(fontSize: 24.sp, color: Colors.black),
-          ),
+              ),
+            ),
+          ],
         ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/HomePage');
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              size: 24.sp,
-              color: Colors.black,
-            )),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../../../reusable_widget/appbar_custom.dart';
 import 'review_appointment_summary_widget.dart';
 import '../../../../../../../reusable_widget/list_tile.dart';
 import '../../../../../../../reusable_widget/sized_box.dart';
@@ -11,25 +12,9 @@ class ReviewAppointmentSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: FittedBox(
-          fit: BoxFit.fitWidth,
-          child: Text(
-            'Review Summary',
-            style: TextStyle(fontSize: 24.sp, color: Colors.black),
-          ),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/HomePage');
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              size: 24.sp,
-              color: Colors.black,
-            )),
+      appBar: customAppBar(
+        context,
+        appBarTitle: 'Review Summary',
       ),
       body: Column(
         children: [

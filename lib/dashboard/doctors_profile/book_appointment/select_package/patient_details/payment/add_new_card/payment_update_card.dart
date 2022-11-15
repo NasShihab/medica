@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../payments_page_widget.dart';
+import '../../../../../../../reusable_widget/appbar_custom.dart';
+import '../../../../../../../reusable_widget/button_custom.dart';
+import '../../../../../../../reusable_widget/color_custom.dart';
 import '../../../../../../../reusable_widget/sized_box.dart';
 
 class PaymentUpdateCard extends StatelessWidget {
@@ -9,53 +11,26 @@ class PaymentUpdateCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation:
-      FloatingActionButtonLocation
-          .centerFloat,
-      floatingActionButton: paymentNextButton(
-          context,
-          tdButtonName: 'Next',
-          tdPageName: '/Review_Summary'),
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.zero,
-              onPressed: () {},
-              icon: Icon(
-                Icons.qr_code_scanner_outlined,
-                color: Colors.black,
-                size: 30.sp,
-              )),
-        ],
-        title: FittedBox(
-          fit: BoxFit.fitWidth,
-          child: Text(
-            'Update Payments',
-            style: TextStyle(
-                fontSize: 24.sp,
-                color: Colors.black),
-          ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      // floatingActionButton: paymentNextButton(context, tdButtonName: 'Next', tdPageName: '/Review_Summary'),
+      floatingActionButton: myFullCustomButton(
+        buttonTitle: 'Next',
+        myOnPressed: () {
+          Navigator.pushNamed(context, '/Review_Summary');
+        },
+      ),
+      appBar: customAppBar(
+        context,
+        appBarTitle: 'Update Card',
+        actionBarIcons: Icon(
+          Icons.qr_code,
+          size: 30.sp,
         ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(
-                  context, '/HomePage');
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              size: 24.sp,
-              color: Colors.black,
-            )),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: 20.w),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
-          crossAxisAlignment:
-          CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             height10(),
             Align(
@@ -75,18 +50,11 @@ class PaymentUpdateCard extends StatelessWidget {
                     children: [
                       ListTile(
                         contentPadding: EdgeInsets.symmetric(vertical: 0.h),
-                        visualDensity:
-                        VisualDensity(horizontal: 4, vertical: -1.h),
-                        leading: Image.asset(
-                            height: 40,
-                            width: 40,
-                            '${updatePaymentMethodList[index].uppaymentLogo}'),
+                        visualDensity: VisualDensity(horizontal: 4, vertical: -1.h),
+                        leading: Image.asset(height: 40, width: 40, '${updatePaymentMethodList[index].uppaymentLogo}'),
                         title: Text(
                           '${updatePaymentMethodList[index].uppaymentName}',
-                          style: TextStyle(
-                              fontWeight:
-                              FontWeight.bold,
-                              fontSize: 20.sp),
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.sp),
                         ),
                         trailing: Radio(
                           value: 1,
@@ -100,10 +68,15 @@ class PaymentUpdateCard extends StatelessWidget {
                 },
               ),
             ),
-            paymentAddNewButton(context,
-                paymentPageName: '/Add_New_Card',
-                paymentAddNewButtonName:
-                'Add New Card'),
+            myFullCustomButton(
+              buttonBackgroundColor: myGrey,
+              buttonBorderColor: Colors.tealAccent,
+              buttonForgroundColor: myPinkAccent,
+              buttonTitle: 'Add New Card',
+              myOnPressed: () {
+                Navigator.pushNamed(context, '/Add_New_Card');
+              },
+            )
           ],
         ),
       ),
@@ -124,7 +97,6 @@ List updatePaymentMethodList = [
     'assets/images/apple.png',
     'Apple Pay',
   ),
-
   UpdatePaymentMethodClass(
     'assets/images/master_card.png',
     '----------------- 4789',
@@ -136,7 +108,7 @@ class UpdatePaymentMethodClass {
   final String uppaymentName;
 
   UpdatePaymentMethodClass(
-      this.uppaymentLogo,
-      this.uppaymentName,
-      );
+    this.uppaymentLogo,
+    this.uppaymentName,
+  );
 }

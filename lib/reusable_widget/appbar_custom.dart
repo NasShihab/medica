@@ -11,18 +11,25 @@ AppBar customAppBar(
     AppBar(
       title: Text(
         appBarTitle,
+        style: TextStyle(fontSize: 24.sp),
       ),
       centerTitle: appBarCenter,
-      actions: [actionBarIcons],
+      actions: [
+        Padding(
+          padding: EdgeInsets.only(right: 10.w),
+          child: actionBarIcons,
+        ),
+      ],
       elevation: 0,
       backgroundColor: Colors.transparent,
       leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            leadIcon,
-            size: 30.sp,
-            color: Colors.black,
-          )),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: Icon(
+          leadIcon,
+          size: 30.sp,
+          color: Colors.black,
+        ),
+      ),
     );

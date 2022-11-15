@@ -38,7 +38,7 @@ class MyAppointmentView extends StatelessWidget {
             ),
             leadingIcon2: IconButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/welcome');
+                Navigator.pushNamed(context, '/bottom_bar_page');
               },
               icon: Icon(
                 Icons.medical_services_sharp,

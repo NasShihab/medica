@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../patient_details_widget.dart';
+import 'package:medica/reusable_widget/button_custom.dart';
+import '../../../../../../../reusable_widget/appbar_custom.dart';
 import '../../../../../../../reusable_widget/sized_box.dart';
 import 'add_new_card_widget.dart';
 
@@ -11,38 +12,10 @@ class AddNewCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: pdNextButton(context, tdButtonName: 'Next', tdPageName: '/Payment_UpdateCard'),
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.zero,
-              onPressed: () {},
-              icon: Icon(
-                Icons.expand_circle_down_outlined,
-                color: Colors.black,
-                size: 30.sp,
-              )),
-        ],
-        title: FittedBox(
-          fit: BoxFit.fitWidth,
-          child: Text(
-            'Add New Card',
-            style: TextStyle(fontSize: 24.sp, color: Colors.black),
-          ),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/HomePage');
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              size: 24.sp,
-              color: Colors.black,
-            )),
+
+      appBar: customAppBar(
+        context,
+        appBarTitle: 'Add New Card',
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 22.w),
@@ -85,6 +58,14 @@ class AddNewCard extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      // floatingActionButton: pdNextButton(context, tdButtonName: 'Next', tdPageName: '/Payment_UpdateCard'),
+      floatingActionButton: myFullCustomButton(
+        buttonTitle: 'Next',
+        myOnPressed: () {
+          Navigator.pushNamed(context, '/Payment_UpdateCard');
+        },
       ),
     );
   }

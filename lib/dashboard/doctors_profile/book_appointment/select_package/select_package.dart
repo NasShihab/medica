@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../reusable_widget/appbar_custom.dart';
 import 'select_package_widget.dart';
 import '../../../../reusable_widget/sized_box.dart';
 import '../../../../reusable_widget/button_custom.dart';
@@ -16,37 +17,20 @@ class SelectPackage extends StatelessWidget {
           myOnPressed: () {
             Navigator.pushNamed(context, '/Patient_Details');
           }),
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.zero,
-              onPressed: () {},
-              icon: Icon(
-                Icons.expand_circle_down_outlined,
-                color: Colors.black,
-                size: 30.sp,
-              )),
-        ],
-        title: FittedBox(
-          fit: BoxFit.fitWidth,
-          child: Text(
-            'Select Package',
-            style: TextStyle(fontSize: 24.sp, color: Colors.black),
-          ),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/HomePage');
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              size: 24.sp,
-              color: Colors.black,
-            )),
-      ),
+      appBar: customAppBar(context,
+          appBarTitle: 'Select Package',
+          actionBarIcons: Row(
+            children: [
+              IconButton(
+                visualDensity: VisualDensity.compact,
+                onPressed: () {},
+                icon: Icon(
+                  Icons.arrow_drop_down_circle,
+                  size: 30.sp,
+                ),
+              ),
+            ],
+          )),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
