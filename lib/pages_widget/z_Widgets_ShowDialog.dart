@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../reusable_widget/custom_color.dart';
-import '../reusable_widget/full_custom_button.dart';
+import '../reusable_widget/color_custom.dart';
+import '../reusable_widget/button_custom.dart';
 
 Widget cancelAppointmentDialog(BuildContext context) => SizedBox(
       height: MediaQuery.of(context).size.height * 0.36,
@@ -39,7 +39,7 @@ Widget cancelAppointmentDialog(BuildContext context) => SizedBox(
                       buttonWidth: double.infinity,
                       buttonFontSize: 18,
                       buttonFontWeight: FontWeight.normal,
-                      buttonForgroundColor: myBlueAccent,
+                      buttonForgroundColor: myPinkAccent,
                       buttonBackgroundColor: Colors.grey,
                       buttonBorderColor: Colors.white,
                       buttonBorderRadius: 50,
@@ -55,8 +55,8 @@ Widget cancelAppointmentDialog(BuildContext context) => SizedBox(
                       buttonFontSize: 18,
                       buttonFontWeight: FontWeight.normal,
                       buttonForgroundColor: Colors.white,
-                      buttonBackgroundColor: myBlueAccent,
-                      buttonBorderColor: myBlueAccent,
+                      buttonBackgroundColor: myPinkAccent,
+                      buttonBorderColor: myPinkAccent,
                       buttonBorderRadius: 50,
                       myOnPressed: () {
                         Navigator.pushNamed(context, '/Canceled_Reason');
@@ -106,8 +106,8 @@ Widget cancelDialog(BuildContext context, {required String message}) => AlertDia
                   buttonFontSize: 20,
                   buttonFontWeight: FontWeight.normal,
                   buttonForgroundColor: Colors.white,
-                  buttonBackgroundColor: myBlueAccent,
-                  buttonBorderColor: myBlueAccent,
+                  buttonBackgroundColor: myPinkAccent,
+                  buttonBorderColor: myPinkAccent,
                   buttonBorderRadius: 50,
                   myOnPressed: () {
                     Navigator.pushNamed(context, '/My_Appointment');

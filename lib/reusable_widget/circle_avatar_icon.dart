@@ -5,9 +5,9 @@ import 'sized_box.dart';
 
 Widget customCircleAvatarIcon({
   required dynamic myIcon,
-  dynamic myIconColor = const Color(0xFF2962FF),
+  dynamic myIconColor = const Color(0xFFFF4D67),
   double iconSize = 30,
-  dynamic circleBackgroundColor = const Color(0xFFCFD8DC),
+  dynamic circleBackgroundColor = Colors.white,
   Widget myIconUnderTitile = const SizedBox.shrink(),
   double myPadding = 10,
 }) =>
