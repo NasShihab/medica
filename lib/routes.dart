@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medica/opening_screens/screen_5.dart';
-import 'package:medica/opening_screens/screen_6.dart';
-import 'package:medica/opening_screens/screen_8.dart';
 import 'package:medica/dashboard/notification.dart';
 import 'package:medica/dashboard/top_doctors/top_doctors.dart';
 import 'package:medica/dashboard/dashboard.dart';
@@ -16,9 +13,6 @@ import 'dashboard/appointment_view/consultation/video_call_doctor/video_ringing_
 import 'dashboard/appointment_view/consultation/video_call_doctor/video_runnig_page.dart';
 import 'opening_screens/screen_1.dart';
 import 'opening_screens/screen_2.dart';
-import 'opening_screens/screen_3.dart';
-import 'opening_screens/screen_4.dart';
-import 'opening_screens/screen_7.dart';
 import 'opening_screens/welcome.dart';
 import 'auth/sign_up/create_pin.dart';
 import 'auth/sign_up/fill_profile.dart';
@@ -50,12 +44,6 @@ var myRoutes = <String, WidgetBuilder>{
   '/': (context) => const Screen1(),
   '/screen_1': (context) => const Screen1(),
   '/screen_2': (context) => const Screen2(),
-  '/screen_3': (context) => const Screen3(),
-  '/screen_4': (context) => const Screen4(),
-  '/screen_5': (context) => const Screen5(),
-  '/screen_6': (context) => const Screen6(),
-  '/screen_7': (context) => const Screen7(),
-  '/screen_8': (context) => const Screen8(),
   '/welcome': (context) => const Welcome(),
   '/login': (context) => const Login(),
   '/sign_up': (context) => const SignUp(),
@@ -66,7 +54,6 @@ var myRoutes = <String, WidgetBuilder>{
   '/OtpCode': (context) => const OtpCodeVerification(),
   '/CreatePassword': (context) => const CreateNewPassword(),
   '/bottom_bar_page': (context) => const Dashboard(),
-
   '/notification': (context) => const NotificationPage(),
   '/favorite_doctors': (context) => const FavoriteDoctors(),
   '/TopDoctors': (context) => const TopDoctors(),
