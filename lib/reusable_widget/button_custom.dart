@@ -1,28 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Widget myFullCustomButton({String buttonTitle = 'My Buttonm', double buttonHeight = 60, double buttonWidth = double.infinity, double buttonFontSize = 20, dynamic buttonFontWeight = FontWeight.normal, dynamic buttonForgroundColor = Colors.white, dynamic buttonBackgroundColor = const Color(0xFFFF4D67), dynamic buttonBorderColor = const Color(0xFFFF4D67), double buttonBorderWidth = 2, double buttonBorderRadius = 30, double buttonPaddingVerticle = 0, double buttonPaddingHorizontal = 0, double buttonOoutsidePaddingHorizontal = 10, required VoidCallback myOnPressed}) => Container(
-      padding: EdgeInsets.symmetric(horizontal: buttonOoutsidePaddingHorizontal.w),
+Widget myFullCustomButton({
+  String buttonTitle = 'My Buttonm',
+  double buttonHeight = 60,
+  double buttonWidth = double.infinity,
+  double buttonFontSize = 20,
+  dynamic buttonFontWeight = FontWeight.normal,
+  dynamic buttonForgroundColor = Colors.white,
+  dynamic buttonBackgroundColor = const Color(0xFFFF4D67),
+  dynamic buttonBorderColor = const Color(0xFFFF4D67),
+  double buttonBorderWidth = 2,
+  double buttonBorderRadius = 30,
+  double buttonPaddingVerticle = 0,
+  double buttonPaddingHorizontal = 0,
+  double buttonOoutsidePaddingHorizontal = 10,
+  required VoidCallback myOnPressed,
+}) =>
+    Container(
+      padding:
+          EdgeInsets.symmetric(horizontal: buttonOoutsidePaddingHorizontal.w),
       height: buttonHeight.h,
       width: buttonWidth.w,
       child: ElevatedButton(
         style: ButtonStyle(
           side: MaterialStateProperty.resolveWith<BorderSide>(
-            (states) => BorderSide(width: buttonBorderWidth, color: buttonBorderColor),
+            (states) =>
+                BorderSide(width: buttonBorderWidth, color: buttonBorderColor),
           ),
           backgroundColor: MaterialStateProperty.all(buttonBackgroundColor),
           foregroundColor: MaterialStateProperty.all(buttonForgroundColor),
           padding: MaterialStateProperty.all(
-            EdgeInsets.symmetric(vertical: buttonPaddingVerticle.h, horizontal: buttonPaddingHorizontal.w),
+            EdgeInsets.symmetric(
+                vertical: buttonPaddingVerticle.h,
+                horizontal: buttonPaddingHorizontal.w),
           ),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(buttonBorderRadius.r)),
+            RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(buttonBorderRadius.r)),
           ),
         ),
         onPressed: myOnPressed,
         child: Text(
           buttonTitle,
-          style: TextStyle(fontSize: buttonFontSize.sp, fontWeight: buttonFontWeight),
+          style: TextStyle(
+              fontSize: buttonFontSize.sp, fontWeight: buttonFontWeight),
         ),
       ),
     );
@@ -36,7 +58,12 @@ Widget myTextButton({
       width: double.infinity,
       child: TextButton.icon(
         onPressed: () {},
-        style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white), foregroundColor: MaterialStateProperty.all(Colors.black), padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 18.h)), elevation: MaterialStateProperty.all(.5)),
+        style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.white),
+            foregroundColor: MaterialStateProperty.all(Colors.black),
+            padding:
+                MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 18.h)),
+            elevation: MaterialStateProperty.all(.5)),
         icon: CircleAvatar(
           radius: 11.r,
           backgroundImage: AssetImage(icon),
@@ -71,7 +98,8 @@ Widget myTextField({
               borderRadius: BorderRadius.circular(8.r),
               borderSide: BorderSide(color: Colors.grey, width: 1.w),
             ),
-            contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+            contentPadding:
+                EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
       ),
     );
 Widget myPasswordField({
@@ -100,7 +128,8 @@ Widget myPasswordField({
               borderRadius: BorderRadius.circular(8.r),
               borderSide: BorderSide(color: Colors.grey, width: 1.w),
             ),
-            contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+            contentPadding:
+                EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
       ),
     );
 
@@ -127,7 +156,8 @@ Widget myTextFieldPrefix({
                 borderRadius: BorderRadius.circular(8.r),
                 borderSide: BorderSide(color: Colors.grey, width: 1.w),
               ),
-              contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+              contentPadding:
+                  EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
         ),
       ),
     );
