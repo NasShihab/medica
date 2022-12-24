@@ -1,10 +1,24 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../reusable_widget/sized_box.dart';
 
-class Screen1 extends StatelessWidget {
+class Screen1 extends StatefulWidget {
   const Screen1({Key? key}) : super(key: key);
+
+  @override
+  State<Screen1> createState() => _Screen1State();
+}
+
+class _Screen1State extends State<Screen1> {
+  @override
+  void initState() {
+    Timer(const Duration(seconds: 3),
+        (() => Navigator.pushNamed(context, '/screen_2')));
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +33,6 @@ class Screen1 extends StatelessWidget {
                   radius: 40.r,
                   child: Icon(
                     Icons.medical_services_rounded,
-                    //color: Colors.white,
                     size: 40.sp,
                   )),
               width20(),
@@ -32,15 +45,10 @@ class Screen1 extends StatelessWidget {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: GestureDetector(
-        onTap: () {
-          Navigator.pushNamed(context, '/screen_2');
-        },
-        child: Image(
-          height: 70.h,
-          width: 70.w,
-          image: const AssetImage('assets/images/Loading.gif'),
-        ),
+      floatingActionButton: Image(
+        height: 70.h,
+        width: 70.w,
+        image: const AssetImage('assets/images/Loading.gif'),
       ),
     );
   }
