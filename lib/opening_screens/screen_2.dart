@@ -6,17 +6,13 @@ class Screen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, '/screen_3');
-          },
-          child: const Image(
-            fit: BoxFit.cover,
-            image: AssetImage(
-              'assets/images/screen_2.png',
-            ),
-          ),
+      body: GestureDetector(
+        onTap: (() => Navigator.pushNamed(context, '/welcome')),
+        child: Container(
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/screen_2.png'),
+                  fit: BoxFit.fill)),
         ),
       ),
     );
