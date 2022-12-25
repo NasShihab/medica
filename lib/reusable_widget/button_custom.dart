@@ -81,26 +81,22 @@ Widget myTextField({
   required Icon suffixIcon,
   required String hintText,
 }) =>
-    SizedBox(
-      height: 50.h,
-      width: double.infinity,
-      child: TextField(
-        decoration: InputDecoration(
-            prefixIcon: icon,
-            suffixIcon: suffixIcon,
-            hintText: hintText,
-            hintStyle: TextStyle(fontSize: 12.sp),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(color: Colors.grey, width: 1.w),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(color: Colors.grey, width: 1.w),
-            ),
-            contentPadding:
-                EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
-      ),
+    TextField(
+      decoration: InputDecoration(
+          prefixIcon: icon,
+          suffixIcon: suffixIcon,
+          hintText: hintText,
+          hintStyle: TextStyle(fontSize: 12.sp),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.r),
+            borderSide: BorderSide(color: Colors.grey, width: 1.w),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.r),
+            borderSide: BorderSide(color: Colors.grey, width: 1.w),
+          ),
+          contentPadding:
+              EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
     );
 Widget myPasswordField({
   required Icon icon,
@@ -108,29 +104,25 @@ Widget myPasswordField({
   required String hintText,
   double height = 50,
 }) =>
-    SizedBox(
-      height: height.h,
-      width: double.infinity,
-      child: TextField(
-        obscureText: true,
-        enableSuggestions: false,
-        autocorrect: false,
-        decoration: InputDecoration(
-            prefixIcon: icon,
-            suffixIcon: suffixIcon,
-            hintText: hintText,
-            hintStyle: TextStyle(fontSize: 12.sp),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(color: Colors.grey, width: 1.w),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(color: Colors.grey, width: 1.w),
-            ),
-            contentPadding:
-                EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
-      ),
+    TextField(
+      obscureText: true,
+      enableSuggestions: false,
+      autocorrect: false,
+      decoration: InputDecoration(
+          prefixIcon: icon,
+          suffixIcon: suffixIcon,
+          hintText: hintText,
+          hintStyle: TextStyle(fontSize: 12.sp),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.r),
+            borderSide: BorderSide(color: Colors.grey, width: 1.w),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.r),
+            borderSide: BorderSide(color: Colors.grey, width: 1.w),
+          ),
+          contentPadding:
+              EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
     );
 
 Widget myTextFieldPrefix({

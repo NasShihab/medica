@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../reusable_widget/button_custom.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  bool isCheck = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +37,7 @@ class Login extends StatelessWidget {
             // Let's You In
             Text(
               'Login to your account',
-              style: TextStyle(fontSize: 30.sp, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 30.h),
 
@@ -48,13 +54,18 @@ class Login extends StatelessWidget {
                 Icons.visibility_off,
               ),
             ),
+
             CheckboxListTile(
-              contentPadding: EdgeInsets.symmetric(horizontal: 90.w),
+              contentPadding: EdgeInsets.zero,
               controlAffinity: ListTileControlAffinity.leading,
               activeColor: Colors.green,
               checkColor: Colors.white,
-              value: false,
-              onChanged: (bool? value) {},
+              value: isCheck,
+              onChanged: (bool? value) {
+                setState(() {
+                  isCheck = !isCheck;
+                });
+              },
               title: const Text('Remember Me'),
             ),
             SizedBox(height: 10.h),

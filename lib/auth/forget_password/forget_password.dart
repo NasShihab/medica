@@ -10,7 +10,7 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar(context, appBarTitle: 'Forget Your Password'),
+      appBar: AppBar(title: const Text('Forget Your Password')),
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 25.h),
@@ -25,7 +25,11 @@ class ForgetPassword extends StatelessWidget {
               ),
             ),
             Flexible(
-              child: Text('Select which contact details should we use to reset your password', textAlign: TextAlign.center, style: TextStyle(fontSize: 18.sp)),
+              flex: 3,
+              child: Text(
+                  'Select which contact details should we use to reset your password',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 18.sp)),
             ),
             Column(
               children: [
@@ -33,6 +37,9 @@ class ForgetPassword extends StatelessWidget {
                   text1: 'Via SMS',
                   text2: '017*****259',
                   icon: Icons.message,
+                ),
+                const SizedBox(
+                  height: 8,
                 ),
                 myPointBar(
                   text1: 'Via Mail',
@@ -63,11 +70,11 @@ Widget myPointBar({
     Row(
       children: [
         CircleAvatar(
-          radius: 50.r,
+          radius: 40.r,
           backgroundColor: myGrey,
           child: Icon(
             icon,
-            size: 40.sp,
+            size: 32.sp,
             color: myPinkAccent,
           ),
         ),

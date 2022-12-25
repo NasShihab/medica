@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/reusable_widget/appbar_custom.dart';
 import 'package:medica/reusable_widget/button_custom.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -10,9 +9,9 @@ class OtpCodeVerification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      extendBodyBehindAppBar: true,
-      appBar: customAppBar(context, appBarTitle: 'Enter OTP code for verification'),
+      appBar: AppBar(
+        title: const Text('OTP Verification'),
+      ),
       body: SafeArea(
         child: Container(
           height: MediaQuery.of(context).size.height * .50,
@@ -28,10 +27,11 @@ class OtpCodeVerification extends StatelessWidget {
               ),
               PinCodeTextField(
                 pinTheme: PinTheme(
-                  inactiveColor: Colors.grey,
-                  activeColor: Colors.grey,
-                  shape: PinCodeFieldShape.box,
-                ),
+                    inactiveColor: Colors.grey,
+                    activeColor: Colors.grey,
+                    shape: PinCodeFieldShape.box,
+                    borderWidth: 0.5,
+                    borderRadius: BorderRadius.circular(12)),
                 obscuringCharacter: "o",
                 appContext: context,
                 length: 4,

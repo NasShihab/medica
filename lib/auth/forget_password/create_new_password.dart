@@ -38,13 +38,12 @@ class CreateNewPassword extends StatelessWidget {
                   ),
                   SizedBox(height: 20.h),
                   myPasswordField(
-                    icon: const Icon(Icons.lock),
-                    hintText: "Enter New Password",
-                    suffixIcon: const Icon(
-                      Icons.visibility_off,
-                    ),
-                    height: 60.h
-                  ),
+                      icon: const Icon(Icons.lock),
+                      hintText: "Enter New Password",
+                      suffixIcon: const Icon(
+                        Icons.visibility_off,
+                      ),
+                      height: 60.h),
                   SizedBox(height: 10.h),
                   myPasswordField(
                     icon: const Icon(Icons.lock),
@@ -54,7 +53,7 @@ class CreateNewPassword extends StatelessWidget {
                     ),
                   ),
                   CheckboxListTile(
-                    contentPadding: EdgeInsets.symmetric(horizontal: 90.w),
+                    contentPadding: EdgeInsets.zero,
                     controlAffinity: ListTileControlAffinity.leading,
                     activeColor: Colors.green,
                     checkColor: Colors.white,
@@ -83,7 +82,8 @@ class CreateNewPassword extends StatelessWidget {
 }
 
 AlertDialog alert(BuildContext context) => AlertDialog(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.r))),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(30.r))),
       content: SizedBox(
         height: 500.h,
         child: Column(
@@ -121,7 +121,8 @@ AlertDialog alert(BuildContext context) => AlertDialog(
                 child: CircleAvatar(
                   radius: 40.r,
                   backgroundColor: Colors.transparent,
-                  backgroundImage: const AssetImage('assets/images/loading.png'),
+                  backgroundImage:
+                      const AssetImage('assets/images/loading.png'),
                 ),
               ),
             ),
