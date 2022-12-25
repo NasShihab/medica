@@ -134,30 +134,27 @@ Widget myPasswordField({
     );
 
 Widget myTextFieldPrefix({
-  required Icon myPrefixIcon,
   required Icon mySuffixIcon,
   required String htext,
 }) =>
-    Expanded(
-      child: SizedBox(
-        height: 50.h,
-        width: double.infinity,
-        child: TextField(
-          decoration: InputDecoration(
-              prefixIcon: myPrefixIcon,
-              suffixIcon: mySuffixIcon,
-              hintText: htext,
-              hintStyle: TextStyle(fontSize: 12.sp),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
-                borderSide: BorderSide(color: Colors.grey, width: 1.w),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
-                borderSide: BorderSide(color: Colors.grey, width: 1.w),
-              ),
-              contentPadding:
-                  EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+    TextField(
+      decoration: InputDecoration(
+        suffixIcon: mySuffixIcon,
+        fillColor: Colors.white70,
+        filled: true,
+        hintText: htext,
+        hintStyle: TextStyle(fontSize: 14.sp),
+        border: InputBorder.none,
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: 12.w,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.transparent),
+          borderRadius: BorderRadius.all(Radius.circular(15.r)),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.transparent),
+          borderRadius: BorderRadius.all(Radius.circular(15.r)),
         ),
       ),
     );

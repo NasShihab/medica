@@ -17,10 +17,12 @@ class FillProfile extends StatelessWidget {
       appBar: customAppBar(context, appBarTitle: 'Fill Your Profile'),
       body: SafeArea(
         child: Container(
-          height: MediaQuery.of(context).size.height * .85,
+          height: MediaQuery.of(context).size.height * .80,
           padding: EdgeInsets.symmetric(horizontal: 24.w),
           child: Column(
+            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              //Profile Picture Area
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -30,11 +32,12 @@ class FillProfile extends StatelessWidget {
                       CircleAvatar(
                         backgroundColor: Colors.grey,
                         radius: 100.r,
-                        backgroundImage: const AssetImage('assets/images/profile.png'),
+                        backgroundImage:
+                            const AssetImage('assets/images/profile.png'),
                       ),
                       Positioned(
                         bottom: 5.h,
-                        right: -25.h,
+                        right: -30.h,
                         child: RawMaterialButton(
                           onPressed: () {},
                           shape: const CircleBorder(),
@@ -50,32 +53,31 @@ class FillProfile extends StatelessWidget {
                 ],
               ),
               height30(),
+              //Text Field Area
               myTextFieldPrefix(
-                myPrefixIcon: const Icon(Icons.email),
                 htext: "Full Name",
                 mySuffixIcon: const Icon(null),
               ),
+              height10(),
               myTextFieldPrefix(
-                myPrefixIcon: const Icon(Icons.email),
                 htext: "Nickname",
                 mySuffixIcon: const Icon(null),
               ),
+              height10(),
               myTextFieldPrefix(
-                myPrefixIcon: const Icon(Icons.email),
                 htext: "Date of birth",
                 mySuffixIcon: const Icon(Icons.calendar_month),
               ),
+              height10(),
               myTextFieldPrefix(
-                myPrefixIcon: const Icon(Icons.email),
                 htext: "Email",
+                mySuffixIcon: const Icon(Icons.email),
+              ),
+              height10(),
+              myTextFieldPrefix(
+                htext: "Gander",
                 mySuffixIcon: const Icon(Icons.arrow_drop_down_circle_outlined),
               ),
-              myTextFieldPrefix(
-                myPrefixIcon: const Icon(Icons.email),
-                htext: "Gander",
-                mySuffixIcon: const Icon(Icons.arrow_drop_down),
-              ),
-              SizedBox(height: 10.h),
             ],
           ),
         ),
