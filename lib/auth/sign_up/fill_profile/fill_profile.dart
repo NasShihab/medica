@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medica/reusable_widget/button_custom.dart';
 import 'package:medica/reusable_widget/sized_box.dart';
 
-import '../../reusable_widget/appbar_custom.dart';
+import '../../../reusable_widget/appbar_custom.dart';
+import 'fill_profile_widget.dart';
 
 class FillProfile extends StatelessWidget {
   const FillProfile({Key? key}) : super(key: key);
@@ -74,10 +75,7 @@ class FillProfile extends StatelessWidget {
                 mySuffixIcon: const Icon(Icons.email),
               ),
               height10(),
-              myTextFieldPrefix(
-                htext: "Gander",
-                mySuffixIcon: const Icon(Icons.arrow_drop_down_circle_outlined),
-              ),
+              const CustomDropDown()
             ],
           ),
         ),

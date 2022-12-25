@@ -15,7 +15,7 @@ import 'opening_screens/screen_1.dart';
 import 'opening_screens/screen_2.dart';
 import 'opening_screens/welcome.dart';
 import 'auth/sign_up/create_pin.dart';
-import 'auth/sign_up/fill_profile.dart';
+import 'auth/sign_up/fill_profile/fill_profile.dart';
 import 'auth/sign_up/sign_up.dart';
 import 'auth/sign_up/fingerprint.dart';
 import 'auth/forget_password/create_new_password.dart';
