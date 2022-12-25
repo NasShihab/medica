@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medica/reusable_widget/color_custom.dart';
 import 'package:medica/reusable_widget/button_custom.dart';
 import 'package:medica/reusable_widget/sized_box.dart';
 
@@ -37,14 +36,15 @@ class FillProfile extends StatelessWidget {
                       ),
                       Positioned(
                         bottom: 5.h,
-                        right: -30.h,
-                        child: RawMaterialButton(
-                          onPressed: () {},
-                          shape: const CircleBorder(),
-                          fillColor: myPinkAccent,
-                          child: const Icon(
-                            Icons.edit,
-                            color: Colors.white,
+                        right: 10.h,
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: CircleAvatar(
+                            radius: 25.r,
+                            child: Icon(
+                              Icons.edit,
+                              size: 30.sp,
+                            ),
                           ),
                         ),
                       ),
