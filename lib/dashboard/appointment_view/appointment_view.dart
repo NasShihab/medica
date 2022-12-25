@@ -46,11 +46,13 @@ class MyAppointmentView extends StatelessWidget {
                 size: 24.sp,
               ),
             )),
-        body:  const TabBarView(children: [
-          UpcomingAppointment(),
-          CompletedAppointment(),
-          CanceledAppointment(),
-        ]),
+        body: const TabBarView(
+          children: [
+            UpcomingAppointment(),
+            CompletedAppointment(),
+            CanceledAppointment(),
+          ],
+        ),
       ),
     );
   }

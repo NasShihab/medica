@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Widget myFullCustomButton(
-        {String buttonTitle = 'My Buttonm',
-        double buttonHeight = 60,
-        double buttonWidth = double.infinity,
-        double buttonFontSize = 20,
-        dynamic buttonFontWeight = FontWeight.normal,
-        dynamic buttonForgroundColor = Colors.white,
-        dynamic buttonBackgroundColor = const Color(0xFFFF4D67),
-        dynamic buttonBorderColor = const Color(0xFFFF4D67),
-        double buttonBorderWidth = 2,
-        double buttonBorderRadius = 30,
-        double buttonPaddingVerticle = 0,
-        double buttonPaddingHorizontal = 0,
-        double buttonOoutsidePaddingHorizontal = 10,
-        required VoidCallback myOnPressed}) =>
+Widget myFullCustomButton({
+  String buttonTitle = 'My Buttonm',
+  double buttonHeight = 60,
+  double buttonWidth = double.infinity,
+  double buttonFontSize = 20,
+  dynamic buttonFontWeight = FontWeight.normal,
+  dynamic buttonForgroundColor = Colors.white,
+  dynamic buttonBackgroundColor = const Color(0xFFFF4D67),
+  dynamic buttonBorderColor = const Color(0xFFFF4D67),
+  double buttonBorderWidth = 2,
+  double buttonBorderRadius = 30,
+  double buttonPaddingVerticle = 0,
+  double buttonPaddingHorizontal = 0,
+  double buttonOoutsidePaddingHorizontal = 10,
+  required VoidCallback myOnPressed,
+}) =>
     Container(
       padding:
           EdgeInsets.symmetric(horizontal: buttonOoutsidePaddingHorizontal.w),
@@ -80,20 +81,25 @@ Widget myTextField({
   required Icon suffixIcon,
   required String hintText,
 }) =>
-    TextField(
-      decoration: InputDecoration(
-        prefixIcon: icon,
-        suffixIcon: suffixIcon,
-        hintText: hintText,
-        hintStyle: TextStyle(fontSize: 12.sp),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.r),
-          borderSide: BorderSide(color: Colors.grey, width: 1.w),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.r),
-          borderSide: BorderSide(color: Colors.grey, width: 1.w),
-        ),
+    SizedBox(
+      height: 50.h,
+      width: double.infinity,
+      child: TextField(
+        decoration: InputDecoration(
+            prefixIcon: icon,
+            suffixIcon: suffixIcon,
+            hintText: hintText,
+            hintStyle: TextStyle(fontSize: 12.sp),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: BorderSide(color: Colors.grey, width: 1.w),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: BorderSide(color: Colors.grey, width: 1.w),
+            ),
+            contentPadding:
+                EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
       ),
     );
 Widget myPasswordField({
@@ -102,51 +108,53 @@ Widget myPasswordField({
   required String hintText,
   double height = 50,
 }) =>
-    TextField(
-      obscureText: true,
-      enableSuggestions: false,
-      autocorrect: false,
-      decoration: InputDecoration(
-        prefixIcon: icon,
-        suffixIcon: suffixIcon,
-        hintText: hintText,
-        hintStyle: TextStyle(fontSize: 12.sp),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.r),
-          borderSide: BorderSide(color: Colors.grey, width: 1.w),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.r),
-          borderSide: BorderSide(color: Colors.grey, width: 1.w),
-        ),
+    SizedBox(
+      height: height.h,
+      width: double.infinity,
+      child: TextField(
+        obscureText: true,
+        enableSuggestions: false,
+        autocorrect: false,
+        decoration: InputDecoration(
+            prefixIcon: icon,
+            suffixIcon: suffixIcon,
+            hintText: hintText,
+            hintStyle: TextStyle(fontSize: 12.sp),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: BorderSide(color: Colors.grey, width: 1.w),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: BorderSide(color: Colors.grey, width: 1.w),
+            ),
+            contentPadding:
+                EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
       ),
     );
 
 Widget myTextFieldPrefix({
-  required Icon myPrefixIcon,
   required Icon mySuffixIcon,
   required String htext,
 }) =>
-    Expanded(
-      child: SizedBox(
-        height: 50.h,
-        width: double.infinity,
-        child: TextField(
-          decoration: InputDecoration(
-              prefixIcon: myPrefixIcon,
-              suffixIcon: mySuffixIcon,
-              hintText: htext,
-              hintStyle: TextStyle(fontSize: 12.sp),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
-                borderSide: BorderSide(color: Colors.grey, width: 1.w),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.r),
-                borderSide: BorderSide(color: Colors.grey, width: 1.w),
-              ),
-              contentPadding:
-                  EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+    TextField(
+      decoration: InputDecoration(
+        suffixIcon: mySuffixIcon,
+        fillColor: Colors.white70,
+        filled: true,
+        hintText: htext,
+        hintStyle: TextStyle(fontSize: 14.sp),
+        border: InputBorder.none,
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: 12.w,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.transparent),
+          borderRadius: BorderRadius.all(Radius.circular(15.r)),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.transparent),
+          borderRadius: BorderRadius.all(Radius.circular(15.r)),
         ),
       ),
     );
