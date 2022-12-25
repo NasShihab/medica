@@ -23,7 +23,8 @@ class Login extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 100.r,
-                  backgroundImage: const AssetImage('assets/images/welcome.jpg'),
+                  backgroundImage:
+                      const AssetImage('assets/images/welcome.jpg'),
                 ),
               ],
             ),
@@ -39,7 +40,7 @@ class Login extends StatelessWidget {
               hintText: "Email",
               suffixIcon: const Icon(null),
             ),
-            SizedBox(height: 10.h),
+            SizedBox(height: 16.h),
             myPasswordField(
               icon: const Icon(Icons.lock),
               hintText: "Password",
@@ -124,7 +125,8 @@ class Login extends StatelessWidget {
                       },
                       child: Text(
                         'Sign Up',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.sp),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15.sp),
                       )),
                 ],
               ),
