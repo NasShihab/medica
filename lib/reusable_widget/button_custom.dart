@@ -149,11 +149,11 @@ Widget myTextFieldPrefix({
           horizontal: 12.w,
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.transparent),
+          borderSide: const BorderSide(color: Colors.transparent),
           borderRadius: BorderRadius.all(Radius.circular(15.r)),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.transparent),
+          borderSide: const BorderSide(color: Colors.transparent),
           borderRadius: BorderRadius.all(Radius.circular(15.r)),
         ),
       ),
